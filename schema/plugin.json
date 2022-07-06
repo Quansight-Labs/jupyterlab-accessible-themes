@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "jupyterlab-accessible-themes",
+  "description": "jupyterlab-accessible-themes settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}
