@@ -52,12 +52,6 @@
                 ]
             }
         },
-        "sharedPackages": {
-            "@jupyterlab-accessible-themes/jupyterlab-theme-tools": {
-                "bundled": true,
-                "singleton": true
-            }
-        },
         "outputDir": "../../jupyterlab_accessible_themes/labextensions/dark"
     }
 }

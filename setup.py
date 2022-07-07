@@ -1,93 +1,60 @@
-"""
-jupyterlab_accessible_themes setup
-"""
-import json
-import sys
+import re
 from pathlib import Path
+import json
 
 import setuptools
 
-HERE = Path(__file__).parent.resolve()
-
-# Get the package info from package.json
-pkg_json = json.loads((HERE / "package.json").read_bytes())
-
-# The name of the project
-name = "jupyterlab_accessible_themes"
-
-lab_path = (HERE / pkg_json["jupyterlab"]["outputDir"])
-
-# Representative files that should exist after a successful build
-ensured_targets = [
-    str(lab_path / "package.json")
+HERE = Path(__file__).parent
+MOD = "jupyterlab_accessible_themes"
+VARIANTS = ["dark", "light"]
+EXTS = [
+    HERE / MOD / f"labextensions/{v}"
+    for v in VARIANTS
+]
+MANIFESTS = [
+    ext / "package.json"
+    for ext in EXTS
+]
+PACKAGES = [
+    json.loads(pkg_json.read_text(encoding="utf-8"))
+    for pkg_json in MANIFESTS
 ]
 
-labext_name = pkg_json["name"]
+SHARE = f"""share/jupyter/labextensions"""
+EXT_FILES = {
+    f"""{SHARE}/{pkg["name"]}""": ["install.json"]
+    for pkg in PACKAGES
+}
 
-data_files_spec = [
-    ("share/jupyter/labextensions/%s" % labext_name, str(lab_path.relative_to(HERE)), "**"),
-    ("share/jupyter/labextensions/%s" % labext_name, str("."), "install.json"),
-]
+for ext, pkg in zip(EXTS, PACKAGES):
+    for ext_path in [ext] + [d for d in ext.rglob("*") if d.is_dir()]:
+        target = f"""{SHARE}/{pkg["name"]}"""
+        if ext_path != ext:
+            target = f"""{target}/{ext_path.relative_to(ext)}"""
+        EXT_FILES[target] = [
+            str(p.relative_to(HERE).as_posix())
+            for p in ext_path.glob("*")
+            if not p.is_dir()
+        ]
 
-long_description = (HERE / "README.md").read_text(encoding="utf8")
+DATA_FILES = sorted([(k, v) for k, v in EXT_FILES.items()])
 
-version = (
-    pkg_json["version"]
-    .replace("-alpha.", "a")
-    .replace("-beta.", "b")
-    .replace("-rc.", "rc")
+SETUP_ARGS = dict(
+    name=PACKAGES[0]["jupyterlab"]["discovery"]["server"]["base"]["name"],
+    description=PACKAGES[0]["description"],
+    version=PACKAGES[0]["version"],
+    url=PACKAGES[0]["homepage"],
+    license=PACKAGES[0]["license"],
+    packages=["jupyterlab_accessible_themes"],
+    data_files=DATA_FILES,
+    project_urls={
+        "Bug Tracker": PACKAGES[0]["bugs"]["url"],
+        "Source Code": PACKAGES[0]["repository"]["url"]
+    },
+    author="quansight-labs",
+    author_email="contact@quansight.com"
 )
 
-setup_args = dict(
-    name=name,
-    version=version,
-    url=pkg_json["homepage"],
-    author=pkg_json["author"]["name"],
-    author_email=pkg_json["author"]["email"],
-    description=pkg_json["description"],
-    license=pkg_json["license"],
-    license_file="LICENSE",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    packages=setuptools.find_packages(),
-    zip_safe=False,
-    include_package_data=True,
-    python_requires=">=3.7",
-    platforms="Linux, Mac OS X, Windows",
-    keywords=["Jupyter", "JupyterLab", "JupyterLab3"],
-    classifiers=[
-        "License :: OSI Approved :: BSD License",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Framework :: Jupyter",
-        "Framework :: Jupyter :: JupyterLab",
-        "Framework :: Jupyter :: JupyterLab :: 3",
-        "Framework :: Jupyter :: JupyterLab :: Extensions",
-        "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
-    ],
-)
-
-try:
-    from jupyter_packaging import (
-        wrap_installers,
-        npm_builder,
-        get_data_files
-    )
-    post_develop = npm_builder(
-        build_cmd="install:extension", source_dir="src", build_dir=lab_path
-    )
-    setup_args["cmdclass"] = wrap_installers(post_develop=post_develop, ensured_targets=ensured_targets)
-    setup_args["data_files"] = get_data_files(data_files_spec)
-except ImportError as e:
-    import logging
-    logging.basicConfig(format="%(levelname)s: %(message)s")
-    logging.warning("Build tool `jupyter-packaging` is missing. Install it with pip or conda.")
-    if not ("--name" in sys.argv or "--version" in sys.argv):
-        raise e
 
 if __name__ == "__main__":
-    setuptools.setup(**setup_args)
+    setuptools.setup(**SETUP_ARGS)

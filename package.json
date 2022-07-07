@@ -88,12 +88,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "jupyterlab": {
-    "extension": true,
-    "outputDir": "jupyterlab_accessible_themes/labextension",
-    "schemaDir": "schema",
-    "themePath": "style/index.css"
-  },
   "jupyter-releaser": {
     "hooks": {
       "before-build-npm": [
