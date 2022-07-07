@@ -20,7 +20,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const style = 'jupyterlab-accessible-themes/index.css';
 
     manager.register({
-      name: 'jupyterlab-accessible-dark',
+      name: 'jupyterlab-accessible-light',
       isLight: true,
       load: () => manager.loadCSS(style),
       unload: () => Promise.resolve(undefined)
