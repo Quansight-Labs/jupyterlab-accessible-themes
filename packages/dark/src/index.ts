@@ -11,13 +11,13 @@ import { ISettingRegistry } from '@jupyterlab/settingregistry';
  * Initialization data for the jupyterlab-accessible-themes extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab-accessible-themes:plugin',
+  id: 'jupyterlab-accessible-themes:dark',
   autoStart: true,
   requires: [IThemeManager],
   optional: [ISettingRegistry],
   activate: (app: JupyterFrontEnd, manager: IThemeManager, settingRegistry: ISettingRegistry | null) => {
     console.log('JupyterLab extension jupyterlab-accessible-themes is activated!');
-    const style = 'jupyterlab-accessible-themes/index.css';
+    const style = '@jupyterlab-accessible-themes/jupyterlab-theme-dark/index.css';
 
     manager.register({
       name: 'jupyterlab-accessible-dark',
