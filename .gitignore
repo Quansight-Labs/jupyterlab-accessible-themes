@@ -1,0 +1,7 @@
+node_modules
+*.tsbuildinfo
+labextensions
+*.egg-info
+*.pyc
+.doit.*
+.vscode

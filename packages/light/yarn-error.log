@@ -1,0 +1,92 @@
+Arguments: 
+  /home/tbone/mambaforge/envs/a11y/bin/node /home/tbone/mambaforge/envs/a11y/bin/yarn install
+
+PATH: 
+  /home/tbone/mambaforge/envs/a11y/bin:/home/tbone/mambaforge/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.4.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/tbone/Documents/jupyterlab-accessible-themes/packages/dark/package.json: Unexpected token } in JSON at position 429
+      at JSON.parse (<anonymous>)
+      at /home/tbone/mambaforge/envs/a11y/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/home/tbone/mambaforge/envs/a11y/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /home/tbone/mambaforge/envs/a11y/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "@jupterlab-accessible-themes/jupyterlab-theme-dark",
+      "version": "0.1.0",
+      "description": "an accessible dark theme for jupyter lab",
+      "license": "BSD-3-Clause",
+      "author": "project jupyter",
+      "homepage": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes",
+      "repository": {
+          "type": "git",
+          "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes",
+      },
+      "bugs": {
+          "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
+      },
+      "main": "lib/index.js",
+      "files": [
+          "{lib,style,src}/**/*.{.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf,css}"
+      ],
+      "scripts": {
+          "build:ext": "jupyter labextension build --debug .",
+          "watch:ext": "jupyter labextension watch --debug ."
+      },
+      "sideEffects": [
+          "style/*.css"
+      ],
+      "types": "lib/index.d.ts",
+      "dependencies": {
+          "@jupyterlab/application": "^3.1.0",
+          "@jupyterlab/apputils": "^3.1.0",
+          "@jupyterlab/settingregistry": "^3.1.0"
+      },
+      "devDependencies": {
+          "@jupyterlab/builder": "^3.0.2",
+          "base64-inline-loader": "^1.1.1"
+      },
+      "keywords": [
+          "jupyter",
+          "jupyterlab",
+          "jupyterlab-extension"
+      ],
+      "jupyterlab": {
+          "themePath": "style/index.css",
+          "extension": "lib/plugin.js",
+          "discovery": {
+              "server": {
+                  "base": {
+                      "name": "jupyterlab-accessible-themes"
+                  },
+                  "managers": [
+                      "pip"
+                  ]
+              }
+          },
+          "sharedPackages": {
+              "@jupyterlab-accessible-themes/jupyterlab-theme-tools": {
+                  "bundled": true,
+                  "singleton": true
+              }
+          },
+          "outputDir": "../../jupyterlab_accessible_themes/labextensions/dark"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
