@@ -1,19 +1,19 @@
-Arguments: 
+Arguments:
   /home/tbone/mambaforge/envs/a11y/bin/node /home/tbone/mambaforge/envs/a11y/bin/yarn install
 
-PATH: 
+PATH:
   /home/tbone/mambaforge/envs/a11y/bin:/home/tbone/mambaforge/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 
-Yarn version: 
+Yarn version:
   1.22.19
 
-Node version: 
+Node version:
   18.4.0
 
-Platform: 
+Platform:
   linux x64
 
-Trace: 
+Trace:
   SyntaxError: /home/tbone/Documents/jupyterlab-accessible-themes/packages/dark/package.json: Unexpected token } in JSON at position 429
       at JSON.parse (<anonymous>)
       at /home/tbone/mambaforge/envs/a11y/lib/node_modules/yarn/lib/cli.js:1629:59
@@ -21,7 +21,7 @@ Trace:
       at step (/home/tbone/mambaforge/envs/a11y/lib/node_modules/yarn/lib/cli.js:310:30)
       at /home/tbone/mambaforge/envs/a11y/lib/node_modules/yarn/lib/cli.js:321:13
 
-npm manifest: 
+npm manifest:
   {
       "name": "@jupterlab-accessible-themes/jupyterlab-theme-dark",
       "version": "0.1.0",
@@ -85,8 +85,8 @@ npm manifest:
       }
   }
 
-yarn manifest: 
+yarn manifest:
   No manifest
 
-Lockfile: 
+Lockfile:
   No lockfile

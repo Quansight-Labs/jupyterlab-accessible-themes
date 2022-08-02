@@ -3,7 +3,6 @@ from pathlib import Path
 
 from ._version import __version__
 
-
 HERE = Path(__file__).parent.resolve()
 EXT = HERE / "labextensions"
 

@@ -1,12 +1,12 @@
-const jestJupyterLab = require('@jupyterlab/testutils/lib/jest-config');
+const jestJupyterLab = require("@jupyterlab/testutils/lib/jest-config");
 
 const esModules = [
-  '@jupyterlab/',
-  'lib0',
-  'y\\-protocols',
-  'y\\-websocket',
-  'yjs'
-].join('|');
+  "@jupyterlab/",
+  "lib0",
+  "y\\-protocols",
+  "y\\-websocket",
+  "yjs",
+].join("|");
 
 const jlabConfig = jestJupyterLab(__dirname);
 
@@ -17,7 +17,7 @@ const {
   setupFilesAfterEnv,
   setupFiles,
   testPathIgnorePatterns,
-  transform
+  transform,
 } = jlabConfig;
 
 module.exports = {
@@ -29,14 +29,14 @@ module.exports = {
   testPathIgnorePatterns,
   transform,
   automock: false,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['lcov', 'text'],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/**/*.d.ts"],
+  coverageDirectory: "coverage",
+  coverageReporters: ["lcov", "text"],
   globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.json'
-    }
+    "ts-jest": {
+      tsconfig: "tsconfig.json",
+    },
   },
-  testRegex: 'src/.*/.*.spec.ts[x]?$',
-  transformIgnorePatterns: [`/node_modules/(?!${esModules}).+`]
+  testRegex: "src/.*/.*.spec.ts[x]?$",
+  transformIgnorePatterns: [`/node_modules/(?!${esModules}).+`],
 };

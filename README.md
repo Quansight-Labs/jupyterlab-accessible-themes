@@ -1,9 +1,9 @@
 # JupyterLab accessible themes
 
 | Information | Links                                                                                                                                                                |
-| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Project     | [![License](https://img.shields.io/badge/License-BSD%203--Clause-gray.svg?colorA=2D2A56&colorB=5936D9&style=flat.svg)](https://opensource.org/licenses/BSD-3-Clause) |
-| Tools | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/jupyterlab-accessible-themes/main?urlpath=lab) |
+| Tools       | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/jupyterlab-accessible-themes/main?urlpath=lab)                           |
 
 Welcome to the JupyterLab accessible themes repository 👋🏽 .
 To learn more about the broader accessibility initiatives within Jupyter, check the [jupyter/accessibility repository][jupyter-accesibility].
@@ -64,13 +64,13 @@ The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/
 
    ```bash
     cd jupyterlab_accessible_themes
-    ```
+   ```
 
 3. Install the package in development mode
 
-    ```bash
-    pip install -e .
-    ```
+   ```bash
+   pip install -e .
+   ```
 
 4. Now you'll need to link the development version of the extension to Jupyterlab and rebuild the Typescript source:
 
@@ -136,8 +136,8 @@ This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) t
    ```
 
 2. In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
-command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `jupyterlab-accessible-themes` within that folder.
+   command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
+   folder is located. Then you can remove the symlink named `jupyterlab-accessible-themes` within that folder.
 
 ### ✅ Testing the extension
 
@@ -168,4 +168,5 @@ See [RELEASE](RELEASE.md)
 [This project is licensed under the BSD-3-Clause license](https://opensource.org/licenses/BSD-3-Clause).
 
 <!-- links -->
+
 [jupyter-accesibility]: https://github.com/jupyter/accessibility
