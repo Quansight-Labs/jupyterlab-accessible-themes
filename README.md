@@ -99,6 +99,34 @@ By default, the `jlpm build` command generates the source maps for this extensio
 jupyter lab build --minimize=False
 ```
 
+### 🧹 Pre-commit hooks
+
+This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) to standardize our YAML and markdown structure.
+
+1. Before you can run the hooks, you need to install the pre-commit package manager:
+
+   ```bash
+   # using pip
+   pip install pre-commit
+
+   # if you prefer using conda
+   conda install -c conda-forge pre-commit
+   ```
+
+2. From the root of this project, install the git hook scripts:
+
+   ```bash
+   # install the pre-commit hooks
+   pre-commit install
+   ```
+
+3. Optional- run the hooks against the files in this repository
+
+   ```bash
+   # run the pre-commit hooks
+   pre-commit run --all-files
+   ```
+
 ### 🧽 Uninstalling the development version
 
 1. Remove the extension:
