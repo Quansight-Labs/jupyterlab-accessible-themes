@@ -1,30 +1,18 @@
+import json
 import re
 from pathlib import Path
-import json
 
 import setuptools
 
 HERE = Path(__file__).parent
 MOD = "jupyterlab_accessible_themes"
 VARIANTS = ["dark", "light"]
-EXTS = [
-    HERE / MOD / f"labextensions/{v}"
-    for v in VARIANTS
-]
-MANIFESTS = [
-    ext / "package.json"
-    for ext in EXTS
-]
-PACKAGES = [
-    json.loads(pkg_json.read_text(encoding="utf-8"))
-    for pkg_json in MANIFESTS
-]
+EXTS = [HERE / MOD / f"labextensions/{v}" for v in VARIANTS]
+MANIFESTS = [ext / "package.json" for ext in EXTS]
+PACKAGES = [json.loads(pkg_json.read_text(encoding="utf-8")) for pkg_json in MANIFESTS]
 
-SHARE = f"""share/jupyter/labextensions"""
-EXT_FILES = {
-    f"""{SHARE}/{pkg["name"]}""": ["install.json"]
-    for pkg in PACKAGES
-}
+SHARE = "share/jupyter/labextensions"
+EXT_FILES = {f"""{SHARE}/{pkg["name"]}""": ["install.json"] for pkg in PACKAGES}
 
 for ext, pkg in zip(EXTS, PACKAGES):
     for ext_path in [ext] + [d for d in ext.rglob("*") if d.is_dir()]:
@@ -49,10 +37,10 @@ SETUP_ARGS = dict(
     data_files=DATA_FILES,
     project_urls={
         "Bug Tracker": PACKAGES[0]["bugs"]["url"],
-        "Source Code": PACKAGES[0]["repository"]["url"]
+        "Source Code": PACKAGES[0]["repository"]["url"],
     },
     author="quansight-labs",
-    author_email="contact@quansight.com"
+    author_email="contact@quansight.com",
 )
 
 
