@@ -1,3 +1,6 @@
+// Copyright (c) Jupyter Accessibility Team.
+// Distributed under the terms of the Modified BSD License.
+
 const jestJupyterLab = require("@jupyterlab/testutils/lib/jest-config");
 
 const esModules = [
