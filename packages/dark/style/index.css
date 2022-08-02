@@ -1,4 +1,9 @@
-@import './variables.css';
+/*
+Copyright (c) Jupyter Accessibility Team.
+Distributed under the terms of the Modified BSD License.
+*/
+
+@import "./variables.css";
 
 /* Set the default typography for monospace elements */
 tt,

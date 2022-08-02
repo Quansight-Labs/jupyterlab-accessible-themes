@@ -17,7 +17,7 @@
   },
   "license": "BSD-3-Clause",
   "author": {
-    "name": "Quansight Labs",
+    "name": "Jupyter Accessibility team",
     "email": "contact@quansight.com"
   },
   "files": [
@@ -29,7 +29,7 @@
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/github_username/jupyterlab-accessible-themes.git"
+    "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:ext",

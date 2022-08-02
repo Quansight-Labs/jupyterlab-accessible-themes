@@ -1,0 +1,19 @@
+name: Add issues to projects
+
+# https://github.com/actions/add-to-project
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add To GitHub Projects Beta 🏷
+        uses: actions/add-to-project@v0.3.0
+        with:
+          project-url: https://github.com/orgs/Quansight-Labs/projects/8
+          github-token: ${{ secrets.ACCESS_TOKEN }}

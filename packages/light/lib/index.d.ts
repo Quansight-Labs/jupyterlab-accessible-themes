@@ -1,4 +1,4 @@
-import { JupyterFrontEndPlugin } from '@jupyterlab/application';
+import { JupyterFrontEndPlugin } from "@jupyterlab/application";
 /**
  * Initialization data for the jupyterlab-accessible-themes extension.
  */
