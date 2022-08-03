@@ -1,9 +1,18 @@
+<div align="center">
+ <img alt="Jupyter Accessibility logo" src="https://github.com/jupyter/accessibility/blob/main/docs/_static/logo.png?raw=true" width="250" />
+</div>
+<br>
+
 # JupyterLab accessible themes
 
-| Information | Links                                                                                                                                                                |
-| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project     | [![License](https://img.shields.io/badge/License-BSD%203--Clause-gray.svg?colorA=2D2A56&colorB=5936D9&style=flat.svg)](https://opensource.org/licenses/BSD-3-Clause) |
-| Tools       | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/jupyterlab-accessible-themes/main?urlpath=lab)                           |
+<!-- prettier-ignore-start -->
+<!-- ignoring because prettier by default adds loads of spaces -->
+
+| Information                  | Links                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Project                      | [![OSI License clickable badge - BSD-3](https://img.shields.io/badge/License-BSD%203--Clause%20📃-gray.svg?colorA=2D2A56&colorB=5936D9&style=flat.svg)](https://opensource.org/licenses/BSD-3-Clause) [![Project backlog clickable badge](https://img.shields.io/badge/Backlog-GitHub%20Board%20🗃️-gray.svg?colorA=2D2A56&colorB=A7B2F2&style=flat.svg)](https://github.com/orgs/Quansight-Labs/projects/8/views/1) |
+| Tools                        | [![Launch on Binder clickable badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/jupyterlab-accessible-themes/main?urlpath=lab)                                                                                                                                                                                                                                                |
+| <!-- prettier-ignore-end --> |
 
 Welcome to the JupyterLab accessible themes repository 👋🏽 .
 To learn more about the broader accessibility initiatives within Jupyter, check the [jupyter/accessibility repository][jupyter-accesibility].
@@ -28,7 +37,8 @@ To learn more about the broader accessibility initiatives within Jupyter, check 
 
 - [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) >= 3.0
 
-## 🏗 Installing the extension
+<!-- Will comment this section as it is not yet applicable, and was leftover from the cookiecutter -->
+<!-- ## 🏗 Installing the extension
 
 To install the extension, execute:
 
@@ -42,7 +52,7 @@ To remove the extension, execute:
 
 ```bash
 pip uninstall jupyterlab_accessible_themes
-```
+``` -->
 
 ## 🙋🏽‍♀️ Contributing
 
@@ -50,9 +60,13 @@ pip uninstall jupyterlab_accessible_themes
 
 #### Pre-requisites
 
-You will need to have [NodeJS](https://nodejs.org/en/download/) installed in your local computer to build the extension package.
+1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed in your local computer to build the extension package.
+2. Python >= 3.6 and pip.
 
-The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
+##### Building and linking the extension
+
+> **Note**
+> The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
 
 1. Clone this repository to your local computer
 
@@ -72,7 +86,7 @@ The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/
    pip install -e .
    ```
 
-4. Now you'll need to link the development version of the extension to Jupyterlab and rebuild the Typescript source:
+4. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
 
    ```bash
    # Link your development version of the extension with JupyterLab
@@ -161,7 +175,10 @@ More information are provided within the [ui-tests](./ui-tests/README.md) README
 
 ### 📦 Packaging the extension
 
-See [RELEASE](RELEASE.md)
+Detailed instructions for creating a `jupyterlab-accesible-themes` can be found in the [RELEASE](RELEASE.md) file.
+
+> **Warning**
+> As of 3rd of August this projects is still in its infancy and no releases are made yet.
 
 ## 📖 License
 

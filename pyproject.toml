@@ -4,7 +4,10 @@ build-backend = "jupyter_packaging.build_api"
 
 [tool.jupyter-packaging.options]
 skip-if-exists = ["jupyterlab_accessible_themes/labextension/static/style.js"]
-ensured-targets = ["jupyterlab_accessible_themes/labextension/static/style.js", "jupyterlab_accessible_themes/labextension/package.json"]
+ensured-targets = [
+    "jupyterlab_accessible_themes/labextension/static/style.js",
+    "jupyterlab_accessible_themes/labextension/package.json"
+]
 
 [tool.jupyter-packaging.builder]
 factory = "jupyter_packaging.npm_builder"
@@ -14,4 +17,9 @@ build_cmd = "build:prod"
 npm = ["jlpm"]
 
 [tool.check-manifest]
-ignore = ["jupyterlab_accessible_themes/labextension/**", "yarn.lock", ".*", "package-lock.json"]
+ignore = [
+    "jupyterlab_accessible_themes/labextension/**",
+    "yarn.lock",
+    ".*",
+    "package-lock.json"
+]
