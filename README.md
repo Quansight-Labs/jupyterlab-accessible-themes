@@ -89,6 +89,12 @@ pip uninstall jupyterlab_accessible_themes
 4. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
 
    ```bash
+   # Install node dependencies
+   npm install
+
+   # Compile packages
+   npm run build
+
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
    # Rebuild extension Typescript source after making changes - can use yarn or npm depending on your preference
