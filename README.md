@@ -90,10 +90,10 @@ pip uninstall jupyterlab_accessible_themes
 
    ```bash
    # Install node dependencies
-   npm install
+   jlpm install
 
    # Compile packages
-   npm run build
+   jlpm build
 
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
