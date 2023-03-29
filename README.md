@@ -31,7 +31,10 @@ To learn more about the broader accessibility initiatives within Jupyter, check 
     - [📦 Packaging the extension](#-packaging-the-extension)
   - [📖 License](#-license)
 
-<!-- TODO: we need to add a warning/disclose on what we mean by JLab accessible themes as pointed out by @gabalafou -->
+
+This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the readme of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
+
+<!-- TODO: ADD A LIST OF THEMES ONCE THEY EXIST -->
 
 ## 📦 Requirements
 
