@@ -92,12 +92,17 @@ pip uninstall jupyterlab_accessible_themes
    # Install node dependencies
    jlpm install
 
-   # Compile packages
+   # Compile packages before linking to Jupyterlab development version
    jlpm build
 
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
-   # Rebuild extension Typescript source after making changes - can use yarn or npm depending on your preference
+   ```
+
+5. After doing some changes, to visualize them in your local Jupyterlab please re-run the following command:
+
+   ```bash
+   # Rebuild extension Typescript source after making changes
    jlpm build
    ```
 
@@ -107,6 +112,7 @@ pip uninstall jupyterlab_accessible_themes
 # Watch the source directory in one terminal, automatically rebuilding when needed
 # Can use yarn or npm depending on your preference
 jlpm watch
+
 # Run JupyterLab in another terminal
 jupyter lab
 ```

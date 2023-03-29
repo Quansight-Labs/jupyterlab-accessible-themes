@@ -35,6 +35,13 @@ repos:
     hooks:
       - id: flake8
 
+  # Lint: CSS files
+  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
+    rev: 15.3.0
+    hooks:
+    -   id: stylelint
+        additional_dependencies: ['stylelint@13.2.1', 'stylelint-config-standard@20.0.0']
+
   # Misc...
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
