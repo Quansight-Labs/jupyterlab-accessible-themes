@@ -1,0 +1,58 @@
+{
+    "name": "@jupyterlab-accessible-themes/pitaya-smoothie",
+    "version": "0.1.0",
+    "description": "Pitaya Smoothie in JupyterLab: a dark theme inspired by 2018 Pantone of the Year. Designed for low-light condition and colorblindness tested.",
+    "license": "BSD-3-Clause",
+    "author": "Quansight Labs",
+    "homepage": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
+    },
+    "bugs": {
+      "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
+    },
+    "main": "lib/index.js",
+    "files": [
+      "{lib,style,src}/**/*.{.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf,css}"
+    ],
+    "scripts": {
+      "build:lib": "tsc -b",
+      "build:ext": "jupyter labextension build --debug .",
+      "watch:lib": "tsc -b -w --preserveWatchOutput",
+      "watch:ext": "jupyter labextension watch --debug ."
+    },
+    "sideEffects": [
+      "style/*.css"
+    ],
+    "types": "lib/index.d.ts",
+    "dependencies": {
+      "@jupyterlab/application": "^3.1.0",
+      "@jupyterlab/apputils": "^3.1.0",
+      "@jupyterlab/settingregistry": "^3.1.0"
+    },
+    "devDependencies": {
+      "@jupyterlab/builder": "^3.0.2",
+      "base64-inline-loader": "^1.1.1"
+    },
+    "keywords": [
+      "jupyter",
+      "jupyterlab",
+      "jupyterlab-extension"
+    ],
+    "jupyterlab": {
+      "themePath": "style/index.css",
+      "extension": "lib/index.js",
+      "discovery": {
+        "server": {
+          "base": {
+            "name": "jupyterlab-accessible-themes"
+          },
+          "managers": [
+            "pip"
+          ]
+        }
+      },
+      "outputDir": "../../jupyterlab_accessible_themes/labextensions/pitaya_smoothie"
+    }
+  }
