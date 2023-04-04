@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Accessibility Team.
+| Copyright (c) Jupyter Development Team.
 | Distributed under the terms of the Modified BSD License.
 |----------------------------------------------------------------------------*/
 /*
@@ -23,357 +23,357 @@ Material Design when selecting colors. We are not, however, following
 all of MD as it is not optimized for dense, information rich UIs.
 */
 :root {
-    /* defining colours here */
-    --jupyter-orange: var(--md-orange-700);
-    --pitaya-pink500: #f25a92;
-    --pitaya-pink400: #f474a3;
-    --pitaya-pink300: #f78fb5;
-    --pitaya-pink100: #f9aec9;
-    --pitaya-yellow500: #fad000;
-    --pitaya-yellow400: #fbd61f;
-    --pitaya-yellow300: #fde159;
-    --pitaya-yellow100: #feee9f;
-    --pitaya-yellow-extra: #ffe46b;
-    --pitaya-teal500: #1abec2;
-    --pitaya-teal400: #33cccf;
-    --pitaya-teal300: #60dadc;
-    --pitaya-teal100: #9ce8e9;
-    --pitaya-teal-extra: #37e0e0;
-    --pitaya-teal-extra1: #11b1b4;
-    --pitaya-periwinkle500: #7998f2;
-    --pitaya-periwinkle400: #89a4f4;
-    --pitaya-periwinkle300: #aabdf7;
-    --pitaya-periwinkle100: #cbd7fa;
-    --pitaya-periwinkle-extra: #9dbcf6;
-    --pitaya-periwinkle-extra1: #6f8eea;
-    --pitaya-red500: #f45c7b;
-    --pitaya-red400: #f7718c;
-    --pitaya-red300: #f991a6;
-    --pitaya-red100: #fcc2ce;
-    --pitaya-orange: #f38672;
-    --pitaya-lilac500: #a56cf5;
-    --pitaya-lilac400: #b683fc;
-    --pitaya-lilac300: #8b81b0;
-    --indigo-900: #06040f;
-    --indigo-800: #0e0920;
-    --indigo-700: #181036;
-    --indigo-600: #261b4d;
-    --indigo-500: #372b64;
-    --indigo-400: #4c3f7b;
-    --indigo-300: #655992;
-    --indigo-200: #8278a9;
-    --indigo-100: #a29ac0;
-    --indigo-050: #c4bfd7;
-    --indigo-025: #eae9ee;
-    --pitaya-foreground: #f7f7f7;
-    --pitaya-background: var(--indigo-700);
-    --pitaya-active-items: var(--indigo-600);
-    --pitaya-active-items1: var(--indigo-500);
-    --pitaya-active-items-foreground: var(--pitaya-periwinkle-extra1);
-    --pitaya-hihglight: rgba(50, 31, 122, 0.85);
-    --pitaya-hihglight-focused: rgba(50, 31, 122, 0.8);
-    /* Elevation
-    *
-    * We style box-shadows using Material Design's idea of elevation. These particular numbers are taken from here:
-    *
-    * https://github.com/material-components/material-components-web
-    * https://material-components-web.appspot.com/elevation.html
-    */
-    --jp-shadow-base-lightness: 0;
-    --jp-shadow-umbra-color: rgba(
-        var(--jp-shadow-base-lightness),
-        var(--jp-shadow-base-lightness),
-        var(--jp-shadow-base-lightness),
-        0.2
-    );
-    --jp-shadow-penumbra-color: rgba(
-        var(--jp-shadow-base-lightness),
-        var(--jp-shadow-base-lightness),
-        var(--jp-shadow-base-lightness),
-        0.14
-    );
-    --jp-shadow-ambient-color: rgba(
-        var(--jp-shadow-base-lightness),
-        var(--jp-shadow-base-lightness),
-        var(--jp-shadow-base-lightness),
-        0.12
-    );
-    --jp-elevation-z0: none;
-    --jp-elevation-z1: 0px 2px 1px -1px var(--jp-shadow-umbra-color), 0px 1px 1px 0px var(--jp-shadow-penumbra-color),
-        0px 1px 3px 0px var(--jp-shadow-ambient-color);
-    --jp-elevation-z2: 0px 3px 1px -2px var(--jp-shadow-umbra-color), 0px 2px 2px 0px var(--jp-shadow-penumbra-color),
-        0px 1px 5px 0px var(--jp-shadow-ambient-color);
-    --jp-elevation-z4: 0px 2px 4px -1px var(--jp-shadow-umbra-color), 0px 4px 5px 0px var(--jp-shadow-penumbra-color),
-        0px 1px 10px 0px var(--jp-shadow-ambient-color);
-    --jp-elevation-z6: 0px 3px 5px -1px var(--jp-shadow-umbra-color), 0px 6px 10px 0px var(--jp-shadow-penumbra-color),
-        0px 1px 18px 0px var(--jp-shadow-ambient-color);
-    --jp-elevation-z8: 0px 5px 5px -3px var(--jp-shadow-umbra-color), 0px 8px 10px 1px var(--jp-shadow-penumbra-color),
-        0px 3px 14px 2px var(--jp-shadow-ambient-color);
-    --jp-elevation-z12: 0px 7px 8px -4px var(--jp-shadow-umbra-color), 0px 12px 17px 2px var(--jp-shadow-penumbra-color),
-        0px 5px 22px 4px var(--jp-shadow-ambient-color);
-    --jp-elevation-z16: 0px 8px 10px -5px var(--jp-shadow-umbra-color),
-        0px 16px 24px 2px var(--jp-shadow-penumbra-color), 0px 6px 30px 5px var(--jp-shadow-ambient-color);
-    --jp-elevation-z20: 0px 10px 13px -6px var(--jp-shadow-umbra-color),
-        0px 20px 31px 3px var(--jp-shadow-penumbra-color), 0px 8px 38px 7px var(--jp-shadow-ambient-color);
-    --jp-elevation-z24: 0px 11px 15px -7px var(--jp-shadow-umbra-color),
-        0px 24px 38px 3px var(--jp-shadow-penumbra-color), 0px 9px 46px 8px var(--jp-shadow-ambient-color);
-    /* Borders
-    *
-    * The following variables, specify the visual styling of borders in JupyterLab.
-    */
-    --jp-border-width: 1px;
-    --jp-border-color0: var(--indigo-500);
-    --jp-border-color1: var(--indigo-500);
-    --jp-border-color2: var(--indigo-400);
-    --jp-border-color3: var(--indigo-400);
-    --jp-border-radius: 2px;
-    /* UI Fonts
-    *
-    * The UI font CSS variables are used for the typography all of the JupyterLab
-    * user interface elements that are not directly user generated content.
-    *
-    * The font sizing here is done assuming that the body font size of --jp-ui-font-size1
-    * is applied to a parent element. When children elements, such as headings, are sized
-    * in em all things will be computed relative to that body size.
-    */
-    --jp-ui-font-scale-factor: 1.2;
-    --jp-ui-font-size0: 0.83333em;
-    --jp-ui-font-size1: 13px;
-    /* Base font size */
-    --jp-ui-font-size2: 1.2em;
-    --jp-ui-font-size3: 1.44em;
-    --jp-ui-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    /*
-    * Use these font colors against the corresponding main layout colors.
-    * In a light theme, these go from dark to light.
-    * Dark theme: light to dark
-    */
-    /* Defaults use Material Design specification */
-    /* active item */
-    --jp-ui-font-color0: var(--pitaya-foreground);
-    /* sidebar files & top menu */
-    --jp-ui-font-color1: rgba(196, 191, 215, 1);
-    --jp-ui-font-color2: rgba(196, 191, 215, 0.8);
-    --jp-ui-font-color3: rgba(196, 191, 215, 0.6);
-    /*
-    * Use these against the brand/accent/warn/error colors.
-    * These will typically go from light to darker, in both a dark and light theme.
-    */
-    --jp-ui-inverse-font-color0: var(--pitaya-foreground);
-    --jp-ui-inverse-font-color1: rgba(196, 191, 215, 1);
-    --jp-ui-inverse-font-color2: rgba(196, 191, 215, 0.8);
-    --jp-ui-inverse-font-color3: rgba(196, 191, 215, 0.6);
-    /* Content Fonts
-    *
-    * Content font variables are used for typography of user generated content.
-    *
-    * The font sizing here is done assuming that the body font size of --jp-content-font-size1
-    * is applied to a parent element. When children elements, such as headings, are sized
-    * in em all things will be computed relative to that body size.
-    */
-    --jp-content-line-height: 1.6;
-    --jp-content-font-scale-factor: 1.2;
-    --jp-content-font-size0: 0.83333em;
-    --jp-content-font-size1: 14px;
-    /* Base font size */
-    --jp-content-font-size2: 1.2em;
-    --jp-content-font-size3: 1.44em;
-    --jp-content-font-size4: 1.728em;
-    --jp-content-font-size5: 2.0736em;
-    /* This gives a magnification of about 125% in presentation mode over normal. */
-    --jp-content-presentation-font-size1: 17px;
-    --jp-content-heading-line-height: 1;
-    --jp-content-heading-margin-top: 1.2em;
-    --jp-content-heading-margin-bottom: 0.8em;
-    --jp-content-heading-font-weight: 500;
-    /* Defaults use Material Design specification */
-    /* matching to pitaya smoothie foreground colour */
-    --jp-content-font-color0: rgba(247, 247, 247, 1);
-    --jp-content-font-color1: rgba(247, 247, 247, 0.87);
-    --jp-content-font-color2: rgba(247, 247, 247, 0.54);
-    --jp-content-font-color3: rgba(247, 247, 247, 0.38);
-    --jp-content-link-color: var(--pitaya-lilac500);
-    --jp-content-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    /*
-    * Code Fonts
-    *
-    * Code font variables are used for typography of code and other monospaces content.
-    */
-    --jp-code-font-size: 13px;
-    --jp-code-line-height: 1.3077;
-    /* 17px for 13px base */
-    --jp-code-padding: 0.385em;
-    /* 5px for 13px base */
-    --jp-code-font-family-default: Menlo, Consolas, "DejaVu Sans Mono", monospace;
-    --jp-code-font-family: var(--jp-code-font-family-default);
-    /* This gives a magnification of about 125% in presentation mode over normal. */
-    --jp-code-presentation-font-size: 16px;
-    /* may need to tweak cursor width if you change font size */
-    --jp-code-cursor-width0: 1.4px;
-    --jp-code-cursor-width1: 2px;
-    --jp-code-cursor-width2: 4px;
-    /* Layout
-    *
-    * The following are the main layout colors use in JupyterLab. In a light
-    * theme these would go from light to dark.
-    */
-    /* main notebook background - same as editor original theme*/
-    --jp-layout-color0: var(--indigo-700);
-    /* sidebar - file names, menu bar, active tab */
-    --jp-layout-color1: var(--indigo-800);
-    /* activity bar, inactive tab, status bar*/
-    /* pitaya smoothie -> using same as background 181036 */
-    /* here use same as inactive tabs */
-    --jp-layout-color2: var(--indigo700);
-    /* editor/notebok surrounding area */
-    --jp-layout-color3: var(--indigo-600);
-    --jp-layout-color4: var(--indigo-600);
-    /* Inverse Layout
-    *
-    * The following are the inverse layout colors use in JupyterLab. In a light
-    * theme these would go from dark to light.
-    */
-    /* using activity bar colours as reference from pitaya smoothie*/
-    --jp-inverse-layout-color0: var(--indigo-025);
-    --jp-inverse-layout-color1: var(--indigo-050);
-    /* status bar icons */
-    --jp-inverse-layout-color2: var(--indigo-100);
-    /* activity bar icons */
-    --jp-inverse-layout-color3: var(--indigo-200);
-    --jp-inverse-layout-color4: var(--indigo-300);
-    /* Brand/accent */
-    --jp-brand-color0: var(--pitaya-teal500);
-    /* sidebar active item - testing compliance with pitaya */
-    --jp-brand-color1: var(--pitaya-teal500);
-    --jp-brand-color2: var(--pitaya-teal400);
-    --jp-brand-color3: var(--pitaya-teal300);
-    --jp-accent-color0: var(--pitaya-pink500);
-    --jp-accent-color1: var(--pitaya-pink400);
-    --jp-accent-color2: var(--pitaya-pink300);
-    --jp-accent-color3: var(--pitaya-pink100);
-    /* State colors (warn, error, success, info) */
-    --jp-warn-color0: var(--pitaya-yellow500);
-    --jp-warn-color1: var(--pitaya-yellow400);
-    --jp-warn-color2: var(--pitaya-yellow300);
-    --jp-warn-color3: var(--pitaya-yellow100);
-    --jp-error-color0: var(--pitaya-red500);
-    --jp-error-color1: var(--pitaya-red400);
-    --jp-error-color2: var(--pitaya-red100);
-    --jp-error-color3: var(--pitaya-red100);
-    --jp-success-color0: var(--pitaya-teal500);
-    --jp-success-color1: var(--pitaya-teal400);
-    --jp-success-color2: var(--pitaya-teal300);
-    --jp-success-color3: var(--pitaya-teal100);
-    --jp-info-color0: var(--pitaya-periwinkle500);
-    --jp-info-color1: var(--pitaya-periwinkle400);
-    --jp-info-color2: var(--pitaya-periwinkle100);
-    --jp-info-color3: var(--pitaya-periwinkle100);
-    /* Cell specific styles */
-    --jp-cell-padding: 5px;
-    --jp-cell-collapser-width: 8px;
-    --jp-cell-collapser-min-height: 20px;
-    --jp-cell-collapser-not-active-hover-opacity: 0.6;
-    --jp-cell-editor-background: var(--pitaya-background);
-    --jp-cell-editor-border-color: rgba(121, 152, 242, 0.6);
-    --jp-cell-editor-box-shadow: inset 0 0 2px var(--pitaya-periwinkle400);
-    --jp-cell-editor-active-background: var(--jp-layout-color0);
-    --jp-cell-editor-active-border-color: var(--jp-brand-color0);
-    --jp-cell-prompt-width: 64px;
-    --jp-cell-prompt-font-family: "Source Code Pro", monospace;
-    --jp-cell-prompt-letter-spacing: 0px;
-    --jp-cell-prompt-opacity: 1;
-    --jp-cell-prompt-not-active-opacity: 0.5;
-    --jp-cell-inprompt-font-color: var(--pitaya-lilac500);
-    --jp-cell-prompt-not-active-font-color: var(--pitaya-periwinkle-extra);
-    --jp-cell-outprompt-font-color: var(--pitaya-teal500);
-    /* Notebook specific styles */
-    --jp-notebook-padding: 10px;
-    --jp-notebook-select-background: var(--jp-layout-color1);
-    --jp-notebook-multiselected-color: var(--pitaya-hihglight);
-    /* The scroll padding is calculated to fill enough space at the bottom of the
-      notebook to show one single-line cell (with appropriate padding) at the top
-      when the notebook is scrolled all the way to the bottom. We also subtract one
-      pixel so that no scrollbar appears if we have just one single-line cell in the
-      notebook. This padding is to enable a 'scroll past end' feature in a notebook.
-    */
-    --jp-notebook-scroll-padding: calc(
-        100% - var(--jp-code-font-size) * var(--jp-code-line-height) - var(--jp-code-padding) - var(--jp-cell-padding) -
-            1px
-    );
-    /* Rendermime styles */
-    --jp-rendermime-error-background: rgba(244, 92, 123, 0.25);
-    --jp-rendermime-table-row-background: var(--pitaya-active-items);
-    --jp-rendermime-table-row-hover-background: var(--pitaya-active-items1);
-    /* Dialog specific styles */
-    --jp-dialog-background: rgba(38, 27, 77, 0.25);
-    /* Console specific styles */
-    --jp-console-padding: 10px;
-    /* Toolbar specific styles */
-    --jp-toolbar-border-color: var(--jp-border-color1);
-    --jp-toolbar-micro-height: 8px;
-    --jp-toolbar-background: var(--jp-layout-color1);
-    --jp-toolbar-box-shadow: 0px 0px 2px 0px rgba(38, 27, 77, 0.24);
-    --jp-toolbar-header-margin: 4px 4px 0px 4px;
-    --jp-toolbar-active-background: var(--pitaya-active-items);
-    /* Input field styles */
-    --jp-input-box-shadow: inset 0 0 2px var(--pitaya-periwinkle500);
-    --jp-input-active-background: var(--jp-layout-color1);
-    --jp-input-hover-background: var(--jp-layout-color1);
-    --jp-input-background: var(--jp-layout-color0);
-    --jp-input-border-color: var(--jp-border-color1);
-    --jp-input-active-border-color: var(--jp-brand-color1);
-    /* General editor styles */
-    --jp-editor-selected-background: var(--pitaya-highlight);
-    --jp-editor-selected-focused-background: var(--pitaya-hihglight-focused);
-    --jp-editor-cursor-color: var(--pitaya-pink500);
-    /* Code mirror specific styles */
-    --jp-mirror-editor-keyword-color: var(--pitaya-lilac400);
-    --jp-mirror-editor-atom-color: var(--pitaya-periwinkle500);
-    --jp-mirror-editor-number-color: var(--pitaya-orange);
-    --jp-mirror-editor-def-color: var(--pitaya-periwinkle300);
-    --jp-mirror-editor-variable-color: var(--pitaya-periwinkle300);
-    --jp-mirror-editor-variable-2-color: var(--pitaya-teal-extras);
-    --jp-mirror-editor-variable-3-color: var(--pitaya-foreground);
-    --jp-mirror-editor-punctuation-color: #a599e9;
-    --jp-mirror-editor-property-color: var(--pitaya-foreground);
-    --jp-mirror-editor-operator-color: var(--pitaya-lilac400);
-    --jp-mirror-editor-comment-color: var(--pitaya-lilac300);
-    --jp-mirror-editor-string-color: var(--pitaya-teal-extra);
-    --jp-mirror-editor-meta-color: var(--pitaya-lilac500);
-    --jp-mirror-editor-string-2-color: #a599e9;
-    --jp-mirror-editor-qualifier-color: var(--pitaya-lilac300);
-    --jp-mirror-editor-builtin-color: var(--pitaya-yellow-extra);
-    --jp-mirror-editor-bracket-color: var(--pitaya-periwinkle-extra1);
-    --jp-mirror-editor-tag-color: var(--pitaya-periwinkle-extra1);
-    --jp-mirror-editor-attribute-color: var(--pitaya-orange);
-    --jp-mirror-editor-header-color: var(--pitaya-teal-extra);
-    --jp-mirror-editor-quote-color: var(--pitaya-foreground);
-    --jp-mirror-editor-link-color: var(--pitaya-lilac400);
-    --jp-mirror-editor-error-color: var(--pitaya-red500);
-    --jp-mirror-editor-hr-color: var(--pitaya-lilac300);
-    /* Vega extension styles */
-    --jp-vega-background: var(--pitaya-foreground);
-    /* Search-related styles */
-    --jp-search-toggle-off-opacity: 0.6;
-    --jp-search-toggle-hover-opacity: 0.8;
-    --jp-search-toggle-on-opacity: 1;
-    --jp-search-selected-match-background-color: var(--pitaya-hihglight);
-    --jp-search-selected-match-color: var(--pitaya-foreground);
-    --jp-search-unselected-match-background-color: var(--pitaya-hihglight-focused);
-    --jp-search-unselected-match-color: var(--pitaya-hihglight);
-    /* scrollbar related styles. Supports every browser except Edge. */
-    --jp-scrollbar-background-color: var(--jp-layout-color4);
-    --jp-scrollbar-thumb-color: 242, 97, 150;
-    /* need to specify thumb color as an RGB triplet */
-    --jp-scrollbar-endpad: 3px;
-    /* the minimum gap between the thumb and the ends of a scrollbar */
-    /* hacks for setting the thumb shape. These do nothing in Firefox */
-    --jp-scrollbar-thumb-margin: 3.5px;
-    /* the space in between the sides of the thumb and the track */
-    --jp-scrollbar-thumb-radius: 9px;
-    /* set to a large-ish value for rounded endcaps on the thumb */
-  }
+  /* defining colours here */
+  --jupyter-orange: var(--md-orange-700);
+  --pitaya-pink500: #f25a92;
+  --pitaya-pink400: #f474a3;
+  --pitaya-pink300: #f78fb5;
+  --pitaya-pink100: #f9aec9;
+  --pitaya-yellow500: #fad000;
+  --pitaya-yellow400: #fbd61f;
+  --pitaya-yellow300: #fde159;
+  --pitaya-yellow100: #feee9f;
+  --pitaya-yellow-extra: #ffe46b;
+  --pitaya-teal500: #1abec2;
+  --pitaya-teal400: #33cccf;
+  --pitaya-teal300: #60dadc;
+  --pitaya-teal100: #9ce8e9;
+  --pitaya-teal-extra: #37e0e0;
+  --pitaya-teal-extra1: #11b1b4;
+  --pitaya-periwinkle500: #7998f2;
+  --pitaya-periwinkle400: #89a4f4;
+  --pitaya-periwinkle300: #aabdf7;
+  --pitaya-periwinkle100: #cbd7fa;
+  --pitaya-periwinkle-extra: #9dbcf6;
+  --pitaya-periwinkle-extra1: #6f8eea;
+  --pitaya-red500: #f45c7b;
+  --pitaya-red400: #f7718c;
+  --pitaya-red300: #f991a6;
+  --pitaya-red100: #fcc2ce;
+  --pitaya-orange: #f38672;
+  --pitaya-lilac500: #a56cf5;
+  --pitaya-lilac400: #b683fc;
+  --pitaya-lilac300: #8b81b0;
+  --indigo-900: #06040f;
+  --indigo-800: #0e0920;
+  --indigo-700: #181036;
+  --indigo-600: #261b4d;
+  --indigo-500: #372b64;
+  --indigo-400: #4c3f7b;
+  --indigo-300: #655992;
+  --indigo-200: #8278a9;
+  --indigo-100: #a29ac0;
+  --indigo-050: #c4bfd7;
+  --indigo-025: #eae9ee;
+  --pitaya-foreground: #f7f7f7;
+  --pitaya-background: var(--indigo-700);
+  --pitaya-active-items: var(--indigo-600);
+  --pitaya-active-items1: var(--indigo-500);
+  --pitaya-active-items-foreground: var(--pitaya-periwinkle-extra1);
+  --pitaya-hihglight: rgba(50, 31, 122, 0.85);
+  --pitaya-hihglight-focused: rgba(50, 31, 122, 0.8);
+  /* Elevation
+  *
+  * We style box-shadows using Material Design's idea of elevation. These particular numbers are taken from here:
+  *
+  * https://github.com/material-components/material-components-web
+  * https://material-components-web.appspot.com/elevation.html
+  */
+  --jp-shadow-base-lightness: 0;
+  --jp-shadow-umbra-color: rgba(
+      var(--jp-shadow-base-lightness),
+      var(--jp-shadow-base-lightness),
+      var(--jp-shadow-base-lightness),
+      0.2
+  );
+  --jp-shadow-penumbra-color: rgba(
+      var(--jp-shadow-base-lightness),
+      var(--jp-shadow-base-lightness),
+      var(--jp-shadow-base-lightness),
+      0.14
+  );
+  --jp-shadow-ambient-color: rgba(
+      var(--jp-shadow-base-lightness),
+      var(--jp-shadow-base-lightness),
+      var(--jp-shadow-base-lightness),
+      0.12
+  );
+  --jp-elevation-z0: none;
+  --jp-elevation-z1: 0px 2px 1px -1px var(--jp-shadow-umbra-color), 0px 1px 1px 0px var(--jp-shadow-penumbra-color),
+      0px 1px 3px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z2: 0px 3px 1px -2px var(--jp-shadow-umbra-color), 0px 2px 2px 0px var(--jp-shadow-penumbra-color),
+      0px 1px 5px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z4: 0px 2px 4px -1px var(--jp-shadow-umbra-color), 0px 4px 5px 0px var(--jp-shadow-penumbra-color),
+      0px 1px 10px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z6: 0px 3px 5px -1px var(--jp-shadow-umbra-color), 0px 6px 10px 0px var(--jp-shadow-penumbra-color),
+      0px 1px 18px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z8: 0px 5px 5px -3px var(--jp-shadow-umbra-color), 0px 8px 10px 1px var(--jp-shadow-penumbra-color),
+      0px 3px 14px 2px var(--jp-shadow-ambient-color);
+  --jp-elevation-z12: 0px 7px 8px -4px var(--jp-shadow-umbra-color), 0px 12px 17px 2px var(--jp-shadow-penumbra-color),
+      0px 5px 22px 4px var(--jp-shadow-ambient-color);
+  --jp-elevation-z16: 0px 8px 10px -5px var(--jp-shadow-umbra-color),
+      0px 16px 24px 2px var(--jp-shadow-penumbra-color), 0px 6px 30px 5px var(--jp-shadow-ambient-color);
+  --jp-elevation-z20: 0px 10px 13px -6px var(--jp-shadow-umbra-color),
+      0px 20px 31px 3px var(--jp-shadow-penumbra-color), 0px 8px 38px 7px var(--jp-shadow-ambient-color);
+  --jp-elevation-z24: 0px 11px 15px -7px var(--jp-shadow-umbra-color),
+      0px 24px 38px 3px var(--jp-shadow-penumbra-color), 0px 9px 46px 8px var(--jp-shadow-ambient-color);
+  /* Borders
+  *
+  * The following variables, specify the visual styling of borders in JupyterLab.
+  */
+  --jp-border-width: 1px;
+  --jp-border-color0: var(--indigo-500);
+  --jp-border-color1: var(--indigo-500);
+  --jp-border-color2: var(--indigo-400);
+  --jp-border-color3: var(--indigo-400);
+  --jp-border-radius: 2px;
+  /* UI Fonts
+  *
+  * The UI font CSS variables are used for the typography all of the JupyterLab
+  * user interface elements that are not directly user generated content.
+  *
+  * The font sizing here is done assuming that the body font size of --jp-ui-font-size1
+  * is applied to a parent element. When children elements, such as headings, are sized
+  * in em all things will be computed relative to that body size.
+  */
+  --jp-ui-font-scale-factor: 1.2;
+  --jp-ui-font-size0: 0.83333em;
+  --jp-ui-font-size1: 13px;
+  /* Base font size */
+  --jp-ui-font-size2: 1.2em;
+  --jp-ui-font-size3: 1.44em;
+  --jp-ui-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /*
+  * Use these font colors against the corresponding main layout colors.
+  * In a light theme, these go from dark to light.
+  * Dark theme: light to dark
+  */
+  /* Defaults use Material Design specification */
+  /* active item */
+  --jp-ui-font-color0: var(--pitaya-foreground);
+  /* sidebar files & top menu */
+  --jp-ui-font-color1: rgba(196, 191, 215, 1);
+  --jp-ui-font-color2: rgba(196, 191, 215, 0.8);
+  --jp-ui-font-color3: rgba(196, 191, 215, 0.6);
+  /*
+  * Use these against the brand/accent/warn/error colors.
+  * These will typically go from light to darker, in both a dark and light theme.
+  */
+  --jp-ui-inverse-font-color0: var(--pitaya-foreground);
+  --jp-ui-inverse-font-color1: rgba(196, 191, 215, 1);
+  --jp-ui-inverse-font-color2: rgba(196, 191, 215, 0.8);
+  --jp-ui-inverse-font-color3: rgba(196, 191, 215, 0.6);
+  /* Content Fonts
+  *
+  * Content font variables are used for typography of user generated content.
+  *
+  * The font sizing here is done assuming that the body font size of --jp-content-font-size1
+  * is applied to a parent element. When children elements, such as headings, are sized
+  * in em all things will be computed relative to that body size.
+  */
+  --jp-content-line-height: 1.6;
+  --jp-content-font-scale-factor: 1.2;
+  --jp-content-font-size0: 0.83333em;
+  --jp-content-font-size1: 14px;
+  /* Base font size */
+  --jp-content-font-size2: 1.2em;
+  --jp-content-font-size3: 1.44em;
+  --jp-content-font-size4: 1.728em;
+  --jp-content-font-size5: 2.0736em;
+  /* This gives a magnification of about 125% in presentation mode over normal. */
+  --jp-content-presentation-font-size1: 17px;
+  --jp-content-heading-line-height: 1;
+  --jp-content-heading-margin-top: 1.2em;
+  --jp-content-heading-margin-bottom: 0.8em;
+  --jp-content-heading-font-weight: 500;
+  /* Defaults use Material Design specification */
+  /* matching to pitaya smoothie foreground colour */
+  --jp-content-font-color0: rgba(247, 247, 247, 1);
+  --jp-content-font-color1: rgba(247, 247, 247, 0.87);
+  --jp-content-font-color2: rgba(247, 247, 247, 0.54);
+  --jp-content-font-color3: rgba(247, 247, 247, 0.38);
+  --jp-content-link-color: var(--pitaya-lilac500);
+  --jp-content-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /*
+  * Code Fonts
+  *
+  * Code font variables are used for typography of code and other monospaces content.
+  */
+  --jp-code-font-size: 13px;
+  --jp-code-line-height: 1.3077;
+  /* 17px for 13px base */
+  --jp-code-padding: 0.385em;
+  /* 5px for 13px base */
+  --jp-code-font-family-default: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --jp-code-font-family: var(--jp-code-font-family-default);
+  /* This gives a magnification of about 125% in presentation mode over normal. */
+  --jp-code-presentation-font-size: 16px;
+  /* may need to tweak cursor width if you change font size */
+  --jp-code-cursor-width0: 1.4px;
+  --jp-code-cursor-width1: 2px;
+  --jp-code-cursor-width2: 4px;
+  /* Layout
+  *
+  * The following are the main layout colors use in JupyterLab. In a light
+  * theme these would go from light to dark.
+  */
+  /* main notebook background - same as editor original theme*/
+  --jp-layout-color0: var(--indigo-700);
+  /* sidebar - file names, menu bar, active tab */
+  --jp-layout-color1: var(--indigo-800);
+  /* activity bar, inactive tab, status bar*/
+  /* pitaya smoothie -> using same as background 181036 */
+  /* here use same as inactive tabs */
+  --jp-layout-color2: var(--indigo700);
+  /* editor/notebok surrounding area */
+  --jp-layout-color3: var(--indigo-600);
+  --jp-layout-color4: var(--indigo-600);
+  /* Inverse Layout
+  *
+  * The following are the inverse layout colors use in JupyterLab. In a light
+  * theme these would go from dark to light.
+  */
+  /* using activity bar colours as reference from pitaya smoothie*/
+  --jp-inverse-layout-color0: var(--indigo-025);
+  --jp-inverse-layout-color1: var(--indigo-050);
+  /* status bar icons */
+  --jp-inverse-layout-color2: var(--indigo-100);
+  /* activity bar icons */
+  --jp-inverse-layout-color3: var(--indigo-200);
+  --jp-inverse-layout-color4: var(--indigo-300);
+  /* Brand/accent */
+  --jp-brand-color0: var(--pitaya-teal500);
+  /* sidebar active item - testing compliance with pitaya */
+  --jp-brand-color1: var(--pitaya-teal500);
+  --jp-brand-color2: var(--pitaya-teal400);
+  --jp-brand-color3: var(--pitaya-teal300);
+  --jp-accent-color0: var(--pitaya-pink500);
+  --jp-accent-color1: var(--pitaya-pink400);
+  --jp-accent-color2: var(--pitaya-pink300);
+  --jp-accent-color3: var(--pitaya-pink100);
+  /* State colors (warn, error, success, info) */
+  --jp-warn-color0: var(--pitaya-yellow500);
+  --jp-warn-color1: var(--pitaya-yellow400);
+  --jp-warn-color2: var(--pitaya-yellow300);
+  --jp-warn-color3: var(--pitaya-yellow100);
+  --jp-error-color0: var(--pitaya-red500);
+  --jp-error-color1: var(--pitaya-red400);
+  --jp-error-color2: var(--pitaya-red100);
+  --jp-error-color3: var(--pitaya-red100);
+  --jp-success-color0: var(--pitaya-teal500);
+  --jp-success-color1: var(--pitaya-teal400);
+  --jp-success-color2: var(--pitaya-teal300);
+  --jp-success-color3: var(--pitaya-teal100);
+  --jp-info-color0: var(--pitaya-periwinkle500);
+  --jp-info-color1: var(--pitaya-periwinkle400);
+  --jp-info-color2: var(--pitaya-periwinkle100);
+  --jp-info-color3: var(--pitaya-periwinkle100);
+  /* Cell specific styles */
+  --jp-cell-padding: 5px;
+  --jp-cell-collapser-width: 8px;
+  --jp-cell-collapser-min-height: 20px;
+  --jp-cell-collapser-not-active-hover-opacity: 0.6;
+  --jp-cell-editor-background: var(--pitaya-background);
+  --jp-cell-editor-border-color: rgba(121, 152, 242, 0.6);
+  --jp-cell-editor-box-shadow: inset 0 0 2px var(--pitaya-periwinkle400);
+  --jp-cell-editor-active-background: var(--jp-layout-color0);
+  --jp-cell-editor-active-border-color: var(--jp-brand-color0);
+  --jp-cell-prompt-width: 64px;
+  --jp-cell-prompt-font-family: "Source Code Pro", monospace;
+  --jp-cell-prompt-letter-spacing: 0px;
+  --jp-cell-prompt-opacity: 1;
+  --jp-cell-prompt-not-active-opacity: 0.5;
+  --jp-cell-inprompt-font-color: var(--pitaya-lilac500);
+  --jp-cell-prompt-not-active-font-color: var(--pitaya-periwinkle-extra);
+  --jp-cell-outprompt-font-color: var(--pitaya-teal500);
+  /* Notebook specific styles */
+  --jp-notebook-padding: 10px;
+  --jp-notebook-select-background: var(--jp-layout-color1);
+  --jp-notebook-multiselected-color: var(--pitaya-hihglight);
+  /* The scroll padding is calculated to fill enough space at the bottom of the
+    notebook to show one single-line cell (with appropriate padding) at the top
+    when the notebook is scrolled all the way to the bottom. We also subtract one
+    pixel so that no scrollbar appears if we have just one single-line cell in the
+    notebook. This padding is to enable a 'scroll past end' feature in a notebook.
+  */
+  --jp-notebook-scroll-padding: calc(
+      100% - var(--jp-code-font-size) * var(--jp-code-line-height) - var(--jp-code-padding) - var(--jp-cell-padding) -
+          1px
+  );
+  /* Rendermime styles */
+  --jp-rendermime-error-background: rgba(244, 92, 123, 0.25);
+  --jp-rendermime-table-row-background: var(--pitaya-active-items);
+  --jp-rendermime-table-row-hover-background: var(--pitaya-active-items1);
+  /* Dialog specific styles */
+  --jp-dialog-background: rgba(38, 27, 77, 0.25);
+  /* Console specific styles */
+  --jp-console-padding: 10px;
+  /* Toolbar specific styles */
+  --jp-toolbar-border-color: var(--jp-border-color1);
+  --jp-toolbar-micro-height: 8px;
+  --jp-toolbar-background: var(--jp-layout-color1);
+  --jp-toolbar-box-shadow: 0px 0px 2px 0px rgba(38, 27, 77, 0.24);
+  --jp-toolbar-header-margin: 4px 4px 0px 4px;
+  --jp-toolbar-active-background: var(--pitaya-active-items);
+  /* Input field styles */
+  --jp-input-box-shadow: inset 0 0 2px var(--pitaya-periwinkle500);
+  --jp-input-active-background: var(--jp-layout-color1);
+  --jp-input-hover-background: var(--jp-layout-color1);
+  --jp-input-background: var(--jp-layout-color0);
+  --jp-input-border-color: var(--jp-border-color1);
+  --jp-input-active-border-color: var(--jp-brand-color1);
+  /* General editor styles */
+  --jp-editor-selected-background: var(--pitaya-highlight);
+  --jp-editor-selected-focused-background: var(--pitaya-hihglight-focused);
+  --jp-editor-cursor-color: var(--pitaya-pink500);
+  /* Code mirror specific styles */
+  --jp-mirror-editor-keyword-color: var(--pitaya-lilac400);
+  --jp-mirror-editor-atom-color: var(--pitaya-periwinkle500);
+  --jp-mirror-editor-number-color: var(--pitaya-orange);
+  --jp-mirror-editor-def-color: var(--pitaya-periwinkle300);
+  --jp-mirror-editor-variable-color: var(--pitaya-periwinkle300);
+  --jp-mirror-editor-variable-2-color: var(--pitaya-teal-extras);
+  --jp-mirror-editor-variable-3-color: var(--pitaya-foreground);
+  --jp-mirror-editor-punctuation-color: #a599e9;
+  --jp-mirror-editor-property-color: var(--pitaya-foreground);
+  --jp-mirror-editor-operator-color: var(--pitaya-lilac400);
+  --jp-mirror-editor-comment-color: var(--pitaya-lilac300);
+  --jp-mirror-editor-string-color: var(--pitaya-teal-extra);
+  --jp-mirror-editor-meta-color: var(--pitaya-lilac500);
+  --jp-mirror-editor-string-2-color: #a599e9;
+  --jp-mirror-editor-qualifier-color: var(--pitaya-lilac300);
+  --jp-mirror-editor-builtin-color: var(--pitaya-yellow-extra);
+  --jp-mirror-editor-bracket-color: var(--pitaya-periwinkle-extra1);
+  --jp-mirror-editor-tag-color: var(--pitaya-periwinkle-extra1);
+  --jp-mirror-editor-attribute-color: var(--pitaya-orange);
+  --jp-mirror-editor-header-color: var(--pitaya-teal-extra);
+  --jp-mirror-editor-quote-color: var(--pitaya-foreground);
+  --jp-mirror-editor-link-color: var(--pitaya-lilac400);
+  --jp-mirror-editor-error-color: var(--pitaya-red500);
+  --jp-mirror-editor-hr-color: var(--pitaya-lilac300);
+  /* Vega extension styles */
+  --jp-vega-background: var(--pitaya-foreground);
+  /* Search-related styles */
+  --jp-search-toggle-off-opacity: 0.6;
+  --jp-search-toggle-hover-opacity: 0.8;
+  --jp-search-toggle-on-opacity: 1;
+  --jp-search-selected-match-background-color: var(--pitaya-hihglight);
+  --jp-search-selected-match-color: var(--pitaya-foreground);
+  --jp-search-unselected-match-background-color: var(--pitaya-hihglight-focused);
+  --jp-search-unselected-match-color: var(--pitaya-hihglight);
+  /* scrollbar related styles. Supports every browser except Edge. */
+  --jp-scrollbar-background-color: var(--jp-layout-color4);
+  --jp-scrollbar-thumb-color: 242, 97, 150;
+  /* need to specify thumb color as an RGB triplet */
+  --jp-scrollbar-endpad: 3px;
+  /* the minimum gap between the thumb and the ends of a scrollbar */
+  /* hacks for setting the thumb shape. These do nothing in Firefox */
+  --jp-scrollbar-thumb-margin: 3.5px;
+  /* the space in between the sides of the thumb and the track */
+  --jp-scrollbar-thumb-radius: 9px;
+  /* set to a large-ish value for rounded endcaps on the thumb */
+}
 
-  /*# sourceMappingURL=variables.css.map */
+/*# sourceMappingURL=variables.css.map */
