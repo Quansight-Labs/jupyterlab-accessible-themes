@@ -31,7 +31,10 @@ To learn more about the broader accessibility initiatives within Jupyter, check 
     - [📦 Packaging the extension](#-packaging-the-extension)
   - [📖 License](#-license)
 
-<!-- TODO: we need to add a warning/disclose on what we mean by JLab accessible themes as pointed out by @gabalafou -->
+
+This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the readme of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
+
+<!-- TODO: ADD A LIST OF THEMES ONCE THEY EXIST -->
 
 ## 📦 Requirements
 
@@ -89,9 +92,20 @@ pip uninstall jupyterlab_accessible_themes
 4. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
 
    ```bash
+   # Install node dependencies
+   jlpm install
+
+   # Compile packages before linking to Jupyterlab development version
+   jlpm build
+
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
-   # Rebuild extension Typescript source after making changes - can use yarn or npm depending on your preference
+   ```
+
+5. After doing some changes, to visualize them in your local Jupyterlab please re-run the following command:
+
+   ```bash
+   # Rebuild extension Typescript source after making changes
    jlpm build
    ```
 
@@ -101,6 +115,7 @@ pip uninstall jupyterlab_accessible_themes
 # Watch the source directory in one terminal, automatically rebuilding when needed
 # Can use yarn or npm depending on your preference
 jlpm watch
+
 # Run JupyterLab in another terminal
 jupyter lab
 ```
