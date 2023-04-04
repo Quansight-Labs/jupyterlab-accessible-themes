@@ -241,3 +241,5 @@ labextensions
 
 # for VSCode users
 .vscode
+
+.DS_Store

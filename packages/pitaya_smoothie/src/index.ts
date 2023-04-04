@@ -34,7 +34,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
       "@jupyterlab-accessible-themes/jupyterlab-theme-pitayasmoothie/index.css";
 
     manager.register({
-      name: "pitaya smoothie",
+      name: "Pitaya Smoothie",
       isLight: true,
       load: () => manager.loadCSS(style),
       unload: () => Promise.resolve(undefined),

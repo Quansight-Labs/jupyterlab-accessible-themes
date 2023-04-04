@@ -334,7 +334,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-mirror-editor-number-color: var(--pitaya-orange);
   --jp-mirror-editor-def-color: var(--pitaya-periwinkle300);
   --jp-mirror-editor-variable-color: var(--pitaya-periwinkle300);
-  --jp-mirror-editor-variable-2-color: var(--pitaya-teal-extras);
+  --jp-mirror-editor-variable-2-color: var(--pitaya-teal-extra);
   --jp-mirror-editor-variable-3-color: var(--pitaya-foreground);
   --jp-mirror-editor-punctuation-color: #a599e9;
   --jp-mirror-editor-property-color: var(--pitaya-foreground);
