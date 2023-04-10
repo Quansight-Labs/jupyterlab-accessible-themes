@@ -21,6 +21,11 @@ be used with `--jp-layout-color1`. The numbers have the following meanings:
 Throughout JupyterLab, we are mostly following principles from Google's
 Material Design when selecting colors. We are not, however, following
 all of MD as it is not optimized for dense, information rich UIs.
+
+The name of the variables follow the css patterns described in the css
+jupyterlab developer guide,
+https://jupyterlab.readthedocs.io/en/latest/developer/css.html and pitaya
+smoothie main theme, https://github.com/trallard/pitaya_smoothie.
 */
 :root {
   /* defining colours here */

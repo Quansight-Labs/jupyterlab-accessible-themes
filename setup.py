@@ -9,7 +9,7 @@ import setuptools
 
 HERE = Path(__file__).parent
 MOD = "jupyterlab_accessible_themes"
-VARIANTS = ["pitaya_smoothie"]
+VARIANTS = ["pitayasmoothie"]
 EXTS = [HERE / MOD / f"labextensions/{v}" for v in VARIANTS]
 MANIFESTS = [ext / "package.json" for ext in EXTS]
 PACKAGES = [json.loads(pkg_json.read_text(encoding="utf-8")) for pkg_json in MANIFESTS]
