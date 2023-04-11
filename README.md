@@ -34,7 +34,10 @@ To learn more about the broader accessibility initiatives within Jupyter, check 
 
 This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the readme of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
 
-<!-- TODO: ADD A LIST OF THEMES ONCE THEY EXIST -->
+## Themes
+
+- [Pitaya Smoothie](./packages/pitaya_smoothie/README.md) - Color-blind friendly
+
 
 ## 📦 Requirements
 
@@ -128,6 +131,8 @@ By default, the `jlpm build` command generates the source maps for this extensio
 jupyter lab build --minimize=False
 ```
 
+Once everything is installed, please remember that you will still need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
+
 ### 🧹 Pre-commit hooks
 
 This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) to standardize our YAML and markdown structure.
@@ -202,3 +207,9 @@ Detailed instructions for creating a `jupyterlab-accesible-themes` can be found 
 <!-- links -->
 
 [jupyter-accesibility]: https://github.com/jupyter/accessibility
+
+## Acknowledgements
+
+We want to thank the following sources for being the source of inspiration for one or more themes that are available in this repository,
+
+- [Pitaya Smoothie theme](https://github.com/trallard/pitaya_smoothie)

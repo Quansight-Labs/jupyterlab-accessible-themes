@@ -14,7 +14,9 @@ import { ISettingRegistry } from "@jupyterlab/settingregistry";
  * Initialization data for the jupyterlab-accessible-themes extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: "jupyterlab-accessible-themes:light",
+  // NOTE: The package id cannot contain a dash or underscore, so we need
+  // to remove it here.
+  id: "jupyterlab-accessible-themes:pitayasmoothie",
   autoStart: true,
   requires: [IThemeManager],
   optional: [ISettingRegistry],
@@ -26,11 +28,13 @@ const plugin: JupyterFrontEndPlugin<void> = {
     console.log(
       "JupyterLab extension jupyterlab-accessible-themes is activated!"
     );
+    // NOTE: The package name cannot contain a dash or underscore, so we need
+    // to remove it for the installation folder name.
     const style =
-      "@jupyterlab-accessible-themes/jupyterlab-theme-light/index.css";
+      "@jupyterlab-accessible-themes/jupyterlab-theme-pitayasmoothie/index.css";
 
     manager.register({
-      name: "jupyterlab-accessible-light",
+      name: "Pitaya Smoothie",
       isLight: true,
       load: () => manager.loadCSS(style),
       unload: () => Promise.resolve(undefined),

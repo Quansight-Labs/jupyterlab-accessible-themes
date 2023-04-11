@@ -1,9 +1,9 @@
 {
-  "name": "@jupyterlab-accessible-themes/jupyterlab-theme-dark",
+  "name": "@jupyterlab-accessible-themes/jupyterlab-theme-pitayasmoothie",
   "version": "0.1.0",
-  "description": "an accessible dark theme for jupyter lab",
+  "description": "Pitaya Smoothie in JupyterLab: a dark theme inspired by 2018 Pantone of the Year. Designed for low-light condition and colorblindness tested.",
   "license": "BSD-3-Clause",
-  "author": "project jupyter",
+  "author": "jupyter accessibility group",
   "homepage": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes",
   "repository": {
     "type": "git",
@@ -53,6 +53,6 @@
         ]
       }
     },
-    "outputDir": "../../jupyterlab_accessible_themes/labextensions/dark"
+    "outputDir": "../../jupyterlab_accessible_themes/labextensions/pitayasmoothie"
   }
 }
