@@ -131,6 +131,8 @@ By default, the `jlpm build` command generates the source maps for this extensio
 jupyter lab build --minimize=False
 ```
 
+Once everything is installed, please remember that you will still need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
+
 ### 🧹 Pre-commit hooks
 
 This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) to standardize our YAML and markdown structure.
