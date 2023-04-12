@@ -3,8 +3,9 @@
 # - https://mybinder.readthedocs.io/en/latest/howto/gh-actions-badges.html
 name: Binder Badge
 on:
-  pull_request_target:
-    types: [opened]
+  pull_request:
+    types:
+      - opened
 
 permissions:
   pull-requests: write
