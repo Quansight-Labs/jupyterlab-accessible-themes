@@ -39,8 +39,8 @@ _("rm", "-rf", "jupyterlab_accessible_themes/labextensions")
 _("rm", "-rf", "jupyterlab_accessible_themes.egg-info")
 
 # install the labextension
-_(sys.executable, "-m", "jlpm", "install")
-_(sys.executable, "-m", "jlpm", "build")
+_("jlpm", "install")
+_("jlpm", "build")
 _(sys.executable, "-m", "pip", "install", "-e", ".")
 _(sys.executable, "-m", "jupyter", "labextension", "develop", "--overwrite", ".")
 
