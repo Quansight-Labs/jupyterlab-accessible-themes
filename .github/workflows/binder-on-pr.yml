@@ -1,5 +1,7 @@
 # References:
 # This workflow adds a Binder preview URL to new PRs (via a comment on the PR).
+# This comment will only be created once, and then it will be updated with
+# every new commit
 # - https://github.com/jupyterlab/jupyterlab-git/blob/master/.github/workflows/binder-on-pr.yaml
 # - https://mybinder.readthedocs.io/en/latest/howto/gh-actions-badges.html
 name: Binder Badge
