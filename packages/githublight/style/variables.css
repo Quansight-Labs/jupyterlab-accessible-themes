@@ -331,6 +331,14 @@ smoothie main theme, https://github.com/trallard/pitaya_smoothie.
   *
   * The following are the inverse layout colors use in JupyterLab. In a light
   * theme these would go from dark to light.
+  *
+  * In versions of JupyterLab <= 3.5.x the variable is named as
+  * --jp-inverse-layout-colorX.
+  *
+  * In versions of JupyterLab >= 3.6.x the variable is named as
+  * --jp-inverse-layoutX.
+  *
+  * We are including both of them here.
   */
   /* using activity bar colours as reference from pitaya smoothie*/
   --jp-inverse-layout-color0: var(--indigo-025);
@@ -340,6 +348,12 @@ smoothie main theme, https://github.com/trallard/pitaya_smoothie.
   /* activity bar icons */
   --jp-inverse-layout-color3: var(--indigo-200);
   --jp-inverse-layout-color4: var(--indigo-300);
+  --jp-inverse-layout0: var(--indigo-025);
+  --jp-inverse-layout1: var(--indigo-050);
+  --jp-inverse-layout2: var(--indigo-100);
+  /* activity bar icons */
+  --jp-inverse-layout3: var(--indigo-200);
+  --jp-inverse-layout4: var(--indigo-300);
   /* Brand/accent */
   --jp-brand-color0: var(--pitaya-teal500);
   /* sidebar active item - testing compliance with pitaya */
