@@ -26,7 +26,7 @@ def _(*args, **kwargs):
     print("\n\t", " ".join(args), "\n")
     return_code = subprocess.call(args, **kwargs)
     if return_code != 0:
-        print("\nERROR", return_code, " ".join(args))
+        print(f"\nERROR, {return_code}: {' '.join(args)}")
         sys.exit(return_code)
 
 
