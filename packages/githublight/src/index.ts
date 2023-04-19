@@ -34,7 +34,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
       "@jupyterlab-accessible-themes/jupyterlab-theme-githublight/index.css";
 
     manager.register({
-      name: "Pitaya Smoothie",
+      name: "Github Light",
       isLight: true,
       load: () => manager.loadCSS(style),
       unload: () => Promise.resolve(undefined),
