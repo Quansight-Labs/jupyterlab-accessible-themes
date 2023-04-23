@@ -1,0 +1,23 @@
+# Copyright (c) Jupyter Accessibility Team.
+# Distributed under the terms of the Modified BSD License.
+# a mybinder.org-ready environment for demoing jupyterlab_accessible_themes
+# this environment may also be used locally on Linux/MacOS/Windows, e.g.
+#
+#   conda env update --file binder/environment.yml
+#   conda activate jupyterlab-accessible-themes-demo
+#
+name: jupyterlab-accessible-themes-demo
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  # runtime dependencies
+  - python >=3.8
+  - jupyterlab >=3,<4.0.0a0
+  # labextension build dependencies
+  - nodejs >=16
+  - pip
+  - wheel
+  # additional packages for demos
