@@ -307,7 +307,7 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-inverse-layout3: var(--gh-light-gray8);
   --jp-inverse-layout4: var(--gh-light-gray7);
   /* Brand/accent */
-  --jp-brand-color0: var(--gh-light-blue0);
+  --jp-brand-color0: var(--gh-light-gray7);
   /* sidebar active item */
   --jp-brand-color1: var(--gh-light-gray0);
   --jp-brand-color2: var(--gh-light-gray1);

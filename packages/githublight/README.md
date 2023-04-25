@@ -1,18 +1,16 @@
 # Github Light
 
-
+A theme that mimics github light theme. It is heavily inspired in the `github light theme default` for VSCode available [here](https://github.com/primer/github-vscode-theme).
 
 ## Usage ✨
 
 To enable the theme in JupyterLab: `Go to Settings -> JupyterLab Theme -> Github Light`
 
-To enable the theme's scrollbars please navigate to `Settings -> Advanced Settings Editor -> Theme` then enable the checkbox `Scrollbar Theming`.
-
 ## Colors
 
 All the colors used for text in the theme are compliant with [WCAG 2.1 standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
 
-Background color: ![#181036](https://via.placeholder.com/20/181036/181036.png) `#181036`
+Background color: ![##ffffff](https://via.placeholder.com/20/#ffffff/#ffffff.png) `#ffffff`
 
 Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
 
@@ -20,19 +18,18 @@ Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.p
 
 | Color                                                        | Hex       | Ratio    | Normal text | Large text |
 | ------------------------------------------------------------ | --------- | -------- | ----------- | ---------- |
-| ![#f7f7f7](https://via.placeholder.com/20/f7f7f7/f7f7f7.png) | `#f7f7f7` | 16.8 : 1 | AAA         | AAA        |
-| ![#37e0e0](https://via.placeholder.com/20/37e0e0/37e0e0.png) | `#37e0e0` | 11.1 : 1 | AAA         | AAA        |
-| ![#1abec2](https://via.placeholder.com/20/1abec2/1abec2.png) | `#1abec2` | 7.9 : 1  | AAA         | AAA        |
-| ![#9dbcf6](https://via.placeholder.com/20/9dbcf6/9dbcf6.png) | `#9dbcf6` | 9.4 : 1  | AAA         | AAA        |
-| ![#aabdf7](https://via.placeholder.com/20/aabdf7/aabdf7.png) | `#aabdf7` | 9.7 : 1  | AAA         | AAA        |
-| ![#7998f2](https://via.placeholder.com/20/7998f2/7998f2.png) | `#7998f2` | 6.5 : 1  | AA          | AAA        |
-| ![#b683fc](https://via.placeholder.com/20/b683fc/b683fc.png) | `#b683fc` | 6.6 : 1  | AA          | AAA        |
-| ![#a56cf5](https://via.placeholder.com/20/a56cf5/a56cf5.png) | `#a56cf5` | 5.2 : 1  | AA          | AAA        |
-| ![#8b81b0](https://via.placeholder.com/20/8b81b0/8b81b0.png) | `#8b81b0` | 5.0 : 1  | AA          | AAA        |
-| ![#f38672](https://via.placeholder.com/20/f38672/f38672.png) | `#f38672` | 7.3 : 1  | AAA         | AAA        |
-| ![#f45c7b](https://via.placeholder.com/20/f45c7b/f45c7b.png) | `#f45c7b` | 5.7 : 1  | AA          | AAA        |
-| ![#ffe46b](https://via.placeholder.com/20/ffe46b/ffe46b.png) | `#ffe46b` | 14.2 : 1 | AAA         | AAA        |
-
+| ![#1F2328](https://via.placeholder.com/20/1F2328/1F2328.png) | `#1F2328` | 15.8 : 1 | AAA         | AAA        |
+| ![#6e7781](https://via.placeholder.com/20/6e7781/6e7781.png) | `#6e7781` | 4.5 : 1  | AAA         | AA         |
+| ![#57606a](https://via.placeholder.com/20/57606a/57606a.png) | `#57606a` | 6.4 : 1  | AAA         | AA         |
+| ![#424a53](https://via.placeholder.com/20/424a53/424a53.png) | `#424a53` | 9.0 : 1  | AAA         | AAA        |
+| ![#32383f](https://via.placeholder.com/20/32383f/32383f.png) | `#32383f` | 11.8 : 1 | AAA         | AAA        |
+| ![#24292f](https://via.placeholder.com/20/24292f/24292f.png) | `#24292f` | 14.7 : 1 | AAA         | AAA        |
+| ![#0550ae](https://via.placeholder.com/20/0550ae/0550ae.png) | `#0550ae` | 7.6 : 1  | AAA         | AAA        |
+| ![#0a3069](https://via.placeholder.com/20/0a3069/0a3069.png) | `#0a3069` | 12.8 : 1 | AAA         | AAA        |
+| ![#116329](https://via.placeholder.com/20/116329/116329.png) | `#116329` | 7.4 : 1  | AAA         | AAA        |
+| ![#953800](https://via.placeholder.com/20/953800/953800.png) | `#953800` | 7.4 : 1  | AAA         | AAA        |
+| ![#a40e26](https://via.placeholder.com/20/a40e26/a40e26.png) | `#a40e26` | 7.9 : 1  | AAA         | AAA        |
+| ![#6639ba](https://via.placeholder.com/20/6639ba/6639ba.png) | `#6639ba` | 7.3 : 1  | AAA         | AAA        |
 
 ## Screenshots
 
@@ -40,4 +37,4 @@ Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.p
 
 ## Acknowledgements
 
-
+This theme is based and inspired in the [`github light default` theme for VSCode](https://github.com/primer/github-vscode-theme)

@@ -213,3 +213,4 @@ Detailed instructions for creating a `jupyterlab-accesible-themes` can be found 
 We want to thank the following sources for being the source of inspiration for one or more themes that are available in this repository,
 
 - [Pitaya Smoothie theme](https://github.com/trallard/pitaya_smoothie)
+- [VSCode github themes](https://github.com/primer/github-vscode-theme)
