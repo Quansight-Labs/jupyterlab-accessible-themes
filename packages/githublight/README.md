@@ -1,14 +1,14 @@
-# Github Light
+# GitHub Light
 
-A theme that mimics github light theme. It is heavily inspired in the `github light theme default` for VSCode available [here](https://github.com/primer/github-vscode-theme).
+A theme heavily inspired by the [`GitHub light default theme` for VSCode](https://github.com/primer/github-vscode-theme).
 
 ## Usage ✨
 
-To enable the theme in JupyterLab: `Go to Settings -> JupyterLab Theme -> Github Light`
+To enable the theme from the JupyterLab menu bar. Go to `Settings -> JupyterLab Theme -> Github Light`
 
 ## Colors
 
-All the colors used for text in the theme are compliant with [WCAG 2.1 standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+All the colors used for text in the theme are conformant with [WCAG 2.1 contrast standards](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
 Background color: ![##ffffff](https://via.placeholder.com/20/#ffffff/#ffffff.png) `#ffffff`
 
@@ -16,11 +16,13 @@ Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.p
 
 **WCAG compliance**
 
+All the colors in the table shown were tested with the background color.
+
 | Color                                                        | Hex       | Ratio    | Normal text | Large text |
 | ------------------------------------------------------------ | --------- | -------- | ----------- | ---------- |
 | ![#1F2328](https://via.placeholder.com/20/1F2328/1F2328.png) | `#1F2328` | 15.8 : 1 | AAA         | AAA        |
-| ![#6e7781](https://via.placeholder.com/20/6e7781/6e7781.png) | `#6e7781` | 4.5 : 1  | AAA         | AA         |
-| ![#57606a](https://via.placeholder.com/20/57606a/57606a.png) | `#57606a` | 6.4 : 1  | AAA         | AA         |
+| ![#6e7781](https://via.placeholder.com/20/6e7781/6e7781.png) | `#6e7781` | 4.5 : 1  | AA          | AAA        |
+| ![#57606a](https://via.placeholder.com/20/57606a/57606a.png) | `#57606a` | 6.4 : 1  | AA          | AAA        |
 | ![#424a53](https://via.placeholder.com/20/424a53/424a53.png) | `#424a53` | 9.0 : 1  | AAA         | AAA        |
 | ![#32383f](https://via.placeholder.com/20/32383f/32383f.png) | `#32383f` | 11.8 : 1 | AAA         | AAA        |
 | ![#24292f](https://via.placeholder.com/20/24292f/24292f.png) | `#24292f` | 14.7 : 1 | AAA         | AAA        |
@@ -31,10 +33,16 @@ Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.p
 | ![#a40e26](https://via.placeholder.com/20/a40e26/a40e26.png) | `#a40e26` | 7.9 : 1  | AAA         | AAA        |
 | ![#6639ba](https://via.placeholder.com/20/6639ba/6639ba.png) | `#6639ba` | 7.3 : 1  | AAA         | AAA        |
 
+## Font
+
+This theme is using the [Atkinson Hyperlegible font](https://fonts.google.com/specimen/Atkinson+Hyperlegible), which was developed specifically to increase legibility for readers with low vision.
+
+To change this font please change it directly in the `Settings` of JupyterLab.
+
 ## Screenshots
 
-<img alt="JupyterLab Github Light screenshot" src="./images/screenshot.png"/>
+<img alt="JupyterLab GitHub Light screenshot" src="./images/screenshot.png"/>
 
 ## Acknowledgements
 
-This theme is based and inspired in the [`github light default` theme for VSCode](https://github.com/primer/github-vscode-theme)
+This theme is based on and inspired by the [`GitHub Light Default` theme for VSCode](https://github.com/primer/github-vscode-theme)

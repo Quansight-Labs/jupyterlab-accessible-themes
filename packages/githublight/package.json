@@ -1,9 +1,9 @@
 {
   "name": "@jupyterlab-accessible-themes/jupyterlab-theme-githublight",
   "version": "0.1.0",
-  "description": "Pitaya Smoothie in JupyterLab: a dark theme inspired by 2018 Pantone of the Year. Designed for low-light condition and colorblindness tested.",
+  "description": "GitHub Light in JupyterLab: a light theme based on GitHub light interface. It is optimized for colorblindness.",
   "license": "BSD-3-Clause",
-  "author": "jupyter accessibility group",
+  "author": "Jupyter Accessibility Team",
   "homepage": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes",
   "repository": {
     "type": "git",

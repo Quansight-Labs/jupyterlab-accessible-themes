@@ -31,7 +31,10 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
 :root {
-  /* defining colors here */
+  /*
+  * Original colors are available at:
+  * https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts
+  */
   --gh-light-black: #1F2328;
   --gh-light-white: #ffffff;
   --gh-light-gray0: #f6f8fa;
@@ -189,6 +192,8 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   * The font sizing here is done assuming that the body font size of --jp-ui-font-size1
   * is applied to a parent element. When children elements, such as headings, are sized
   * in em all things will be computed relative to that body size.
+  *
+  * By increasing the scale factor, the text will be easier to read and comprehend.
   */
   --jp-ui-font-scale-factor: 1.2;
   --jp-ui-font-size0: 0.83333em;
