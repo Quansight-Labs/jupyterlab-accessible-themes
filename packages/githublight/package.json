@@ -1,7 +1,7 @@
 {
   "name": "@jupyterlab-accessible-themes/jupyterlab-theme-githublight",
   "version": "0.1.0",
-  "description": "GitHub Light in JupyterLab: a light theme based on GitHub light interface. It is optimized for colorblindness.",
+  "description": "GitHub Light in JupyterLab: a theme based on GitHub light interface colors. The colors are optimized for some types of color blindness.",
   "license": "BSD-3-Clause",
   "author": "Jupyter Accessibility Team",
   "homepage": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes",

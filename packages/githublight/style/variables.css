@@ -251,8 +251,7 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-content-font-color2: var(--gh-light-black);
   --jp-content-font-color3: var(--gh-light-black);
   --jp-content-link-color: var(--gh-light-blue8);
-  --jp-content-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --jp-content-font-family: "Atkinson Hyperlegible";
   /*
   * Code Fonts
   *

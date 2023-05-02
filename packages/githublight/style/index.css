@@ -53,6 +53,10 @@ pre {
   fill: var(--gh-light-blue6);
 }
 
+.jp-DirListing-item.jp-mod-selected {
+  background: var(--gh-light-gray2);
+}
+
 /* --------------------------------------
 /* Change disclaimer button font color
 -----------------------------------------*/
@@ -65,6 +69,33 @@ pre {
 -----------------------------------------*/
 .jp-icon3[fill] {
   fill: unset;
+}
+
+/* --------------------------------------
+/* Change hover color in settings forms
+-----------------------------------------*/
+.jp-SettingsPanel .jp-objectFieldWrapper .form-group:hover {
+  background-color: var(--gh-light-gray1) !important;
+}
+
+/* --------------------------------------
+/* Change sidebar
+-----------------------------------------*/
+
+.jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab + .lm-TabBar-tab {
+  fill: var(--gh-light-gray5);
+}
+
+.jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab + .lm-TabBar-tab.lm-mod-current {
+  fill: var(--gh-light-black);
+}
+
+.jp-SideBar .lm-TabBar-tab:not(.lm-mod-current), #jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
+  fill: var(--gh-light-gray5);
+}
+
+.jp-InputGroup input {
+  background-color: var(--gh-light-white);
 }
 
 /*# sourceMappingURL=index.css.map */

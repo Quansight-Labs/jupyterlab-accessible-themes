@@ -35,9 +35,9 @@ All the colors in the table shown were tested with the background color.
 
 ## Font
 
-This theme is using the [Atkinson Hyperlegible font](https://fonts.google.com/specimen/Atkinson+Hyperlegible), which was developed specifically to increase legibility for readers with low vision.
+This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
 
-To change this font please change it directly in the `Settings` of JupyterLab.
+This font may be changed only for the `Markdown viewer` and the `Terminal`. For achieving this please go to `Advance settings` in the JupyterLab UI via the `Settings` option in the `menu bar`. Go to `Markdown viewer settings`, and type the font family that you want to see. For the `Terminal`, scroll to `Terminal settings` and type the font family you prefer.
 
 ## Screenshots
 

@@ -35,6 +35,11 @@ Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.p
 | ![#f45c7b](https://via.placeholder.com/20/f45c7b/f45c7b.png) | `#f45c7b` | 5.7 : 1  | AA          | AAA        |
 | ![#ffe46b](https://via.placeholder.com/20/ffe46b/ffe46b.png) | `#ffe46b` | 14.2 : 1 | AAA         | AAA        |
 
+## Font
+
+This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
+
+This font may be changed only for the `Markdown viewer` and the `Terminal`. For achieving this please go to `Advance settings` in the JupyterLab UI via the `Settings` option in the `menu bar`. Go to `Markdown viewer settings`, and type the font family that you want to see. For the `Terminal`, scroll to `Terminal settings` and type the font family you prefer.
 
 ## Screenshots
 
