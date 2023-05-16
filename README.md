@@ -86,13 +86,7 @@ pip uninstall jupyterlab_accessible_themes
     cd jupyterlab_accessible_themes
    ```
 
-3. Install the package in development mode
-
-   ```bash
-   pip install -e .
-   ```
-
-4. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
+3. Install the node dependencies and build the extension
 
    ```bash
    # Install node dependencies
@@ -100,12 +94,22 @@ pip uninstall jupyterlab_accessible_themes
 
    # Compile packages before linking to Jupyterlab development version
    jlpm build
+   ```
 
+4. Install the package in development mode
+
+   ```bash
+   pip install -e .
+   ```
+
+5. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
+
+   ```bash
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
    ```
 
-5. After doing some changes, to visualize them in your local Jupyterlab please re-run the following command:
+6. After doing some changes, to visualize them in your local Jupyterlab please re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
