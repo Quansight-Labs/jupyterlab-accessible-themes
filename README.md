@@ -80,10 +80,10 @@ pip uninstall jupyterlab_accessible_themes
    git clone https://github.com/Quansight-Labs/jupyterlab-accessible-themes.git
    ```
 
-2. Change to the `jupyterlab_accessible_themes` directory
+2. Change to the `jupyterlab-accessible-themes` directory
 
    ```bash
-    cd jupyterlab_accessible_themes
+    cd jupyterlab-accessible-themes
    ```
 
 3. Install the node dependencies and build the extension
