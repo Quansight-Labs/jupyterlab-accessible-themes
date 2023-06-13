@@ -89,6 +89,9 @@ pip uninstall jupyterlab_accessible_themes
 3. Install the node dependencies and build the extension
 
    ```bash
+   # Install jupyterlab 3.x
+   pip install jupyterlab < 4.0
+   
    # Install node dependencies
    jlpm install
 
