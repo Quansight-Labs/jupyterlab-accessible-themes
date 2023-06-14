@@ -75,6 +75,7 @@ pip uninstall jupyterlab_accessible_themes
 
 > **Note**
 > The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
+> You will need to have NodeJS installed in your local computer to build the extension package.
 
 1. Clone this repository to your local computer
 
@@ -88,12 +89,19 @@ pip uninstall jupyterlab_accessible_themes
     cd jupyterlab-accessible-themes
    ```
 
-3. Install the node dependencies and build the extension
+3. Install Jupyterlab and NodeJS **if not installed**
 
    ```bash
-   # Install jupyterlab 3.x
-   pip install jupyterlab < 4.0
-   
+   # Install JupyterLab 3.x
+   pip install 'jupyterlab<4.0'
+
+   # Install node from conda-forge
+   conda install -c conda-forge 'nodejs>16'
+   ```
+
+4. Install the node dependencies and build the extension
+
+   ```bash
    # Install node dependencies
    jlpm install
 
@@ -101,20 +109,20 @@ pip uninstall jupyterlab_accessible_themes
    jlpm build
    ```
 
-4. Install the package in development mode
+5. Install the package in development mode
 
    ```bash
    pip install -e .
    ```
 
-5. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
+6. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
 
    ```bash
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
    ```
 
-6. After making some changes, to visualize them in your local JupyterLab re-run the following command:
+7. After making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
