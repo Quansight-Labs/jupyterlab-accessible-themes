@@ -18,7 +18,7 @@ Background color: ![#181036](https://via.placeholder.com/20/181036/181036.png) `
 
 Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
 
-**WCAG compliance**
+**WCAG conformance**
 
 | Color                                                        | Hex       | Ratio    | Normal text | Large text |
 | ------------------------------------------------------------ | --------- | -------- | ----------- | ---------- |

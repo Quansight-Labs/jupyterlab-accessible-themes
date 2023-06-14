@@ -14,7 +14,7 @@ Background color: ![##ffffff](https://via.placeholder.com/20/#ffffff/#ffffff.png
 
 Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
 
-**WCAG compliance**
+**WCAG conformance**
 
 All the colors in the table shown were tested with the background color.
 

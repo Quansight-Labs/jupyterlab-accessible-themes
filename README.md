@@ -19,6 +19,7 @@ To learn more about the broader accessibility initiatives within Jupyter, check 
 
 - [JupyterLab accessible themes](#jupyterlab-accessible-themes)
   - [Themes](#themes)
+  - [Font](#font)
   - [📦 Requirements](#-requirements)
   - [🙋🏽‍♀️ Contributing](#️-contributing)
     - [💻 Installing the development version](#-installing-the-development-version)
@@ -40,6 +41,16 @@ This repository defines a set of accessible themes according to [WCAG color stan
 
 - [Pitaya Smoothie](./packages/pitayasmoothie/README.md) - Color-blind friendly
 - [GitHub light](./packages/githublight/README.md) - Color-blind friendly
+
+## Font
+
+All the themes are using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
+
+This font can only be changed for the `Markdown viewer` and the `Terminal`. You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
+
+1. Select the `Settings` option in the `menu bar`.
+2. Go to `Markdown viewer settings`, and type the font family that you want to use.
+3. To change the `Terminal` font, scroll down to `Terminal settings` and type the name of the font family.
 
 ## 📦 Requirements
 
