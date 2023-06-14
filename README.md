@@ -112,7 +112,7 @@ pip uninstall jupyterlab_accessible_themes
    jupyter labextension develop . --overwrite
    ```
 
-6. After doing some changes, to visualize them in your local Jupyterlab please re-run the following command:
+6. After making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
