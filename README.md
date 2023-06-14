@@ -18,18 +18,20 @@ Welcome to the JupyterLab accessible themes repository 👋🏽 .
 To learn more about the broader accessibility initiatives within Jupyter, check the [jupyter/accessibility repository][jupyter-accesibility].
 
 - [JupyterLab accessible themes](#jupyterlab-accessible-themes)
+  - [Themes](#themes)
   - [📦 Requirements](#-requirements)
-  - [🏗 Installing the extension](#-installing-the-extension)
-  - [🧽 Uninstalling the extension](#-uninstalling-the-extension)
   - [🙋🏽‍♀️ Contributing](#️-contributing)
     - [💻 Installing the development version](#-installing-the-development-version)
       - [Pre-requisites](#pre-requisites)
+        - [Building and linking the extension](#building-and-linking-the-extension)
+    - [🧹 Pre-commit hooks](#-pre-commit-hooks)
     - [🧽 Uninstalling the development version](#-uninstalling-the-development-version)
     - [✅ Testing the extension](#-testing-the-extension)
       - [Frontend tests](#frontend-tests)
       - [Integration tests](#integration-tests)
     - [📦 Packaging the extension](#-packaging-the-extension)
   - [📖 License](#-license)
+  - [Acknowledgements](#acknowledgements)
 
 
 This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the readme of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
