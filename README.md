@@ -1,5 +1,5 @@
 <div align="center">
- <img alt="Jupyter Accessibility logo" src="https://github.com/jupyter/accessibility/blob/main/docs/_static/logo.png?raw=true" width="250" />
+ <img alt="Jupyter Accessibility logo" src="https://raw.githubusercontent.com/jupyter/accessibility/main/docs/_static/logos/JupAccessColor.svg" width="250" />
 </div>
 <br>
 
@@ -11,33 +11,32 @@
 | Information                  | Links                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Project                      | [![OSI License clickable badge - BSD-3](https://img.shields.io/badge/License-BSD%203--Clause%20📃-gray.svg?colorA=2D2A56&colorB=5936D9&style=flat.svg)](https://opensource.org/licenses/BSD-3-Clause) [![Project backlog clickable badge](https://img.shields.io/badge/Backlog-GitHub%20Board%20🗃️-gray.svg?colorA=2D2A56&colorB=A7B2F2&style=flat.svg)](https://github.com/orgs/Quansight-Labs/projects/8/views/1) |
-| Tools                        | [![Launch on Binder clickable badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/jupyterlab-accessible-themes/main?urlpath=lab)                                                                                                                                                                                                                                                |
-| <!-- prettier-ignore-end --> |
+| Tools                        | [![Launch on Binder clickable badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/jupyterlab-accessible-themes/main?urlpath=lab)                |                                                    <!-- prettier-ignore-end --> 
 
 Welcome to the JupyterLab accessible themes repository 👋🏽 .
 To learn more about the broader accessibility initiatives within Jupyter, check the [jupyter/accessibility repository][jupyter-accesibility].
 
 - [JupyterLab accessible themes](#jupyterlab-accessible-themes)
+  - [Themes](#themes)
   - [📦 Requirements](#-requirements)
-  - [🏗 Installing the extension](#-installing-the-extension)
-  - [🧽 Uninstalling the extension](#-uninstalling-the-extension)
   - [🙋🏽‍♀️ Contributing](#️-contributing)
     - [💻 Installing the development version](#-installing-the-development-version)
       - [Pre-requisites](#pre-requisites)
+        - [Building and linking the extension](#building-and-linking-the-extension)
+    - [🧹 Pre-commit hooks](#-pre-commit-hooks)
     - [🧽 Uninstalling the development version](#-uninstalling-the-development-version)
     - [✅ Testing the extension](#-testing-the-extension)
       - [Frontend tests](#frontend-tests)
       - [Integration tests](#integration-tests)
     - [📦 Packaging the extension](#-packaging-the-extension)
   - [📖 License](#-license)
+  - [Acknowledgements](#acknowledgements)
 
-
-This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the readme of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
+This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the README of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
 
 ## Themes
 
 - [Pitaya Smoothie](./packages/pitaya_smoothie/README.md) - Color-blind friendly
-
 
 ## 📦 Requirements
 
@@ -105,7 +104,7 @@ pip uninstall jupyterlab_accessible_themes
    jupyter labextension develop . --overwrite
    ```
 
-5. After doing some changes, to visualize them in your local Jupyterlab please re-run the following command:
+5. After doing some changes, to visualize them in your local JupyterLab please re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
