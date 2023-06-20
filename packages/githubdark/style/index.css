@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------------------------
+| Copyright (c) Jupyter Development Team.
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+/*
+The name of the variables follow the css patterns described in the css
+jupyterlab developer guide,
+https://jupyterlab.readthedocs.io/en/latest/developer/css.html
+*/
+@import "./variables.css";
+/* Set the default typography for monospace elements */
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  line-height: var(--jp-code-line-height);
+}
+
+/* --------------------------------------
+/* Change tab style
+-----------------------------------------*/
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
+  background: var(--gh-dark-orange4);
+}
+
+.jp-FileBrowser-toolbar .jp-ToolbarButtonComponent[data-command='filebrowser:create-main-launcher'] {
+  background: var(--gh-dark-green5);
+}
+
+.jp-FileBrowser-toolbar .jp-ToolbarButtonComponent[data-command='filebrowser:create-main-launcher']:hover {
+  background: var(--gh-dark-green4) !important;
+}
+
+.lm-DockPanel-tabBar {
+  color: var(--gh-dark-gray2);
+}
+
+.lm-DockPanel-tabBar .lm-TabBar-tab.lm-mod-current {
+  color: var(--gh-dark-gray0);
+}
+
+/* --------------------------------------
+/* Change list item style
+-----------------------------------------*/
+.jp-DirListing-item.jp-mod-selected .jp-icon-selectable[fill] {
+  fill: var(--gh-dark-blue4);
+}
+
+.jp-DirListing-item.jp-mod-selected {
+  background: var(--gh-dark-gray8);
+}
+
+/* --------------------------------------
+/* Change disclaimer button font color
+-----------------------------------------*/
+.jp-extensionmanager-disclaimer-disable {
+  color: var(--gh-dark-black) !important;
+}
+
+/* --------------------------------------
+/* Change hover color in settings forms
+-----------------------------------------*/
+.jp-SettingsPanel .jp-objectFieldWrapper .form-group:hover {
+  background-color: var(--gh-dark-gray9) !important;
+}
+
+/* --------------------------------------
+/* Change sidebar
+-----------------------------------------*/
+
+.jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab + .lm-TabBar-tab {
+  fill: var(--gh-dark-gray6);
+}
+
+.jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab + .lm-TabBar-tab.lm-mod-current {
+  fill: var(--gh-dark-white);
+}
+
+.jp-SideBar .lm-TabBar-tab:not(.lm-mod-current), #jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
+  fill: var(--gh-dark-gray6);
+}
+
+.jp-InputGroup input {
+  background-color: var(--gh-dark-black);
+}
+
+/*# sourceMappingURL=index.css.map */
