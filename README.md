@@ -88,29 +88,34 @@ pip uninstall jupyterlab_accessible_themes
 > The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
 > You will need to have NodeJS installed in your local computer to build the extension package.
 
-1. Clone this repository to your local computer
+1. Clone this repository to your local computer:
 
    ```bash
    git clone https://github.com/Quansight-Labs/jupyterlab-accessible-themes.git
    ```
 
-2. Change to the `jupyterlab-accessible-themes` directory
+2. Change to the `jupyterlab-accessible-themes` directory:
 
    ```bash
     cd jupyterlab-accessible-themes
    ```
 
-3. Install Jupyterlab and NodeJS **if not installed**
+3. Optional- Create and activate a development environment with your package manager:
 
    ```bash
-   # Install JupyterLab 3.x
-   pip install 'jupyterlab<4.0'
-
-   # Install node from conda-forge
-   conda install -c conda-forge 'nodejs>16'
+   # Create environment named `jupyterlab-accessible-themes`
+   conda create -n jupyterlab-accessible-themes
+   conda activate jupyterlab-accessible-themes
    ```
 
-4. Install the node dependencies and build the extension
+4. Install Jupyterlab and NodeJS **if not installed**:
+
+   ```bash
+   # Install node and jupyterlab from conda-forge
+   conda install -c conda-forge 'nodejs>16' 'jupyterlab<4'
+   ```
+
+5. Install the node dependencies and build the extension:
 
    ```bash
    # Install node dependencies
@@ -120,25 +125,36 @@ pip uninstall jupyterlab_accessible_themes
    jlpm build
    ```
 
-5. Install the package in development mode
+6. Install the package in development mode:
 
    ```bash
    pip install -e .
    ```
 
-6. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
+7. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
 
    ```bash
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
    ```
 
-7. After making some changes, to visualize them in your local JupyterLab re-run the following command:
+8. On first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
    jlpm build
    ```
+
+9. Run JupyterLab and check that the installation worked:
+
+    ```bash
+    # Run JupyterLab
+    jupyter lab
+    ```
+
+Once everything is installed, please remember that you will still need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
+
+##### Further development tips
 
 🔍 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
 
@@ -158,8 +174,6 @@ By default, the `jlpm build` command generates the source maps for this extensio
 ```bash
 jupyter lab build --minimize=False
 ```
-
-Once everything is installed, please remember that you will still need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
 
 ### 🧹 Pre-commit hooks
 
