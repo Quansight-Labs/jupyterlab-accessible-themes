@@ -396,37 +396,37 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   * defined as a variable, for more info see:
   * https://stackoverflow.com/questions/52877167/how-to-change-syntax-highlighting-in-jupyter-notebook
   */
-  --jp-mirror-editor-keyword-color: var(--gh-dark-red4);
-  --jp-mirror-editor-number-color: var(--gh-dark-green4);
-  --jp-mirror-editor-def-color: var(--gh-dark-purple4);
-  --jp-mirror-editor-variable-color: var(--gh-dark-purple4);
-  --jp-mirror-editor-variable-2-color: var(--gh-dark-orange4);
-  --jp-mirror-editor-variable-3-color: var(--gh-dark-orange4);
-  --jp-mirror-editor-punctuation-color: var(--gh-dark-green4);
+  --jp-mirror-editor-keyword-color: var(--gh-dark-red2);
+  --jp-mirror-editor-number-color: var(--gh-dark-green2);
+  --jp-mirror-editor-def-color: var(--gh-dark-purple2);
+  --jp-mirror-editor-variable-color: var(--gh-dark-purple2);
+  --jp-mirror-editor-variable-2-color: var(--gh-dark-orange2);
+  --jp-mirror-editor-variable-3-color: var(--gh-dark-orange2);
+  --jp-mirror-editor-punctuation-color: var(--gh-dark-green2);
   --jp-mirror-editor-property-color: var(--gh-dark-white);
-  --jp-mirror-editor-operator-color: var(--gh-dark-orange4);
-  --jp-mirror-editor-comment-color: var(--gh-dark-gray4);
+  --jp-mirror-editor-operator-color: var(--gh-dark-orange2);
+  --jp-mirror-editor-comment-color: var(--gh-dark-gray2);
   --jp-mirror-editor-string-color: var(--gh-dark-blue2);
-  --jp-mirror-editor-meta-color: var(--gh-dark-blue4);
-  --jp-mirror-editor-string-2-color: var(--gh-dark-blue4);
-  --jp-mirror-editor-builtin-color: var(--gh-dark-purple4);
-  --jp-mirror-editor-bracket-color: var(--gh-dark-orange4);
-  --jp-mirror-editor-tag-color: var(--gh-dark-green4);
+  --jp-mirror-editor-meta-color: var(--gh-dark-blue2);
+  --jp-mirror-editor-string-2-color: var(--gh-dark-blue2);
+  --jp-mirror-editor-builtin-color: var(--gh-dark-purple2);
+  --jp-mirror-editor-bracket-color: var(--gh-dark-orange2);
+  --jp-mirror-editor-tag-color: var(--gh-dark-green2);
   --jp-mirror-editor-attribute-color: var(--gh-dark-white);
-  --jp-mirror-editor-header-color: var(--gh-dark-red3);
-  --jp-mirror-editor-quote-color: var(--gh-dark-green4);
+  --jp-mirror-editor-header-color: var(--gh-dark-red2);
+  --jp-mirror-editor-quote-color: var(--gh-dark-green2);
   --jp-mirror-editor-link-color: var(--gh-dark-blue2);
-  --jp-mirror-editor-error-color: var(--gh-dark-red3);
+  --jp-mirror-editor-error-color: var(--gh-dark-red2);
   /* Vega extension styles */
   --jp-vega-background: var(--gh-dark-black);
   /* Search-related styles */
   --jp-search-toggle-off-opacity: 0.6;
   --jp-search-toggle-hover-opacity: 0.8;
   --jp-search-toggle-on-opacity: 1;
-  --jp-search-selected-match-background-color: var(--gh-dark-blue9);
-  --jp-search-selected-match-color: var(--gh-dark-green8);
-  --jp-search-unselected-match-background-color: var(--gh-dark-yellow9);
-  --jp-search-unselected-match-color: var(--gh-dark-yellow9);
+  --jp-search-selected-match-background-color: var(--gh-dark-blue2);
+  --jp-search-selected-match-color: var(--gh-dark-white);
+  --jp-search-unselected-match-background-color: var(--gh-dark-yellow2);
+  --jp-search-unselected-match-color: var(--gh-dark-white);
   /* scrollbar related styles. Supports every browser except Edge. */
   --jp-scrollbar-background-color: var(--jp-layout-color4);
   --jp-scrollbar-thumb-color: 242, 97, 150;

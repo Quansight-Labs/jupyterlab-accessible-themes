@@ -10,9 +10,9 @@ To enable the theme from the JupyterLab menu bar. Go to `Settings -> JupyterLab 
 
 All the colors used for text in the theme are conformant with [WCAG 2.1 contrast standards](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
 
-Background color: ![##ffffff](https://via.placeholder.com/20/#ffffff/#ffffff.png) `#ffffff`
+Background color: ![#21262d](https://via.placeholder.com/20/#21262d/#21262d.png) `#21262d`
 
-Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
+Highlight color: ![#e3b341](https://via.placeholder.com/20/e3b341/e3b341.png) `#e3b341`
 
 **WCAG conformance**
 
@@ -20,18 +20,14 @@ All the colors in the table shown were tested with the background color.
 
 | Color                                                        | Hex       | Ratio    | Normal text | Large text |
 | ------------------------------------------------------------ | --------- | -------- | ----------- | ---------- |
-| ![#1F2328](https://via.placeholder.com/20/1F2328/1F2328.png) | `#1F2328` | 15.8 : 1 | AAA         | AAA        |
-| ![#6e7781](https://via.placeholder.com/20/6e7781/6e7781.png) | `#6e7781` | 4.5 : 1  | AA          | AAA        |
-| ![#57606a](https://via.placeholder.com/20/57606a/57606a.png) | `#57606a` | 6.4 : 1  | AA          | AAA        |
-| ![#424a53](https://via.placeholder.com/20/424a53/424a53.png) | `#424a53` | 9.0 : 1  | AAA         | AAA        |
-| ![#32383f](https://via.placeholder.com/20/32383f/32383f.png) | `#32383f` | 11.8 : 1 | AAA         | AAA        |
-| ![#24292f](https://via.placeholder.com/20/24292f/24292f.png) | `#24292f` | 14.7 : 1 | AAA         | AAA        |
-| ![#0550ae](https://via.placeholder.com/20/0550ae/0550ae.png) | `#0550ae` | 7.6 : 1  | AAA         | AAA        |
-| ![#0a3069](https://via.placeholder.com/20/0a3069/0a3069.png) | `#0a3069` | 12.8 : 1 | AAA         | AAA        |
-| ![#116329](https://via.placeholder.com/20/116329/116329.png) | `#116329` | 7.4 : 1  | AAA         | AAA        |
-| ![#953800](https://via.placeholder.com/20/953800/953800.png) | `#953800` | 7.4 : 1  | AAA         | AAA        |
-| ![#a40e26](https://via.placeholder.com/20/a40e26/a40e26.png) | `#a40e26` | 7.9 : 1  | AAA         | AAA        |
-| ![#6639ba](https://via.placeholder.com/20/6639ba/6639ba.png) | `#6639ba` | 7.3 : 1  | AAA         | AAA        |
+| ![#ffffff](https://via.placeholder.com/20/ffffff/ffffff.png) | `#ffffff` | 15.2 : 1 | AAA         | AAA        |
+| ![#ffa198](https://via.placeholder.com/20/ffa198/ffa198.png) | `#ffa198` | 7.8 : 1  | AAA         | AAA        |
+| ![#56d364](https://via.placeholder.com/20/56d364/56d364.png) | `#56d364` | 7.9 : 1  | AAA         | AAA        |
+| ![#d2a8ff](https://via.placeholder.com/20/d2a8ff/d2a8ff.png) | `#d2a8ff` | 7.8 : 1  | AAA         | AAA        |
+| ![#ffa657](https://via.placeholder.com/20/ffa657/ffa657.png) | `#ffa657` | 7.9 : 1  | AAA         | AAA        |
+| ![#b1bac4](https://via.placeholder.com/20/b1bac4/b1bac4.png) | `#b1bac4` | 7.7 : 1  | AAA         | AAA        |
+| ![#79c0ff](https://via.placeholder.com/20/79c0ff/79c0ff.png) | `#79c0ff` | 7.8 : 1  | AAA         | AAA        |
+
 
 ## Font
 
@@ -45,8 +41,8 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 
 ## Screenshots
 
-<img alt="JupyterLab GitHub Light screenshot" src="./images/screenshot.png"/>
+<img alt="JupyterLab GitHub Dark screenshot" src="./images/screenshot.png"/>
 
 ## Acknowledgements
 
-This theme is based on and inspired by the [`GitHub Light Default` theme for VSCode](https://github.com/primer/github-vscode-theme)
+This theme is based on and inspired by the [`GitHub Dark Default` theme for VSCode](https://github.com/primer/github-vscode-theme)
