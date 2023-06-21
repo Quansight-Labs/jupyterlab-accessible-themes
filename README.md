@@ -37,6 +37,7 @@ This repository defines a set of accessible themes according to [WCAG color stan
 ## Themes
 
 - [Pitaya Smoothie](./packages/pitaya_smoothie/README.md) - Color-blind friendly
+- [Github Dark](./packages/githubdark/README.md) - Color-blind friendly
 
 
 ## 📦 Requirements
