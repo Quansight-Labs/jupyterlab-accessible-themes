@@ -68,6 +68,10 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# yarn >=2.x local files
+.yarn/*
+.pnp.*
+
 # dotenv environment variables file
 .env
 .env.test
@@ -240,6 +244,10 @@ labextensions
 .doit.*
 
 # for VSCode users
-.vscode
+*.code-workspace
+.history
+.vscode/*
+!.vscode/extension.json
 
+# for MacOS users
 .DS_Store

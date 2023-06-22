@@ -18,27 +18,44 @@ Welcome to the JupyterLab accessible themes repository 👋🏽 .
 To learn more about the broader accessibility initiatives within Jupyter, check the [jupyter/accessibility repository][jupyter-accesibility].
 
 - [JupyterLab accessible themes](#jupyterlab-accessible-themes)
+  - [Themes](#themes)
+  - [Font](#font)
   - [📦 Requirements](#-requirements)
-  - [🏗 Installing the extension](#-installing-the-extension)
-  - [🧽 Uninstalling the extension](#-uninstalling-the-extension)
   - [🙋🏽‍♀️ Contributing](#️-contributing)
     - [💻 Installing the development version](#-installing-the-development-version)
       - [Pre-requisites](#pre-requisites)
+        - [Building and linking the extension](#building-and-linking-the-extension)
+    - [🧹 Pre-commit hooks](#-pre-commit-hooks)
     - [🧽 Uninstalling the development version](#-uninstalling-the-development-version)
     - [✅ Testing the extension](#-testing-the-extension)
       - [Frontend tests](#frontend-tests)
       - [Integration tests](#integration-tests)
     - [📦 Packaging the extension](#-packaging-the-extension)
   - [📖 License](#-license)
+  - [Acknowledgements](#acknowledgements)
 
 
 This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the readme of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
 
 ## Themes
 
+<<<<<<< HEAD
 - [Pitaya Smoothie](./packages/pitaya_smoothie/README.md) - Color-blind friendly
 - [Github Dark](./packages/githubdark/README.md) - Color-blind friendly
+=======
+- [Pitaya Smoothie](./packages/pitayasmoothie/README.md) - Color-blind friendly
+- [GitHub light](./packages/githublight/README.md) - Color-blind friendly
+>>>>>>> main
 
+## Font
+
+All the themes are using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
+
+This font can only be changed for the `Markdown viewer` and the `Terminal`. You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
+
+1. Select the `Settings` option in the `menu bar`.
+2. Go to `Markdown viewer settings`, and type the font family that you want to use.
+3. To change the `Terminal` font, scroll down to `Terminal settings` and type the name of the font family.
 
 ## 📦 Requirements
 
@@ -74,26 +91,36 @@ pip uninstall jupyterlab_accessible_themes
 
 > **Note**
 > The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
+> You will need to have NodeJS installed in your local computer to build the extension package.
 
-1. Clone this repository to your local computer
+1. Clone this repository to your local computer:
 
    ```bash
    git clone https://github.com/Quansight-Labs/jupyterlab-accessible-themes.git
    ```
 
-2. Change to the `jupyterlab_accessible_themes` directory
+2. Change to the `jupyterlab-accessible-themes` directory:
 
    ```bash
-    cd jupyterlab_accessible_themes
+    cd jupyterlab-accessible-themes
    ```
 
-3. Install the package in development mode
+3. Optional- Create and activate a development environment with your package manager:
 
    ```bash
-   pip install -e .
+   # Create environment named `jupyterlab-accessible-themes`
+   conda create -n jupyterlab-accessible-themes
+   conda activate jupyterlab-accessible-themes
    ```
 
-4. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
+4. Install Jupyterlab and NodeJS **if not installed**:
+
+   ```bash
+   # Install node and jupyterlab from conda-forge
+   conda install -c conda-forge 'nodejs>16' 'jupyterlab<4'
+   ```
+
+5. Install the node dependencies and build the extension:
 
    ```bash
    # Install node dependencies
@@ -101,17 +128,38 @@ pip uninstall jupyterlab_accessible_themes
 
    # Compile packages before linking to Jupyterlab development version
    jlpm build
+   ```
 
+6. Install the package in development mode:
+
+   ```bash
+   pip install -e .
+   ```
+
+7. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
+
+   ```bash
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
    ```
 
-5. After doing some changes, to visualize them in your local Jupyterlab please re-run the following command:
+8. On first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
    jlpm build
    ```
+
+9. Run JupyterLab and check that the installation worked:
+
+    ```bash
+    # Run JupyterLab
+    jupyter lab
+    ```
+
+Once everything is installed, please remember that you will still need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
+
+##### Further development tips
 
 🔍 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
 
@@ -131,8 +179,6 @@ By default, the `jlpm build` command generates the source maps for this extensio
 ```bash
 jupyter lab build --minimize=False
 ```
-
-Once everything is installed, please remember that you will still need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
 
 ### 🧹 Pre-commit hooks
 
@@ -214,3 +260,4 @@ Detailed instructions for creating a `jupyterlab-accesible-themes` can be found 
 We want to thank the following sources for being the source of inspiration for one or more themes that are available in this repository,
 
 - [Pitaya Smoothie theme](https://github.com/trallard/pitaya_smoothie)
+- [GitHub's VS Code themes](https://github.com/primer/github-vscode-theme)
