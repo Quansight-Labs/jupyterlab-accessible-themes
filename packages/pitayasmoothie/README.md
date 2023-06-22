@@ -18,7 +18,7 @@ Background color: ![#181036](https://via.placeholder.com/20/181036/181036.png) `
 
 Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
 
-**WCAG compliance**
+**WCAG conformance**
 
 | Color                                                        | Hex       | Ratio    | Normal text | Large text |
 | ------------------------------------------------------------ | --------- | -------- | ----------- | ---------- |
@@ -35,6 +35,15 @@ Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.p
 | ![#f45c7b](https://via.placeholder.com/20/f45c7b/f45c7b.png) | `#f45c7b` | 5.7 : 1  | AA          | AAA        |
 | ![#ffe46b](https://via.placeholder.com/20/ffe46b/ffe46b.png) | `#ffe46b` | 14.2 : 1 | AAA         | AAA        |
 
+## Font
+
+This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
+
+This font can only be changed for the `Markdown viewer` and the `Terminal`. You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
+
+1. Select the `Settings` option in the `menu bar`.
+2. Go to `Markdown viewer settings`, and type the font family that you want to use.
+3. To change the `Terminal` font, scroll down to `Terminal settings` and type the name of the font family.
 
 ## Screenshots
 
