@@ -17,25 +17,30 @@ This extension can be distributed as a Python package.
 The [`pyproject.toml`](./pyproject.toml) file contains all the instructions needed to wrap the extension in a
 Python package.
 
-0. Before generating a package, we first need to install `build`.
+0. Before generating a package, we first need to install `build` and `gitchangelog`.
 
    ```bash
-   pip install build twine
+   pip install build twine gitchangelog
    ```
 
-1. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
+1. Follow the instructions to make a new release,
 
-   ```bash
-   python -m build
-   ```
-
-> **Warning** > `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
-
-2. Then to upload the package to PyPI, do:
-
-   ```bash
-   twine upload dist/*
-   ```
+   - git fetch && git pull
+   - git clean -xdfi
+   - Update CHANGELOG.md with gitchangelog
+   - Check version in package.json - modify it if necessary
+   - git add && git commit -m "Release vX.X.X"
+   - jlpm install
+   - jlpm build
+   - python setup.py bdist_wheel --universal
+   - python setup.py sdist
+   - twine check dist/*
+   - twine upload dist/*
+   - git tag -a vX.X.X -m 'Release x.x.x'
+   - Increment version in package.json
+   - git add && git commit
+   - git push
+   - git push --tags
 
 ### 📦 NPM package
 

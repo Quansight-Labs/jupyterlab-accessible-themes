@@ -8,6 +8,7 @@ include install.json
 include ts*.json
 include *.config.js
 include yarn.lock
+include lerna.json
 
 graft jupyterlab_accessible_themes/labextension
 
