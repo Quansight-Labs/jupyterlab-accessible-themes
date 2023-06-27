@@ -179,10 +179,10 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   * The following variables, specify the visual styling of borders in JupyterLab.
   */
   --jp-border-width: 1px;
-  --jp-border-color0: var(--gh-dark-gray9);
-  --jp-border-color1: var(--gh-dark-gray8);
-  --jp-border-color2: var(--gh-dark-gray7);
-  --jp-border-color3: var(--gh-dark-gray6);
+  --jp-border-color0: var(--gh-dark-gray5);
+  --jp-border-color1: var(--gh-dark-gray4);
+  --jp-border-color2: var(--gh-dark-gray3);
+  --jp-border-color3: var(--gh-dark-gray2);
   --jp-border-radius: 2px;
   /* UI Fonts
   *
