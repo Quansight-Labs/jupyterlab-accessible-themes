@@ -1,5 +1,5 @@
 <div align="center">
- <img alt="Jupyter Accessibility logo" src="https://github.com/jupyter/accessibility/blob/main/docs/_static/logo.png?raw=true" width="250" />
+ <img alt="Jupyter Accessibility logo" src="https://github.com/jupyter/accessibility/blob/main/docs/_static/logos/jupyter_accessibility.png?raw=true" width="250" />
 </div>
 <br>
 
