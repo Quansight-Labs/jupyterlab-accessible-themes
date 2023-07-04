@@ -51,7 +51,18 @@ pre {
 }
 
 .jp-DirListing-item.jp-mod-selected {
-  background: var(--gh-dark-gray8);
+  background: var(--gh-dark-gray6);
+}
+
+.jp-icon-contrast2[fill] {
+  fill: var(--gh-dark-gray1);
+}
+
+/* --------------------------------------
+/* Change list item style
+-----------------------------------------*/
+.lm-Menu-item:hover {
+  background: var(--gh-dark-gray5);
 }
 
 /* --------------------------------------
@@ -82,10 +93,6 @@ pre {
 
 .jp-SideBar .lm-TabBar-tab:not(.lm-mod-current), #jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
   fill: var(--gh-dark-gray6);
-}
-
-.jp-InputGroup input {
-  background-color: var(--gh-dark-black);
 }
 
 /*# sourceMappingURL=index.css.map */

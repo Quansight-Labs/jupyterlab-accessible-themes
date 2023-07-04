@@ -322,10 +322,10 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-accent-color2: var(--gh-dark-blue7);
   --jp-accent-color3: var(--gh-dark-blue8);
   /* State colors (warn, error, success, info) */
-  --jp-warn-color0: var(--gh-dark-gray3);
-  --jp-warn-color1: var(--gh-dark-gray4);
-  --jp-warn-color2: var(--gh-dark-gray5);
-  --jp-warn-color3: var(--gh-dark-gray6);
+  --jp-warn-color0: var(--gh-dark-orange1);
+  --jp-warn-color1: var(--gh-dark-orange2);
+  --jp-warn-color2: var(--gh-dark-orange3);
+  --jp-warn-color3: var(--gh-dark-orange4);
   --jp-error-color0: var(--gh-dark-red5);
   --jp-error-color1: var(--gh-dark-red6);
   --jp-error-color2: var(--gh-dark-red7);
@@ -439,6 +439,8 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-scrollbar-thumb-radius: 9px;
   /* set to a large-ish value for rounded endcaps on the thumb */
   --jp-icon-contrast-color0: var(--gh-dark-gray4);
+  /* set input active box shadow color for the main search */
+  --jp-input-active-box-shadow-color: var(--gh-dark-blue5);
 }
 
 /*# sourceMappingURL=variables.css.map */
