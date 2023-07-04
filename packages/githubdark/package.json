@@ -1,7 +1,7 @@
 {
   "name": "@jupyterlab-accessible-themes/jupyterlab-theme-githubdark",
   "version": "0.1.0",
-  "description": "GitHub Dark in JupyterLab: a theme based on GitHub dark interface colors. The colors are optimized for some types of color blindness.",
+  "description": "GitHub Dark in JupyterLab: a theme based on GitHub dark interface colors.",
   "license": "BSD-3-Clause",
   "author": "Jupyter Accessibility Team",
   "homepage": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes",
@@ -10,7 +10,7 @@
     "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
   },
   "bugs": {
-    "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
+    "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes/issues"
   },
   "main": "lib/index.js",
   "files": [
