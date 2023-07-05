@@ -31,7 +31,7 @@ pre {
 /* Change tab style
 -----------------------------------------*/
 .lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
-  background: var(--gh-light-white);
+  background: var(--gh-light-blue6);
 }
 
 .jp-FileBrowser-toolbar .jp-ToolbarButtonComponent[data-command='filebrowser:create-main-launcher'] {

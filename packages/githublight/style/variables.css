@@ -179,10 +179,10 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   * The following variables, specify the visual styling of borders in JupyterLab.
   */
   --jp-border-width: 1px;
-  --jp-border-color0: var(--gh-light-gray0);
-  --jp-border-color1: var(--gh-light-gray1);
-  --jp-border-color2: var(--gh-light-gray2);
-  --jp-border-color3: var(--gh-light-gray3);
+  --jp-border-color0: var(--gh-light-gray2);
+  --jp-border-color1: var(--gh-light-gray3);
+  --jp-border-color2: var(--gh-light-gray4);
+  --jp-border-color3: var(--gh-light-gray5);
   --jp-border-radius: 2px;
   /* UI Fonts
   *
@@ -281,10 +281,10 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-layout-color1: var(--gh-light-gray0);
   /* activity bar, inactive tab, status bar*/
   /* here use same as inactive tabs */
-  --jp-layout-color2: var(--gh-light-gray0);
+  --jp-layout-color2: var(--gh-light-gray1);
   /* editor/notebok surrounding area */
-  --jp-layout-color3: var(--gh-light-gray0);
-  --jp-layout-color4: var(--gh-light-gray0);
+  --jp-layout-color3: var(--gh-light-gray2);
+  --jp-layout-color4: var(--gh-light-gray3);
   /* Inverse Layout
   *
   * The following are the inverse layout colors use in JupyterLab. In a light
@@ -322,10 +322,10 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-accent-color2: var(--gh-light-blue2);
   --jp-accent-color3: var(--gh-light-blue1);
   /* State colors (warn, error, success, info) */
-  --jp-warn-color0: var(--gh-light-gray6);
-  --jp-warn-color1: var(--gh-light-gray5);
-  --jp-warn-color2: var(--gh-light-gray4);
-  --jp-warn-color3: var(--gh-light-gray3);
+  --jp-warn-color0: var(--gh-light-orange6);
+  --jp-warn-color1: var(--gh-light-orange5);
+  --jp-warn-color2: var(--gh-light-orange4);
+  --jp-warn-color3: var(--gh-light-orange3);
   --jp-error-color0: var(--gh-light-red4);
   --jp-error-color1: var(--gh-light-red3);
   --jp-error-color2: var(--gh-light-red2);
@@ -439,6 +439,8 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-scrollbar-thumb-radius: 9px;
   /* set to a large-ish value for rounded endcaps on the thumb */
   --jp-icon-contrast-color0: var(--gh-light-gray6);
+  /* set input active box shadow color for the main search */
+  --jp-input-active-box-shadow-color: var(--gh-light-blue6);
 }
 
 /*# sourceMappingURL=variables.css.map */
