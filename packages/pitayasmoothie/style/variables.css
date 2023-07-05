@@ -79,6 +79,8 @@ smoothie main theme, https://github.com/trallard/pitaya_smoothie.
   --pitaya-active-items-foreground: var(--pitaya-periwinkle-extra1);
   --pitaya-hihglight: rgba(50, 31, 122, 0.85);
   --pitaya-hihglight-focused: rgba(50, 31, 122, 0.8);
+  /* Make status bar */
+  --jp-statusbar-height: 24px;
   /* Elevation
   *
   * We style box-shadows using Material Design's idea of elevation. These particular numbers are taken from here:
@@ -393,6 +395,13 @@ smoothie main theme, https://github.com/trallard/pitaya_smoothie.
   /* the space in between the sides of the thumb and the track */
   --jp-scrollbar-thumb-radius: 9px;
   /* set to a large-ish value for rounded endcaps on the thumb */
+  /* set icon contrast colors */
+  --jp-icon-contrast-color0: var(--pitaya-lilac300);
+  --jp-icon-contrast-color1: var(--pitaya-lilac300);
+  --jp-icon-contrast-color2: var(--pitaya-lilac300);
+  --jp-icon-contrast-color3: var(--pitaya-lilac400);
+  /* set input active box shadow color for the main search */
+  --jp-input-active-box-shadow-color: var(--pitaya-lilac300);
 }
 
 /*# sourceMappingURL=variables.css.map */
