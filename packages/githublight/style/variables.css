@@ -211,9 +211,9 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   /* active item */
   --jp-ui-font-color0: var(--gh-light-black);
   /* sidebar files & top menu */
-  --jp-ui-font-color1: var(--gh-light-gray9);
-  --jp-ui-font-color2: var(--gh-light-gray8);
-  --jp-ui-font-color3: var(--gh-light-gray7);
+  --jp-ui-font-color1: var(--gh-light-gray8);
+  --jp-ui-font-color2: var(--gh-light-gray6);
+  --jp-ui-font-color3: var(--gh-light-gray5);
   /*
   * Use these against the brand/accent/warn/error colors.
   * These will typically go from light to darker, in both a dark and light theme.
