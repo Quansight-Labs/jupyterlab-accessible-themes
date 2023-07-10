@@ -44,25 +44,20 @@ pre {
 }
 
 /* --------------------------------------
-/* Change list item style
+/* Change menu item style
 -----------------------------------------*/
-.jp-DirListing-item.jp-mod-selected .jp-icon-selectable[fill] {
-  fill: var(--gh-dark-blue4);
+.lm-Menu-item:hover[data-type='command'] {
+  background: var(--gh-dark-gray3);
+  color: var(--gh-dark-black);
 }
 
-.jp-DirListing-item.jp-mod-selected {
-  background: var(--gh-dark-gray6);
+.lm-Menu-item:hover[data-type='submenu'] {
+  background: var(--gh-dark-gray3);
+  color: var(--gh-dark-black);
 }
 
-.jp-icon-contrast2[fill] {
-  fill: var(--gh-dark-gray1);
-}
-
-/* --------------------------------------
-/* Change list item style
------------------------------------------*/
-.lm-Menu-item:hover {
-  background: var(--gh-dark-gray5);
+.lm-Menu-item[data-type='separator'] > div::after {
+  border-top: var(--jp-border-width) solid var(--gh-dark-gray3);
 }
 
 /* --------------------------------------
@@ -93,6 +88,10 @@ pre {
 
 .jp-SideBar .lm-TabBar-tab:not(.lm-mod-current), #jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
   fill: var(--gh-dark-gray6);
+}
+
+.jp-icon-brand1[fill] {
+  fill: var(--gh-dark-blue5);
 }
 
 /*# sourceMappingURL=index.css.map */

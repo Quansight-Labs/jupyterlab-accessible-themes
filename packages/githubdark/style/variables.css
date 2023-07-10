@@ -218,10 +218,10 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   * Use these against the brand/accent/warn/error colors.
   * These will typically go from light to darker, in both a dark and light theme.
   */
-  --jp-ui-inverse-font-color0: var(--gh-dark-white);
-  --jp-ui-inverse-font-color1: var(--gh-dark-gray0);
-  --jp-ui-inverse-font-color2: var(--gh-dark-gray1);
-  --jp-ui-inverse-font-color3: var(--gh-dark-gray2);
+  --jp-ui-inverse-font-color0: var(--gh-dark-gray7);
+  --jp-ui-inverse-font-color1: var(--gh-dark-gray8);
+  --jp-ui-inverse-font-color2: var(--gh-dark-gray9);
+  --jp-ui-inverse-font-color3: var(--gh-dark-black);
   /* Content Fonts
   *
   * Content font variables are used for typography of user generated content.
@@ -298,19 +298,21 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   *
   * We are including both of them here.
   */
-  --jp-inverse-layout-color0: var(--gh-dark-white);
-  --jp-inverse-layout-color1: var(--gh-dark-white);
+  --jp-inverse-layout-color0: var(--gh-dark-gray5);
+  --jp-inverse-layout-color1: var(--gh-dark-gray4);
   /* status bar icons */
-  --jp-inverse-layout-color2: var(--gh-dark-gray0);
+  --jp-inverse-layout-color2: var(--gh-dark-gray3);
   /* activity bar icons */
-  --jp-inverse-layout-color3: var(--gh-dark-gray1);
-  --jp-inverse-layout-color4: var(--gh-dark-gray2);
+  --jp-inverse-layout-color3: var(--gh-dark-gray2);
+  --jp-inverse-layout-color4: var(--gh-dark-gray1);
   --jp-inverse-layout0: var(--gh-dark-white);
   --jp-inverse-layout1: var(--gh-dark-white);
   --jp-inverse-layout2: var(--gh-dark-gray0);
   /* activity bar icons */
   --jp-inverse-layout3: var(--gh-dark-gray1);
   --jp-inverse-layout4: var(--gh-dark-gray2);
+  /*inverse icon color*/
+  --jp-icon-selectable-inverse: var(--gh-dark-black);
   /* Brand/accent */
   --jp-brand-color0: var(--gh-dark-gray3);
   /* sidebar active item */
