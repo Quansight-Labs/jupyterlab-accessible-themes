@@ -58,13 +58,13 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 
 ## 🏗 Installing the extension
 
-To install the extension, execute:
+You can install the extension using `pip`:
 
 ```bash
 pip install jupyterlab_accessible_themes
 ```
 
-Also available in conda-forge channel,
+If you prefer `conda`:
 
 ```bash
 conda install -c conda-forge jupyterlab_accessible_themes
