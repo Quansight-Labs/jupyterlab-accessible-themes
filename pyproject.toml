@@ -23,3 +23,7 @@ ignore = [
     ".*",
     "package-lock.json"
 ]
+
+[project]
+name = "jupyterlab_accessible_themes"
+requires-python = ">=3.8"
