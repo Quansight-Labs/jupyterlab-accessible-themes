@@ -1,6 +1,14 @@
 # GitHub Light
 
-A theme heavily inspired by the [`GitHub light default theme` for VSCode](https://github.com/primer/github-vscode-theme).
+A theme heavily inspired by the [`GitHub light default theme` for VS Code](https://github.com/primer/github-vscode-theme).
+
+- [GitHub Light](#github-light)
+  - [Usage ✨](#usage-)
+  - [Colors](#colors)
+    - [WCAG conformance](#wcag-conformance)
+  - [Font](#font)
+  - [Screenshots](#screenshots)
+  - [Acknowledgements](#acknowledgements)
 
 ## Usage ✨
 
@@ -8,13 +16,12 @@ To enable the theme from the JupyterLab menu bar. Go to `Settings -> JupyterLab 
 
 ## Colors
 
-All the colors used for text in the theme are conformant with [WCAG 2.1 contrast standards](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
+All the colors used for text in the theme are conformant with [WCAG 2.1 contrast standards](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html), against the following colours:
 
-Background color: ![##ffffff](https://via.placeholder.com/20/#ffffff/#ffffff.png) `#ffffff`
+- Background color: ![##ffffff](https://via.placeholder.com/20/#ffffff/#ffffff.png) `#ffffff`
+- Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
 
-Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
-
-**WCAG conformance**
+### WCAG conformance
 
 All the colors in the table shown were tested with the background color.
 
@@ -35,7 +42,7 @@ All the colors in the table shown were tested with the background color.
 
 ## Font
 
-This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
+This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letter form distinction to increase character recognition, ultimately improving readability.
 
 This font can only be changed for the `Markdown viewer` and the `Terminal`. You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
 
@@ -45,8 +52,8 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 
 ## Screenshots
 
-<img alt="JupyterLab GitHub Light screenshot" src="./images/screenshot.png"/>
+<img alt="JupyterLab main interface with the GitHub theme enabled." src="./images/screenshot.png"/>
 
 ## Acknowledgements
 
-This theme is based on and inspired by the [`GitHub Light Default` theme for VSCode](https://github.com/primer/github-vscode-theme)
+This theme is based on and inspired by the [`GitHub Light Default` theme for VS Code](https://github.com/primer/github-vscode-theme).
