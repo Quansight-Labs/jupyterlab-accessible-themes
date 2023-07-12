@@ -35,7 +35,7 @@ To learn more about the broader accessibility initiatives within Jupyter, check 
   - [License 📖](#license-)
   - [Acknowledgements 🙏🏼](#acknowledgements-)
 
-This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the README of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
+This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the README of each theme, you will find detailed information about the colors, their purpose and reference links from the original authors.
 
 ## About the themes
 
@@ -89,7 +89,7 @@ conda uninstall jupyterlab_accessible_themes
 
 #### Pre-requisites
 
-1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed in your local computer to build the extension package.
+1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed on your local computer to build the extension package.
 2. Python >= 3.8 and `pip`.
 
 #### Building and linking the extension
@@ -141,20 +141,14 @@ conda uninstall jupyterlab_accessible_themes
    ```
 
 7. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
-
-   ```bash
-   # Link your development version of the extension with JupyterLab
-   jupyter labextension develop . --overwrite
-   ```
-
-8. On first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
+   On the first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
    jlpm build
    ```
 
-9. Run JupyterLab and check that the installation worked:
+8. Run JupyterLab and check that the installation worked:
 
    ```bash
    # Run JupyterLab
@@ -242,22 +236,17 @@ jlpm test
 
 #### Integration tests
 
-This extension uses [Playwright](https://playwright.dev/docs/intro/) for the integration tests (aka user level tests).
+This extension uses [Playwright](https://playwright.dev/docs/intro/) for the integration tests (aka user-level tests).
 More precisely, the JupyterLab helper [Galata](https://github.com/jupyterlab/jupyterlab/tree/master/galata) is used to handle testing the extension in JupyterLab.
-
-More information are provided within the [ui-tests](./ui-tests/README.md) README.
+More information is provided within the [ui-tests](./ui-tests/README.md) README.
 
 ### Packaging the extension 📦
 
-Detailed instructions for creating a `jupyterlab-accesible-themes` can be found in the [RELEASE](RELEASE.md) file.
+Detailed instructions for creating `jupyterlab-accesible-themes` can be found in the [RELEASE](RELEASE.md) file.
 
 ## License 📖
 
 [This project is licensed under the BSD-3-Clause license](https://opensource.org/licenses/BSD-3-Clause).
-
-<!-- links -->
-
-[jupyter-accesibility]: https://github.com/jupyter/accessibility
 
 ## Acknowledgements 🙏🏼
 
@@ -265,3 +254,7 @@ We want to thank the following sources for being the source of inspiration for o
 
 - [Pitaya Smoothie theme](https://github.com/trallard/pitaya_smoothie)
 - [GitHub's VS Code themes](https://github.com/primer/github-vscode-theme)
+
+<!-- links -->
+
+[jupyter-accesibility]: https://github.com/jupyter/accessibility

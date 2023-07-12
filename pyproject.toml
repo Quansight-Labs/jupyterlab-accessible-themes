@@ -30,7 +30,7 @@ ignore = [
 
 [tool.ruff]
 builtins = ["c"]
-ignore = ["C", "D400", "E", "F401", "F841", "W", "E501"]
+ignore = ["C", "D400", "E", "F401", "F841", "W", "E501", "D104"]
 include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
 select = ["C4", "C9", "D", "E", "F", "W"]
 

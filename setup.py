@@ -1,6 +1,8 @@
 # Copyright (c) Jupyter Accessibility Team.
 # Distributed under the terms of the Modified BSD License.
 
+"""Setup module for jupyterlab_accessible_themes."""
+
 import json
 import os
 from pathlib import Path
@@ -9,6 +11,7 @@ import setuptools
 
 
 def get_long_description():
+    """Get packge description from README.md."""
     with open(
         os.path.join(os.path.dirname(os.path.abspath(__file__)), "README.md"),
         encoding="utf8",
