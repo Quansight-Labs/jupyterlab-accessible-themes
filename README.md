@@ -157,13 +157,13 @@ conda uninstall jupyterlab_accessible_themes
 
 9. Run JupyterLab and check that the installation worked:
 
-    ```bash
-    # Run JupyterLab
-    jupyter lab
-    ```
+   ```bash
+   # Run JupyterLab
+   jupyter lab
+   ```
 
 > **Important**
-Once everything is installed, you will need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
+> Once everything is installed, you will need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
 
 #### Further development tips
 

@@ -23,10 +23,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
   activate: (
     app: JupyterFrontEnd,
     manager: IThemeManager,
-    settingRegistry: ISettingRegistry | null
+    settingRegistry: ISettingRegistry | null,
   ) => {
     console.log(
-      "JupyterLab extension jupyterlab-accessible-themes is activated!"
+      "JupyterLab extension jupyterlab-accessible-themes is activated!",
     );
     // NOTE: The package name cannot contain a dash or underscore, so we need
     // to remove it for the installation folder name.
@@ -46,13 +46,13 @@ const plugin: JupyterFrontEndPlugin<void> = {
         .then((settings) => {
           console.log(
             "jupyterlab-accessible-themes settings loaded:",
-            settings.composite
+            settings.composite,
           );
         })
         .catch((reason) => {
           console.error(
             "Failed to load settings for jupyterlab-accessible-themes.",
-            reason
+            reason,
           );
         });
     }

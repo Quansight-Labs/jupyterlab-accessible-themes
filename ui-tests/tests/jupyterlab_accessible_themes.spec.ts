@@ -18,7 +18,7 @@ test("should emit an activation console message", async ({ page }) => {
   expect(
     logs.filter(
       (s) =>
-        s === "JupyterLab extension jupyterlab-accessible-themes is activated!"
-    )
+        s === "JupyterLab extension jupyterlab-accessible-themes is activated!",
+    ),
   ).toHaveLength(1);
 });

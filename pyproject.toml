@@ -2,6 +2,10 @@
 requires = ["jupyter_packaging~=0.10,<2", "jupyterlab~=3.1"]
 build-backend = "jupyter_packaging.build_api"
 
+[project]
+name = "jupyterlab_accessible_themes"
+requires-python = ">=3.8"
+
 [tool.jupyter-packaging.options]
 skip-if-exists = ["jupyterlab_accessible_themes/labextension/static/style.js"]
 ensured-targets = [
@@ -24,6 +28,11 @@ ignore = [
     "package-lock.json"
 ]
 
-[project]
-name = "jupyterlab_accessible_themes"
-requires-python = ">=3.8"
+[tool.ruff]
+builtins = ["c"]
+ignore = ["C", "D400", "E", "F401", "F841", "W", "E501"]
+include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
+select = ["C4", "C9", "D", "E", "F", "W"]
+
+[tool.ruff.pydocstyle]
+convention = "google" # Accepts: "google", "numpy", or "pep257".
