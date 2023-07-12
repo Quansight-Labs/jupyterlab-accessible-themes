@@ -34,8 +34,8 @@ Python package.
    - jlpm build
    - python setup.py bdist_wheel --universal
    - python setup.py sdist
-   - twine check dist/*
-   - twine upload dist/*
+   - twine check dist/\*
+   - twine upload dist/\*
    - git tag -a vX.X.X -m 'Release x.x.x'
    - Increment version in package.json
    - git add && git commit
