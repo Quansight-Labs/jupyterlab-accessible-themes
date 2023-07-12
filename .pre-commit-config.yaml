@@ -8,6 +8,10 @@
 # - Register git hooks: pre-commit install --install-hooks
 # - Run on all files:   pre-commit run --all-files
 #
+ci:
+  autoupdate_schedule: monthly
+  autofix_commit_msg: |
+    [pre-commit.ci] Apply automatic pre-commit fixes
 repos:
   # Autoformat: markdown, yaml to ensure that it doesn't need to be updated in other repos
   - repo: https://github.com/pre-commit/mirrors-prettier
