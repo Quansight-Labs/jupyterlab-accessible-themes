@@ -3,7 +3,7 @@ name: Check Links
 on:
   push:
     branches:
-        - main
+      - main
   pull_request:
 
 jobs:
