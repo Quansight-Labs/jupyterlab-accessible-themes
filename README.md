@@ -54,7 +54,7 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 
 ## 📦 Requirements
 
-- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) < 4.0
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)  >= 3.0, <4.0
 
 ## 🏗 Installing the extension
 
