@@ -3,14 +3,14 @@
 A theme heavily inspired by the [`GitHub light default theme` for VS Code](https://github.com/primer/github-vscode-theme).
 
 - [GitHub Light](#github-light)
-  - [Usage ✨](#usage-)
+  - [Use ✨](#Use-)
   - [Colors](#colors)
     - [WCAG conformance](#wcag-conformance)
   - [Font](#font)
   - [Screenshots](#screenshots)
   - [Acknowledgements](#acknowledgements)
 
-## Usage ✨
+## Use ✨
 
 To enable the theme from the JupyterLab menu bar. Go to `Settings -> JupyterLab Theme -> Github Light`
 

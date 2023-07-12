@@ -5,14 +5,14 @@ A professional JupyterLab theme with hand-picked & bold colors for JupyterLab. T
 For more details about the core theme colors and the such check out the main theme repository: <https://github.com/trallard/pitaya_smoothie>.
 
 - [Pitaya Smoothie](#pitaya-smoothie)
-  - [Usage ✨](#usage-)
+  - [Use ✨](#Use-)
   - [Colors](#colors)
     - [WCAG conformance](#wcag-conformance)
   - [Font](#font)
   - [Screenshots](#screenshots)
   - [Acknowledgements](#acknowledgements)
 
-## Usage ✨
+## Use ✨
 
 To enable the theme in JupyterLab: `Go to Settings -> JupyterLab Theme -> Pitaya Smoothie`
 
