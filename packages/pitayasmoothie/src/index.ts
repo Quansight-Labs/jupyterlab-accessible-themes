@@ -17,12 +17,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
   id: "jupyterlab-accessible-themes:pitayasmoothie",
   autoStart: true,
   requires: [IThemeManager],
-  activate: (
-    app: JupyterFrontEnd,
-    manager: IThemeManager,
-  ) => {
+  activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
     console.log(
-      "JupyterLab extension jupyterlab-accessible-themes is activated!"
+      "JupyterLab extension jupyterlab-accessible-themes is activated!",
     );
     // NOTE: The package name cannot contain a dash or underscore, so we need
     // to remove it for the installation folder name.
