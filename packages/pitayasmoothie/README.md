@@ -2,23 +2,30 @@
 
 A professional JupyterLab theme with hand-picked & bold colors for JupyterLab. The theme is heavily inspired by the [Pantone colour of the year 2018](https://www.pantone.com/articles/color-of-the-year/color-of-the-year-2018) and the Outrun aesthetics. However, colors are on the pastel side to help provide contrast and highlight what is essential. Color choices have taken into consideration what is accessible to people with colorblindness and in low-light circumstances.
 
-For more details about the core theme colors and the such check out the main theme repository: https://github.com/trallard/pitaya_smoothie
+For more details about the core theme colors and the such check out the main theme repository: <https://github.com/trallard/pitaya_smoothie>.
 
-## Usage ✨
+- [Pitaya Smoothie](#pitaya-smoothie)
+  - [Use ✨](#Use-)
+  - [Colors](#colors)
+    - [WCAG conformance](#wcag-conformance)
+  - [Font](#font)
+  - [Screenshots](#screenshots)
+  - [Acknowledgements](#acknowledgements)
+
+## Use ✨
 
 To enable the theme in JupyterLab: `Go to Settings -> JupyterLab Theme -> Pitaya Smoothie`
 
-To enable the theme's scrollbars please navigate to `Settings -> Advanced Settings Editor -> Theme` then enable the checkbox `Scrollbar Theming`.
+To enable the theme's scrollbars navigate to `Settings -> Advanced Settings Editor -> Theme` then enable the checkbox `Scrollbar Theming`.
 
 ## Colors
 
-All the colors used for text in the theme are compliant with [WCAG 2.1 standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+All the colors used for text in the theme are compliant with [WCAG 2.1 standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) , against the following colours:
 
-Background color: ![#181036](https://via.placeholder.com/20/181036/181036.png) `#181036`
+- Background color: ![#181036](https://via.placeholder.com/20/181036/181036.png) `#181036`
+- Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
 
-Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.png) `#321f7ad9`
-
-**WCAG conformance**
+### WCAG conformance
 
 | Color                                                        | Hex       | Ratio    | Normal text | Large text |
 | ------------------------------------------------------------ | --------- | -------- | ----------- | ---------- |
@@ -37,7 +44,7 @@ Highlight color: ![#321f7ad9](https://via.placeholder.com/20/321f7ad9/321f7ad9.p
 
 ## Font
 
-This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
+This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letter form distinction to increase character recognition, ultimately improving readability.
 
 This font can only be changed for the `Markdown viewer` and the `Terminal`. You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
 
@@ -47,8 +54,8 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 
 ## Screenshots
 
-<img alt="JupyterLab Pitaya smoothie screenshot" src="./images/screenshot.png"/>
+<img alt="JupyterLab main interface with the Pitaya Smoothie theme enabled." src="./images/screenshot.png"/>
 
 ## Acknowledgements
 
-This theme is based and inspired in [vscode theme extension for Pitaya Smoothie](https://github.com/trallard/pitaya_smoothie).
+This theme is based and inspired in [VS Code theme extension for Pitaya Smoothie](https://github.com/trallard/pitaya_smoothie).

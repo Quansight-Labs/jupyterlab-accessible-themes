@@ -28,14 +28,16 @@ button.jp-mod-styled.jp-mod-reject {
   border: 0;
   color: var(--pitaya-foreground);
 }
-button.jp-mod-styled.jp-mod-reject:active, button.jp-mod-styled.jp-mod-reject:hover {
+button.jp-mod-styled.jp-mod-reject:active,
+button.jp-mod-styled.jp-mod-reject:hover {
   background: var(--pitaya-active-items1);
 }
 button.jp-mod-styled.jp-mod-warn {
   border: 0;
   color: var(--pitaya-background);
 }
-button.jp-mod-styled.jp-mod-warn:active, button.jp-mod-styled.jp-mod-warn:hover {
+button.jp-mod-styled.jp-mod-warn:active,
+button.jp-mod-styled.jp-mod-warn:hover {
   background: var(--jp-error-color2);
 }
 button.jp-mod-styled.jp-mod-accept {
@@ -43,7 +45,8 @@ button.jp-mod-styled.jp-mod-accept {
   color: var(--pitaya-background);
   border: 0;
 }
-button.jp-mod-styled.jp-mod-accept:active, button.jp-mod-styled.jp-mod-accept:hover {
+button.jp-mod-styled.jp-mod-accept:active,
+button.jp-mod-styled.jp-mod-accept:hover {
   background: var(--pitaya-periwinkle400);
 }
 
@@ -94,7 +97,7 @@ Disclaimer buttons
   background: var(--pitaya-active-items);
 }
 
-.lm-Menu-item[data-type=separator] > div::after {
+.lm-Menu-item[data-type="separator"] > div::after {
   border-top: var(--jp-border-width) solid var(--jp-layout-color3);
 }
 

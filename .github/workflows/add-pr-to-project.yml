@@ -7,12 +7,12 @@ on:
       - opened
 
 jobs:
-  add-to-project:
+  add-pr-to-project:
     name: Add PR to project
     runs-on: ubuntu-latest
     steps:
       - name: Add To GitHub Projects Beta 🏷
-        uses: actions/add-to-project@v0.3.0
+        uses: actions/add-to-project@v0.5.0
         with:
           project-url: https://github.com/orgs/Quansight-Labs/projects/8
           github-token: ${{ secrets.ACCESS_TOKEN }}
