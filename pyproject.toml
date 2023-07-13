@@ -30,9 +30,18 @@ ignore = [
 
 [tool.ruff]
 builtins = ["c"]
-ignore = ["C", "D400", "E", "F401", "F841", "W", "E501", "D104"]
+# E501 Line too long (158 > 100 characters)
+# D400: First line should end with a period
+# F401: Imported but unused
+# F841: Local variable is assigned to but never used
+ignore = ["D400", "E501"]
 include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
-select = ["C4", "C9", "D", "E", "F", "W"]
+# A: builtins
+# F: Pyflakes
+# E,W: pycodestyle
+# C4: flake8-comprehensions
+# D: pydocstyle
+select = ["A", "B", "C", "C4", "C9", "D", "E", "F", "W", "ICN"]
 
 [tool.ruff.pydocstyle]
 convention = "google" # Accepts: "google", "numpy", or "pep257".

@@ -45,9 +45,10 @@ repos:
     rev: v4.4.0
     # ref: https://github.com/pre-commit/pre-commit-hooks#hooks-available
     hooks:
-      # Autoformat: Makes sure files end in a newline and only a newline
       - id: end-of-file-fixer
-
-      # Trims trailing whitespace.
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
+      - id: check-added-large-files
+      - id: check-toml
+      - id: check-yaml
+      - id: check-case-conflict

@@ -1,9 +1,9 @@
 # Distributed under the terms of the Modified BSD License.
 
+"""JupyterLab extension for accessible themes.""" ""
+
 import json
 from pathlib import Path
-
-from ._version import __version__
 
 HERE = Path(__file__).parent.resolve()
 EXT = HERE / "labextensions"
