@@ -54,15 +54,20 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 
 ## 📦 Requirements
 
-- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) >= 3.0
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)  >= 3.0, <4.0
 
-<!-- Will comment this section as it is not yet applicable, and was leftover from the cookiecutter -->
-<!-- ## 🏗 Installing the extension
+## 🏗 Installing the extension
 
-To install the extension, execute:
+You can install the extension using `pip`:
 
 ```bash
 pip install jupyterlab_accessible_themes
+```
+
+If you prefer `conda`:
+
+```bash
+conda install -c conda-forge jupyterlab_accessible_themes
 ```
 
 ## 🧽 Uninstalling the extension
@@ -71,7 +76,7 @@ To remove the extension, execute:
 
 ```bash
 pip uninstall jupyterlab_accessible_themes
-``` -->
+```
 
 ## 🙋🏽‍♀️ Contributing
 
@@ -80,7 +85,7 @@ pip uninstall jupyterlab_accessible_themes
 #### Pre-requisites
 
 1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed in your local computer to build the extension package.
-2. Python >= 3.6 and pip.
+2. Python >= 3.8 and pip.
 
 ##### Building and linking the extension
 
@@ -238,9 +243,6 @@ More information are provided within the [ui-tests](./ui-tests/README.md) README
 ### 📦 Packaging the extension
 
 Detailed instructions for creating a `jupyterlab-accesible-themes` can be found in the [RELEASE](RELEASE.md) file.
-
-> **Warning**
-> As of 3rd of August this projects is still in its infancy and no releases are made yet.
 
 ## 📖 License
 
