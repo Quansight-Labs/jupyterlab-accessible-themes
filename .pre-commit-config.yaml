@@ -40,14 +40,6 @@ repos:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
 
-  # Lint: CSS files
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: 0.0.2
-    hooks:
-      - id: stylelint
-        additional_dependencies:
-          ["stylelint@13.2.1", "stylelint-config-standard@20.0.0"]
-
   # Misc...
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
