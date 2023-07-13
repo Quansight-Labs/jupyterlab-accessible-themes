@@ -1,7 +1,8 @@
 name: Add binder link to PR
 on:
-  pull_request_target:
-    types: [opened]
+  pull_request:
+    branches:
+      - main
 
 jobs:
   binder:
