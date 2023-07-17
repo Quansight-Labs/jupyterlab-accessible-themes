@@ -99,4 +99,9 @@ pre {
   fill: var(--gh-dark-blue5);
 }
 
+.jp-toast-button {
+  color: var(--gh-dark-white) !important;
+  background: var(--gh-dark-gray4) !important;
+}
+
 /*# sourceMappingURL=index.css.map */

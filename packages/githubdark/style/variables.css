@@ -450,8 +450,11 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-scrollbar-thumb-radius: 9px;
   /* set to a large-ish value for rounded endcaps on the thumb */
   --jp-icon-contrast-color0: var(--gh-dark-gray4);
+  --jp-icon-contrast-color1: var(--gh-dark-gray3);
+  --jp-icon-contrast-color2: var(--gh-dark-gray2);
   /* set input active box shadow color for the main search */
   --jp-input-active-box-shadow-color: var(--gh-dark-blue5);
+  --jp-sidebar-min-width: 50px;
 }
 
 /*# sourceMappingURL=variables.css.map */
