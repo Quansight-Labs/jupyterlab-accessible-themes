@@ -101,17 +101,17 @@ pre {
 /* --------------------------------------
 /* Change menu item style
 -----------------------------------------*/
-.lm-Menu-item:hover[data-type='command'] {
+.lm-Menu-item:hover[data-type="command"] {
   background: var(--gh-light-gray5);
   color: var(--gh-light-white);
 }
 
-.lm-Menu-item:hover[data-type='submenu'] {
+.lm-Menu-item:hover[data-type="submenu"] {
   background: var(--gh-light-gray5);
   color: var(--gh-light-white);
 }
 
-.lm-Menu-item[data-type='separator'] > div::after {
+.lm-Menu-item[data-type="separator"] > div::after {
   border-top: var(--jp-border-width) solid var(--gh-light-gray5);
 }
 
