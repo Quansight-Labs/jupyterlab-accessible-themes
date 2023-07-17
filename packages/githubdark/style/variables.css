@@ -28,7 +28,7 @@ https://jupyterlab.readthedocs.io/en/latest/developer/css.html and github
 vscode themes,
 https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
 */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
 
 :root {
   /*
@@ -138,42 +138,51 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   */
   --jp-shadow-base-lightness: 0;
   --jp-shadow-umbra-color: rgba(
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      0.2
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    0.2
   );
   --jp-shadow-penumbra-color: rgba(
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      0.14
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    0.14
   );
   --jp-shadow-ambient-color: rgba(
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      0.12
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    0.12
   );
   --jp-elevation-z0: none;
-  --jp-elevation-z1: 0px 2px 1px -1px var(--jp-shadow-umbra-color), 0px 1px 1px 0px var(--jp-shadow-penumbra-color),
-      0px 1px 3px 0px var(--jp-shadow-ambient-color);
-  --jp-elevation-z2: 0px 3px 1px -2px var(--jp-shadow-umbra-color), 0px 2px 2px 0px var(--jp-shadow-penumbra-color),
-      0px 1px 5px 0px var(--jp-shadow-ambient-color);
-  --jp-elevation-z4: 0px 2px 4px -1px var(--jp-shadow-umbra-color), 0px 4px 5px 0px var(--jp-shadow-penumbra-color),
-      0px 1px 10px 0px var(--jp-shadow-ambient-color);
-  --jp-elevation-z6: 0px 3px 5px -1px var(--jp-shadow-umbra-color), 0px 6px 10px 0px var(--jp-shadow-penumbra-color),
-      0px 1px 18px 0px var(--jp-shadow-ambient-color);
-  --jp-elevation-z8: 0px 5px 5px -3px var(--jp-shadow-umbra-color), 0px 8px 10px 1px var(--jp-shadow-penumbra-color),
-      0px 3px 14px 2px var(--jp-shadow-ambient-color);
-  --jp-elevation-z12: 0px 7px 8px -4px var(--jp-shadow-umbra-color), 0px 12px 17px 2px var(--jp-shadow-penumbra-color),
-      0px 5px 22px 4px var(--jp-shadow-ambient-color);
+  --jp-elevation-z1: 0px 2px 1px -1px var(--jp-shadow-umbra-color),
+    0px 1px 1px 0px var(--jp-shadow-penumbra-color),
+    0px 1px 3px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z2: 0px 3px 1px -2px var(--jp-shadow-umbra-color),
+    0px 2px 2px 0px var(--jp-shadow-penumbra-color),
+    0px 1px 5px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z4: 0px 2px 4px -1px var(--jp-shadow-umbra-color),
+    0px 4px 5px 0px var(--jp-shadow-penumbra-color),
+    0px 1px 10px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z6: 0px 3px 5px -1px var(--jp-shadow-umbra-color),
+    0px 6px 10px 0px var(--jp-shadow-penumbra-color),
+    0px 1px 18px 0px var(--jp-shadow-ambient-color);
+  --jp-elevation-z8: 0px 5px 5px -3px var(--jp-shadow-umbra-color),
+    0px 8px 10px 1px var(--jp-shadow-penumbra-color),
+    0px 3px 14px 2px var(--jp-shadow-ambient-color);
+  --jp-elevation-z12: 0px 7px 8px -4px var(--jp-shadow-umbra-color),
+    0px 12px 17px 2px var(--jp-shadow-penumbra-color),
+    0px 5px 22px 4px var(--jp-shadow-ambient-color);
   --jp-elevation-z16: 0px 8px 10px -5px var(--jp-shadow-umbra-color),
-      0px 16px 24px 2px var(--jp-shadow-penumbra-color), 0px 6px 30px 5px var(--jp-shadow-ambient-color);
+    0px 16px 24px 2px var(--jp-shadow-penumbra-color),
+    0px 6px 30px 5px var(--jp-shadow-ambient-color);
   --jp-elevation-z20: 0px 10px 13px -6px var(--jp-shadow-umbra-color),
-      0px 20px 31px 3px var(--jp-shadow-penumbra-color), 0px 8px 38px 7px var(--jp-shadow-ambient-color);
+    0px 20px 31px 3px var(--jp-shadow-penumbra-color),
+    0px 8px 38px 7px var(--jp-shadow-ambient-color);
   --jp-elevation-z24: 0px 11px 15px -7px var(--jp-shadow-umbra-color),
-      0px 24px 38px 3px var(--jp-shadow-penumbra-color), 0px 9px 46px 8px var(--jp-shadow-ambient-color);
+    0px 24px 38px 3px var(--jp-shadow-penumbra-color),
+    0px 9px 46px 8px var(--jp-shadow-ambient-color);
   /* Borders
   *
   * The following variables, specify the visual styling of borders in JupyterLab.
@@ -368,8 +377,8 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
     notebook. This padding is to enable a 'scroll past end' feature in a notebook.
   */
   --jp-notebook-scroll-padding: calc(
-      100% - var(--jp-code-font-size) * var(--jp-code-line-height) - var(--jp-code-padding) - var(--jp-cell-padding) -
-          1px
+    100% - var(--jp-code-font-size) * var(--jp-code-line-height) -
+      var(--jp-code-padding) - var(--jp-cell-padding) - 1px
   );
   /* Dialog specific styles */
   --jp-dialog-background: rgba(234, 238, 242, 0.8);

@@ -27,11 +27,13 @@ pre {
   background: var(--gh-dark-orange4);
 }
 
-.jp-FileBrowser-toolbar .jp-ToolbarButtonComponent[data-command='filebrowser:create-main-launcher'] {
+.jp-FileBrowser-toolbar
+  .jp-ToolbarButtonComponent[data-command="filebrowser:create-main-launcher"] {
   background: var(--gh-dark-green5);
 }
 
-.jp-FileBrowser-toolbar .jp-ToolbarButtonComponent[data-command='filebrowser:create-main-launcher']:hover {
+.jp-FileBrowser-toolbar
+  .jp-ToolbarButtonComponent[data-command="filebrowser:create-main-launcher"]:hover {
   background: var(--gh-dark-green4) !important;
 }
 
@@ -46,17 +48,17 @@ pre {
 /* --------------------------------------
 /* Change menu item style
 -----------------------------------------*/
-.lm-Menu-item:hover[data-type='command'] {
+.lm-Menu-item:hover[data-type="command"] {
   background: var(--gh-dark-gray3);
   color: var(--gh-dark-black);
 }
 
-.lm-Menu-item:hover[data-type='submenu'] {
+.lm-Menu-item:hover[data-type="submenu"] {
   background: var(--gh-dark-gray3);
   color: var(--gh-dark-black);
 }
 
-.lm-Menu-item[data-type='separator'] > div::after {
+.lm-Menu-item[data-type="separator"] > div::after {
   border-top: var(--jp-border-width) solid var(--gh-dark-gray3);
 }
 
@@ -82,11 +84,14 @@ pre {
   fill: var(--gh-dark-gray6);
 }
 
-.jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab + .lm-TabBar-tab.lm-mod-current {
+.jp-SideBar.lm-TabBar.jp-mod-left
+  .lm-TabBar-tab
+  + .lm-TabBar-tab.lm-mod-current {
   fill: var(--gh-dark-white);
 }
 
-.jp-SideBar .lm-TabBar-tab:not(.lm-mod-current), #jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
+.jp-SideBar .lm-TabBar-tab:not(.lm-mod-current),
+#jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
   fill: var(--gh-dark-gray6);
 }
 

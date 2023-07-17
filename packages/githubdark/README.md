@@ -28,7 +28,6 @@ All the colors in the table shown were tested with the background color.
 | ![#b1bac4](https://via.placeholder.com/20/b1bac4/b1bac4.png) | `#b1bac4` | 7.7 : 1  | AAA         | AAA        |
 | ![#79c0ff](https://via.placeholder.com/20/79c0ff/79c0ff.png) | `#79c0ff` | 7.8 : 1  | AAA         | AAA        |
 
-
 ## Font
 
 This theme is using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
