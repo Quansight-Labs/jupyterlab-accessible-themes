@@ -1,5 +1,5 @@
 <div align="center">
- <img alt="Jupyter Accessibility logo" src="https://github.com/jupyter/accessibility/blob/main/docs/_static/logo.png?raw=true" width="250" />
+ <img alt="Jupyter Accessibility logo" src="https://github.com/jupyter/accessibility/blob/main/docs/_static/logos/jupyter_accessibility.png?raw=true" width="250" />
 </div>
 <br>
 
@@ -14,38 +14,40 @@
 | Tools                        | [![Launch on Binder clickable badge](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/github_username/jupyterlab-accessible-themes/main?urlpath=lab)                                                                                                                                                                                                                                                |
 | <!-- prettier-ignore-end --> |
 
-Welcome to the JupyterLab accessible themes repository 👋🏽 .
+Welcome to the JupyterLab accessible themes' repository 👋🏽.
 To learn more about the broader accessibility initiatives within Jupyter, check the [jupyter/accessibility repository][jupyter-accesibility].
 
 - [JupyterLab accessible themes](#jupyterlab-accessible-themes)
-  - [Themes](#themes)
-  - [Font](#font)
-  - [📦 Requirements](#-requirements)
-  - [🙋🏽‍♀️ Contributing](#️-contributing)
-    - [💻 Installing the development version](#-installing-the-development-version)
+  - [About the themes](#about-the-themes)
+  - [Requirements 📦](#requirements-)
+  - [Installing the extension 🏗](#installing-the-extension-)
+  - [Uninstalling the extension 🧽](#uninstalling-the-extension-)
+  - [Contributing to JupyterLab accessible themes 🙋🏽‍♀️](#contributing-to-jupyterlab-accessible-themes-️)
+    - [Installing the development version 💻](#installing-the-development-version-)
       - [Pre-requisites](#pre-requisites)
-        - [Building and linking the extension](#building-and-linking-the-extension)
-    - [🧹 Pre-commit hooks](#-pre-commit-hooks)
-    - [🧽 Uninstalling the development version](#-uninstalling-the-development-version)
-    - [✅ Testing the extension](#-testing-the-extension)
+      - [Building and linking the extension](#building-and-linking-the-extension)
+      - [Further development tips](#further-development-tips)
+    - [Pre-commit hooks 🧹](#pre-commit-hooks-)
+    - [Uninstalling the development version 🧽](#uninstalling-the-development-version-)
+    - [Testing the extension ✅](#testing-the-extension-)
       - [Frontend tests](#frontend-tests)
       - [Integration tests](#integration-tests)
-    - [📦 Packaging the extension](#-packaging-the-extension)
-  - [📖 License](#-license)
-  - [Acknowledgements](#acknowledgements)
+    - [Packaging the extension 📦](#packaging-the-extension-)
+  - [License 📖](#license-)
+  - [Acknowledgements 🙏🏼](#acknowledgements-)
 
+This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the README of each theme, you will find detailed information about the colors, their purpose and reference links from the original authors.
 
-This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the readme of each theme you will find detailed information of the colors, its purpose and reference links from the original authors.
-
-## Themes
+## About the themes
 
 - [Pitaya Smoothie](./packages/pitayasmoothie/README.md) - Color-blind friendly
 - [GitHub Light](./packages/githublight/README.md)
 - [Github Dark](./packages/githubdark/README.md)
 
 ## Font
+=======
 
-All the themes are using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letterform distinction to increase character recognition, ultimately improving readability.
+All the themes are using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letter form distinction to increase character recognition, ultimately improving readability.
 
 This font can only be changed for the `Markdown viewer` and the `Terminal`. You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
 
@@ -53,41 +55,52 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 2. Go to `Markdown viewer settings`, and type the font family that you want to use.
 3. To change the `Terminal` font, scroll down to `Terminal settings` and type the name of the font family.
 
-## 📦 Requirements
+## Requirements 📦
 
-- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) >= 3.0
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) >= 3.0, <4.0
 
-<!-- Will comment this section as it is not yet applicable, and was leftover from the cookiecutter -->
-<!-- ## 🏗 Installing the extension
+## Installing the extension 🏗
 
-To install the extension, execute:
+You can install the extension using `pip`:
 
 ```bash
 pip install jupyterlab_accessible_themes
 ```
 
-## 🧽 Uninstalling the extension
-
-To remove the extension, execute:
+If you prefer `conda`:
 
 ```bash
+conda install -c conda-forge jupyterlab_accessible_themes
+
+# alternatively you can use mamba
+mamba install jupyterlab_accessible_themes
+```
+
+## Uninstalling the extension 🧽
+
+To remove the extension you can run the following command:
+
+```bash
+# if installed with pip
 pip uninstall jupyterlab_accessible_themes
-``` -->
 
-## 🙋🏽‍♀️ Contributing
+# if using conda
+conda uninstall jupyterlab_accessible_themes
+```
 
-### 💻 Installing the development version
+## Contributing to JupyterLab accessible themes 🙋🏽‍♀️
+
+### Installing the development version 💻
 
 #### Pre-requisites
 
-1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed in your local computer to build the extension package.
-2. Python >= 3.6 and pip.
+1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed on your local computer to build the extension package.
+2. Python >= 3.8 and `pip`.
 
-##### Building and linking the extension
+#### Building and linking the extension
 
 > **Note**
 > The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
-> You will need to have NodeJS installed in your local computer to build the extension package.
 
 1. Clone this repository to your local computer:
 
@@ -101,7 +114,7 @@ pip uninstall jupyterlab_accessible_themes
     cd jupyterlab-accessible-themes
    ```
 
-3. Optional- Create and activate a development environment with your package manager:
+3. Optional but recommended - Create and activate a development environment with conda:
 
    ```bash
    # Create environment named `jupyterlab-accessible-themes`
@@ -109,7 +122,7 @@ pip uninstall jupyterlab_accessible_themes
    conda activate jupyterlab-accessible-themes
    ```
 
-4. Install Jupyterlab and NodeJS **if not installed**:
+4. Install JupyterLab and NodeJS **if not installed**:
 
    ```bash
    # Install node and jupyterlab from conda-forge
@@ -133,34 +146,29 @@ pip uninstall jupyterlab_accessible_themes
    ```
 
 7. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
-
-   ```bash
-   # Link your development version of the extension with JupyterLab
-   jupyter labextension develop . --overwrite
-   ```
-
-8. On first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
+   On the first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
    jlpm build
    ```
 
-9. Run JupyterLab and check that the installation worked:
+8. Run JupyterLab and check that the installation worked:
 
-    ```bash
-    # Run JupyterLab
-    jupyter lab
-    ```
+   ```bash
+   # Run JupyterLab
+   jupyter lab
+   ```
 
-Once everything is installed, please remember that you will still need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
+> **Important**
+> Once everything is installed, you will need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
 
-##### Further development tips
+#### Further development tips
 
 🔍 You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
 
 ```bash
-# Watch the source directory in one terminal, automatically rebuilding when needed
+# Watch the source directory (JupyterLab accessible themes) in one terminal, automatically rebuilding when needed
 # Can use yarn or npm depending on your preference
 jlpm watch
 
@@ -168,15 +176,17 @@ jlpm watch
 jupyter lab
 ```
 
-With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
+With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab instance.
+Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
 
-By default, the `jlpm build` command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:
+By default, the `jlpm build` command generates the source maps for this extension to make it easier to debug using the browser dev tools.
+To also generate source maps for the JupyterLab core extensions, you can run the following command:
 
 ```bash
 jupyter lab build --minimize=False
 ```
 
-### 🧹 Pre-commit hooks
+### Pre-commit hooks 🧹
 
 This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) to standardize our YAML and markdown structure.
 
@@ -204,7 +214,7 @@ This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) t
    pre-commit run --all-files
    ```
 
-### 🧽 Uninstalling the development version
+### Uninstalling the development version 🧽
 
 1. Remove the extension:
 
@@ -216,7 +226,7 @@ This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) t
    command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
    folder is located. Then you can remove the symlink named `jupyterlab-accessible-themes` within that folder.
 
-### ✅ Testing the extension
+### Testing the extension ✅
 
 #### Frontend tests
 
@@ -231,29 +241,26 @@ jlpm test
 
 #### Integration tests
 
-This extension uses [Playwright](https://playwright.dev/docs/intro/) for the integration tests (aka user level tests).
+This extension uses [Playwright][playwright] for the integration tests (aka user-level tests).
 More precisely, the JupyterLab helper [Galata](https://github.com/jupyterlab/jupyterlab/tree/master/galata) is used to handle testing the extension in JupyterLab.
+More information is provided within the [ui-tests](./ui-tests/README.md) README.
 
-More information are provided within the [ui-tests](./ui-tests/README.md) README.
+### Packaging the extension 📦
 
-### 📦 Packaging the extension
+Detailed instructions for creating `jupyterlab-accesible-themes` can be found in the [RELEASE](RELEASE.md) file.
 
-Detailed instructions for creating a `jupyterlab-accesible-themes` can be found in the [RELEASE](RELEASE.md) file.
-
-> **Warning**
-> As of 3rd of August this projects is still in its infancy and no releases are made yet.
-
-## 📖 License
+## License 📖
 
 [This project is licensed under the BSD-3-Clause license](https://opensource.org/licenses/BSD-3-Clause).
 
-<!-- links -->
-
-[jupyter-accesibility]: https://github.com/jupyter/accessibility
-
-## Acknowledgements
+## Acknowledgements 🙏🏼
 
 We want to thank the following sources for being the source of inspiration for one or more themes that are available in this repository,
 
 - [Pitaya Smoothie theme](https://github.com/trallard/pitaya_smoothie)
 - [GitHub's VS Code themes](https://github.com/primer/github-vscode-theme)
+
+<!-- links -->
+
+[jupyter-accesibility]: https://github.com/jupyter/accessibility
+[playwright]: https://playwright.dev/

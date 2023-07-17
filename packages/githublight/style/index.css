@@ -34,7 +34,8 @@ pre {
   background: var(--gh-light-white);
 }
 
-.jp-FileBrowser-toolbar .jp-ToolbarButtonComponent[data-command='filebrowser:create-main-launcher'] {
+.jp-FileBrowser-toolbar
+  .jp-ToolbarButtonComponent[data-command="filebrowser:create-main-launcher"] {
   background: var(--gh-light-green4);
 }
 
@@ -86,11 +87,14 @@ pre {
   fill: var(--gh-light-gray5);
 }
 
-.jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab + .lm-TabBar-tab.lm-mod-current {
+.jp-SideBar.lm-TabBar.jp-mod-left
+  .lm-TabBar-tab
+  + .lm-TabBar-tab.lm-mod-current {
   fill: var(--gh-light-black);
 }
 
-.jp-SideBar .lm-TabBar-tab:not(.lm-mod-current), #jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
+.jp-SideBar .lm-TabBar-tab:not(.lm-mod-current),
+#jp-down-stack .lm-TabBar-tab:not(.lm-mod-current) {
   fill: var(--gh-light-gray5);
 }
 

@@ -8,16 +8,20 @@
 # - Register git hooks: pre-commit install --install-hooks
 # - Run on all files:   pre-commit run --all-files
 #
+ci:
+  autoupdate_schedule: monthly
+  autofix_commit_msg: |
+    [pre-commit.ci] Apply automatic pre-commit fixes
 repos:
   # Autoformat: markdown, yaml to ensure that it doesn't need to be updated in other repos
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.6.1
+    rev: v3.0.0
     hooks:
       - id: prettier
 
   # Autoformat: Python code - sort imports
   - repo: https://github.com/pycqa/isort
-    rev: 5.10.1
+    rev: 5.12.0
     hooks:
       - id: isort
         name: isort
@@ -25,31 +29,26 @@ repos:
 
   # Autoformat: Python code
   - repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 23.7.0
     hooks:
       - id: black
 
   # Lint: Python code
-  - repo: https://github.com/pycqa/flake8
-    rev: 3.8.4
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.0.277
     hooks:
-      - id: flake8
-
-  # Lint: CSS files
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: 15.3.0
-    hooks:
-    -   id: stylelint
-        additional_dependencies: ['stylelint@13.2.1', 'stylelint-config-standard@20.0.0']
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
 
   # Misc...
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.4.0
     # ref: https://github.com/pre-commit/pre-commit-hooks#hooks-available
     hooks:
-      # Autoformat: Makes sure files end in a newline and only a newline
       - id: end-of-file-fixer
-
-      # Trims trailing whitespace.
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
+      - id: check-added-large-files
+      - id: check-toml
+      - id: check-yaml
+      - id: check-case-conflict

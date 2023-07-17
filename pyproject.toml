@@ -2,6 +2,10 @@
 requires = ["jupyter_packaging~=0.10,<2", "jupyterlab~=3.1"]
 build-backend = "jupyter_packaging.build_api"
 
+[project]
+name = "jupyterlab_accessible_themes"
+requires-python = ">=3.8"
+
 [tool.jupyter-packaging.options]
 skip-if-exists = ["jupyterlab_accessible_themes/labextension/static/style.js"]
 ensured-targets = [
@@ -23,3 +27,21 @@ ignore = [
     ".*",
     "package-lock.json"
 ]
+
+[tool.ruff]
+builtins = ["c"]
+# E501 Line too long (158 > 100 characters)
+# D400: First line should end with a period
+# F401: Imported but unused
+# F841: Local variable is assigned to but never used
+ignore = ["D400", "E501"]
+include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
+# A: builtins
+# F: Pyflakes
+# E,W: pycodestyle
+# C4: flake8-comprehensions
+# D: pydocstyle
+select = ["A", "B", "C", "C4", "C9", "D", "E", "F", "W", "ICN"]
+
+[tool.ruff.pydocstyle]
+convention = "google" # Accepts: "google", "numpy", or "pep257".

@@ -1,12 +1,6 @@
 {
-  "workspaces": [
-    "packages/*"
-  ],
   "useNx": false,
   "version": "0.0.0",
-  "packages": [
-    "packages/*"
-  ],
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "useWorkspaces": true
 }
