@@ -31,7 +31,7 @@ pre {
 /* Change tab style
 -----------------------------------------*/
 .lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
-  background: var(--gh-light-white);
+  background: var(--gh-light-blue6);
 }
 
 .jp-FileBrowser-toolbar
@@ -100,6 +100,31 @@ pre {
 
 .jp-InputGroup input {
   background-color: var(--gh-light-white);
+}
+
+/* --------------------------------------
+/* Change menu item style
+-----------------------------------------*/
+.lm-Menu-item:hover[data-type="command"] {
+  background: var(--gh-light-gray5);
+  color: var(--gh-light-white);
+}
+
+.lm-Menu-item:hover[data-type="submenu"] {
+  background: var(--gh-light-gray5);
+  color: var(--gh-light-white);
+}
+
+.lm-Menu-item[data-type="separator"] > div::after {
+  border-top: var(--jp-border-width) solid var(--gh-light-gray5);
+}
+
+.jp-switch-track {
+  background: var(--gh-light-gray5);
+}
+
+.jp-switch-track::before {
+  color: var(--gh-light-white);
 }
 
 /*# sourceMappingURL=index.css.map */
