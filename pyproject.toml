@@ -5,6 +5,7 @@ build-backend = "jupyter_packaging.build_api"
 [project]
 name = "jupyterlab_accessible_themes"
 requires-python = ">=3.8"
+dynamic = ["version", "description", "readme", "license", "authors", "urls"]
 
 [tool.jupyter-packaging.options]
 skip-if-exists = ["jupyterlab_accessible_themes/labextension/static/style.js"]

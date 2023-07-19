@@ -142,19 +142,25 @@ conda uninstall jupyterlab_accessible_themes
    ```
 
 7. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
-   On the first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
+
+   ```bash
+   # Link your development version of the extension with JupyterLab
+   jupyter labextension develop . --overwrite
+   ```
+
+8. On the first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
 
    ```bash
    # Rebuild extension Typescript source after making changes
    jlpm build
    ```
 
-8. Run JupyterLab and check that the installation worked:
+9. Run JupyterLab and check that the installation worked:
 
-   ```bash
-   # Run JupyterLab
-   jupyter lab
-   ```
+```bash
+# Run JupyterLab
+jupyter lab
+```
 
 > **Important**
 > Once everything is installed, you will need to select the theme inside JupyterLab via the main menu `Settings > Theme`.
