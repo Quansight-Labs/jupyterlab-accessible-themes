@@ -46,3 +46,7 @@ select = ["A", "B", "C", "C4", "C9", "D", "E", "F", "W", "ICN"]
 
 [tool.ruff.pydocstyle]
 convention = "google" # Accepts: "google", "numpy", or "pep257".
+
+[tool.ruff.per-file-ignores]
+# No explicit stacklevel in  __init__.py
+"jupyterlab_accessible_themes/__init__.py" = ["B028"]
