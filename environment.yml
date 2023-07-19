@@ -1,0 +1,12 @@
+# Extension development environment
+name: jupyterlab-accessible-themes
+channels:
+  - conda-forge
+
+dependencies:
+  # runtime dependencies
+  - python >=3.8
+  - jupyterlab <4.0
+  # labextension build dependencies
+  - nodejs >=18,<19
+  - pip
