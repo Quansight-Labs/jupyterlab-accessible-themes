@@ -1,33 +1,102 @@
 [build-system]
-requires = ["jupyter_packaging~=0.10,<2", "jupyterlab~=3.1"]
-build-backend = "jupyter_packaging.build_api"
+requires = ["hatchling", "jupyterlab<4", "hatch-nodejs-version"]
+build-backend = "hatchling.build"
 
 [project]
-name = "jupyterlab_accessible_themes"
+name = "jupyterlab-accessible-themes"
+readme = "README.md"
+description = "A collection of accessible JupyterLab themes"
+license = { file = "LICENSE" }
 requires-python = ">=3.8"
-dynamic = ["version", "description", "readme", "license", "authors", "urls"]
+keywords = [
+    "jupyter",
+    "jupyterlab",
+    "accessibility",
+    "themes",
+    "dark theme",
+    "light theme"
+]
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 3",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+authors = [{ name = "Tania Allard", email = "trallard@bitsandchips.me" }]
+# TODO: add other authors
+# we get the version directly fromt the package.json file
+dynamic = ["version"]
 
-[tool.jupyter-packaging.options]
-skip-if-exists = ["jupyterlab_accessible_themes/labextension/static/style.js"]
+[tool.hatch.version]
+source = "nodejs"
+
+[project.urls]
+Source = "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
+Issues = "https://github.com/github_username/jupyterlab-accessible-themes/issues"
+PyPi = "https://pypi.org/project/jupyterlab-accessible-themes/"
+conda = "https://anaconda.org/conda-forge/jupyterlab-accessible-themes"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/jupyterlab_accessible_themes",
+    "/install.json",
+    "/package.json",
+    "/tsconfig.json"
+]
+artifacts = ["jupyterlab_themes/labextension"]
+exclude = [".github", "binder", "ui-tests"]
+
+[tool.hatch.build.targets.wheel]
+include = ["/jupyterlab_accessible_themes"]
+
+# TODO: revisit this
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyterlab_accessible_themes/labextension" = "share/jupyter/labextensions/jupyterlab-themes"
+"jupyterlab_accessible_themes/labextensions/githublight" = "share/jupyter/labextensions/@jupyterlab-accessible-themes/jupyterlab-theme-githublight"
+"jupyterlab_accessible_themes/labextensions/pitayasmoothie" = "share/jupyter/labextensions/@jupyterlab-accessible-themes/jupyterlab-theme-pitayasmoothie"
+
+[tool.hatch.build.hooks.version]
+path = "jupyterlab_accessible_themes/_version.py"
+
+[tool.hatch.build.hooks.jupyter-builder]
+dependencies = ["hatch-jupyter-builder>=0.5"]
+build-function = "hatch_jupyter_builder.npm_builder"
+# list of expected file paths after building a version sdist or wheel
 ensured-targets = [
-    "jupyterlab_accessible_themes/labextension/static/style.js",
-    "jupyterlab_accessible_themes/labextension/package.json"
+    "jupyterlab_accessible_themes/labextensions/githublight/package.json",
+    "jupyterlab_accessible_themes/labextensions/pitayasmoothie/package.json"
 ]
+install-pre-commit-hook = true
 
-[tool.jupyter-packaging.builder]
-factory = "jupyter_packaging.npm_builder"
-
-[tool.jupyter-packaging.build-args]
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
-npm = ["jlpm"]
+editable_build_cmd = "build"
+source_dir = "packages"
+npm = "jlpm"
 
-[tool.check-manifest]
-ignore = [
-    "jupyterlab_accessible_themes/labextension/**",
-    "yarn.lock",
-    ".*",
-    "package-lock.json"
+[tool.hatch.build.hooks.jupyter-builder.editable-build-kwargs]
+build_cmd = "install:extension"
+npm = ["jlpm"]
+source_dir = "packages"
+build_dir = "jupyterlab_accessible_themes/labextension"
+
+[tool.jupyter-releaser.options]
+version_cmd = "hatch version"
+
+[tool.jupyter-releaser.hooks]
+before-build-npm = [
+    "python -m pip install 'jupyterlab<4'",
+    "jlpm",
+    "jlpm build:prod"
 ]
+before-build-python = ["jlpm clean:all"]
 
 [tool.ruff]
 builtins = ["c"]
