@@ -35,10 +35,12 @@
     "build:labextension:dev": "jupyter labextension build --development True .",
     "build:lib": "lerna run build:lib",
     "build:ext": "lerna run build:ext",
-    "dev": "yarn dev:py && yarn dev:ext",
-    "dev:py": "pip install -e.",
-    "dev:ext": "jupyter labextension develop --overwrite .",
-    "clean": "rimraf \"./packages/*/lib\" \"packages/*/*.tsbuildinfo\" ./jupyterlab_gt_coar_theme/labextensions",
+    "build:lib:prod": "tsc",
+    "clean": "jlpm clean:lib",
+    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
+    "clean:lintcache": "rimraf .eslintcache .stylelintcache",
+    "clean:labextension": "rimraf jupyterlab_accessible_themes/labextension jupyterlab_accessible_themes/_version.py",
+    "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
     "eslint": "jlpm eslint:check --fix",
     "eslint:check": "eslint . --cache --ext .ts,.tsx",
     "install:extension": "jlpm build",
@@ -50,8 +52,9 @@
     "stylelint": "jlpm stylelint:check --fix",
     "stylelint:check": "stylelint --cache \"style/**/*.css\"",
     "test": "jest --coverage",
-    "watch:ext": "lerna run watch:ext --stream --parallel",
-    "watch:lib": "lerna run watch:lib --stream"
+    "watch": "run-p watch:src watch:labextension",
+    "watch:src": "tsc -w --sourceMap",
+    "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
     "@jupyterlab/application": "^3.1.0",
