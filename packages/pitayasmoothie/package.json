@@ -1,6 +1,6 @@
 {
   "name": "@jupyterlab-accessible-themes/jupyterlab-theme-pitayasmoothie",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Pitaya Smoothie in JupyterLab: a dark theme inspired by 2018 Pantone of the Year. Designed for low-light condition and colorblindness tested.",
   "license": "BSD-3-Clause",
   "author": "Jupyter Accessibility Team",
