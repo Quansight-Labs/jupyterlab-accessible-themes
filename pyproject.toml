@@ -52,7 +52,8 @@ include = [
     "/packages",
     "/package.json",
     "/install.json",
-    "/tsconfig.json"
+    "/tsconfig.json",
+    "/lerna.json"
 ]
 artifacts = ["jupyterlab_accessible_themes/labextensions"]
 exclude = [".github", "binder", "ui-tests"]
@@ -70,7 +71,10 @@ include = ["/jupyterlab_accessible_themes"]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 # list of expected file paths after building a version sdist or wheel
-ensured-targets = ["jupyterlab_accessible_themes/labextension/package.json"]
+ensured-targets = [
+    "jupyterlab_accessible_themes/labextensions/pitayasmoothie/package.json",
+    "jupyterlab_accessible_themes/labextensions/githublight/package.json"
+]
 install-pre-commit-hook = true
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]

@@ -30,7 +30,7 @@
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:ext",
-    "build:prod": "jlpm clean && jlpm build:lib && jlpm build:labextension",
+    "build:prod": "jlpm clean && jlpm build:lib && jlpm build:ext",
     "build:labextension": "jupyter labextension build .",
     "build:labextension:dev": "jupyter labextension build --development True .",
     "build:lib": "lerna run build:lib",
