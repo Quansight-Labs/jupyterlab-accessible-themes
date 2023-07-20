@@ -1,11 +1,8 @@
 {
   "name": "jupyterlab-accessible-themes",
   "version": "0.2.0",
-  "description": "accessible jupyter lab themes",
+  "description": "A collection of accessible JupyterLab themes",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -20,27 +17,32 @@
     "name": "Jupyter Accessibility team",
     "email": "contact@quansight.com"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,js,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
+    "url": ".git"
   },
   "scripts": {
-    "build": "jlpm build:lib && jlpm build:ext",
-    "build:prod": "jlpm clean && jlpm build:lib && jlpm build:labextension",
+    "build": "lerna run build",
+    "build:prod": "lerna run build:prod",
+    "build:test": "lerna run build:test",
+    "clean": "jlpm cleam:lib",
+    "develop": "jupyter labextension develop . --overwrite",
+    "test": "lerna run test",
     "build:labextension": "jupyter labextension build .",
     "build:labextension:dev": "jupyter labextension build --development True .",
     "build:lib": "lerna run build:lib",
-    "build:ext": "lerna run build:ext",
-    "dev": "yarn dev:py && yarn dev:ext",
-    "dev:py": "pip install -e.",
-    "dev:ext": "jupyter labextension develop --overwrite .",
-    "clean": "rimraf \"./packages/*/lib\" \"packages/*/*.tsbuildinfo\" ./jupyterlab_gt_coar_theme/labextensions",
+    "build:lib:prod": "tsc",
+    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
+    "clean:lintcache": "rimraf .eslintcache .stylelintcache",
+    "clean:labextension": "rimraf jupyterlab_accessible_themes/labextension jupyterlab_accessible_themes/_version.py",
+    "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
     "eslint": "jlpm eslint:check --fix",
     "eslint:check": "eslint . --cache --ext .ts,.tsx",
     "install:extension": "jlpm build",
@@ -51,18 +53,15 @@
     "prettier:check": "jlpm prettier:base --check",
     "stylelint": "jlpm stylelint:check --fix",
     "stylelint:check": "stylelint --cache \"style/**/*.css\"",
-    "test": "jest --coverage",
-    "watch:ext": "lerna run watch:ext --stream --parallel",
-    "watch:lib": "lerna run watch:lib --stream"
+    "watch": "run-p watch:src watch:labextension",
+    "watch:src": "tsc -w --sourceMap",
+    "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
     "@jupyterlab/application": "^3.1.0",
-    "@jupyterlab/apputils": "^3.1.0",
-    "@jupyterlab/settingregistry": "^3.1.0"
+    "@jupyterlab/apputils": "^3.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "@jupyterlab/builder": "^3.1.0",
     "@jupyterlab/testutils": "^3.0.0",
     "@types/jest": "^26.0.0",
@@ -90,15 +89,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "jupyter-releaser": {
-    "hooks": {
-      "before-build-npm": [
-        "python -m pip install jupyterlab~=3.1",
-        "jlpm"
-      ],
-      "before-build-python": [
-        "jlpm clean:all"
-      ]
-    }
+  "jupyterlab": {
+    "extension": true
   }
 }
