@@ -57,7 +57,8 @@ include = [
     "/package.json",
     "/install.json",
     "/tsconfig.json",
-    "/lerna.json"
+    "/lerna.json",
+    "/README.md",
 ]
 artifacts = ["jupyterlab_accessible_themes/labextensions"]
 exclude = [".github", "binder", "ui-tests"]
