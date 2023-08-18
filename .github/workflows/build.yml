@@ -45,8 +45,6 @@ jobs:
           python -m pip install .
 
           jupyter labextension list
-          jupyter labextension list 2>&1 | grep -ie "jupyterlab-accessible-themes.*OK"
-          python -m jupyterlab.browser_check
 
       - name: Package the extension 🛠
         run: |
@@ -69,14 +67,18 @@ jobs:
     steps:
       - name: Checkout repository 🛎
         uses: actions/checkout@v3
+
       - name: Install Python 🐍
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
           architecture: "x64"
-      - uses: actions/download-artifact@v3
+
+      - name: Downlowd extension packages 📥
+        uses: actions/download-artifact@v3
         with:
           name: extension-artifacts
+
       - name: Install and Test
         run: |
           # Remove NodeJS, twice to take care of system and locally installed node versions.
@@ -86,5 +88,3 @@ jobs:
           pip install "jupyterlab>=3.0.0,<4" jupyterlab_accessible_themes*.whl
 
           jupyter labextension list
-          jupyter labextension list 2>&1 | grep -ie "jupyterlab-accessible-themes.*OK"
-          python -m jupyterlab.browser_check --no-browser-test

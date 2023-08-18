@@ -48,9 +48,9 @@ pip install build twine hatch gitchangelog
 
 1. Cleanup any development files before building the package:
 
-```bash
-  jlpm clean:all
-```
+   ```bash
+     jlpm clean:all
+   ```
 
 1. Clean your local repository:
 
@@ -67,11 +67,11 @@ pip install build twine hatch gitchangelog
 
 1. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
 
-```bash
-python -m build
-```
+   ```bash
+   python -m build
+   ```
 
-> `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
+   > **Warning** > `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
 
 1. Ensure artifacts were built correctly:
 
