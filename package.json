@@ -1,11 +1,8 @@
 {
   "name": "jupyterlab-accessible-themes",
   "version": "0.2.0",
-  "description": "accessible jupyter lab themes",
+  "description": "A collection of accessible JupyterLab themes",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -20,27 +17,30 @@
     "name": "Jupyter Accessibility team",
     "email": "contact@quansight.com"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,js,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Quansight-Labs/jupyterlab-accessible-themes"
+    "url": ".git"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:ext",
-    "build:prod": "jlpm clean && jlpm build:lib && jlpm build:labextension",
+    "build:prod": "jlpm clean && jlpm build:lib && jlpm build:ext",
     "build:labextension": "jupyter labextension build .",
     "build:labextension:dev": "jupyter labextension build --development True .",
     "build:lib": "lerna run build:lib",
     "build:ext": "lerna run build:ext",
-    "dev": "yarn dev:py && yarn dev:ext",
-    "dev:py": "pip install -e.",
-    "dev:ext": "jupyter labextension develop --overwrite .",
-    "clean": "rimraf \"./packages/*/lib\" \"packages/*/*.tsbuildinfo\" ./jupyterlab_gt_coar_theme/labextensions",
+    "build:lib:prod": "tsc",
+    "clean": "jlpm clean:lib",
+    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
+    "clean:lintcache": "rimraf .eslintcache .stylelintcache",
+    "clean:labextension": "rimraf jupyterlab_accessible_themes/labextension jupyterlab_accessible_themes/_version.py",
+    "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
     "eslint": "jlpm eslint:check --fix",
     "eslint:check": "eslint . --cache --ext .ts,.tsx",
     "install:extension": "jlpm build",
@@ -50,19 +50,17 @@
     "prettier:base": "prettier \"**/*{.ts,.tsx,.js,.jsx,.css,.json,.md}\"",
     "prettier:check": "jlpm prettier:base --check",
     "stylelint": "jlpm stylelint:check --fix",
-    "stylelint:check": "stylelint --cache \"style/**/*.css\"",
+    "stylelint:check": "stylelint --cache \"packages/*.*/style/**/*.css\"",
     "test": "jest --coverage",
-    "watch:ext": "lerna run watch:ext --stream --parallel",
-    "watch:lib": "lerna run watch:lib --stream"
+    "watch": "run-p watch:src watch:labextension",
+    "watch:src": "tsc -w --sourceMap",
+    "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
     "@jupyterlab/application": "^3.1.0",
-    "@jupyterlab/apputils": "^3.1.0",
-    "@jupyterlab/settingregistry": "^3.1.0"
+    "@jupyterlab/apputils": "^3.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "@jupyterlab/builder": "^3.1.0",
     "@jupyterlab/testutils": "^3.0.0",
     "@types/jest": "^26.0.0",
@@ -90,15 +88,84 @@
   "publishConfig": {
     "access": "public"
   },
-  "jupyter-releaser": {
-    "hooks": {
-      "before-build-npm": [
-        "python -m pip install jupyterlab~=3.1",
-        "jlpm"
+  "jupyterlab": {
+    "extension": true
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "**/*.d.ts",
+    "tests",
+    "**/__tests__",
+    "ui-tests"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "tsconfig.json",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "interface",
+          "format": [
+            "PascalCase"
+          ],
+          "custom": {
+            "regex": "^I[A-Z]",
+            "match": true
+          }
+        }
       ],
-      "before-build-python": [
-        "jlpm clean:all"
-      ]
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          "args": "none"
+        }
+      ],
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-namespace": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "@typescript-eslint/quotes": [
+        "error",
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": false
+        }
+      ],
+      "curly": [
+        "error",
+        "all"
+      ],
+      "eqeqeq": "error",
+      "prefer-arrow-callback": "error"
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-standard",
+      "stylelint-prettier/recommended"
+    ],
+    "rules": {
+      "property-no-vendor-prefix": null,
+      "selector-no-vendor-prefix": null,
+      "value-no-vendor-prefix": null,
+      "alpha-value-notation": null,
+      "color-function-notation": null
     }
   }
 }

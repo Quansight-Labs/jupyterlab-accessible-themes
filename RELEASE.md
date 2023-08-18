@@ -1,48 +1,91 @@
 # Making a new release of `jupyterlab_accessible_themes`
 
-The extension can be published to `PyPI` and `npm` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
-
 - [Making a new release of `jupyterlab_accessible_themes`](#making-a-new-release-of-jupyterlab_accessible_themes)
-  - [🚧 Manual release](#-manual-release)
-    - [📦 Python package](#-python-package)
-    - [📦 NPM package](#-npm-package)
-  - [👷🏽‍♀️ Automated releases with the Jupyter Releaser](#️-automated-releases-with-the-jupyter-releaser)
-  - [📰 Publishing to `conda-forge`](#-publishing-to-conda-forge)
+  - [Manual release 🛠](#manual-release-)
+    - [Python package 📦](#python-package-)
+      - [Pre-requisites](#pre-requisites)
+      - [Making a new release](#making-a-new-release)
+    - [NPM package 📦](#npm-package-)
+  - [Automated releases with the Jupyter Releaser 🏗](#automated-releases-with-the-jupyter-releaser-)
+  - [Publishing to `conda-forge`](#publishing-to-conda-forge)
 
-## 🚧 Manual release
+## Manual release 🛠
 
-### 📦 Python package
+### Python package 📦
 
-This extension can be distributed as a Python package.
-The [`pyproject.toml`](./pyproject.toml) file contains all the instructions needed to wrap the extension in a
-Python package.
+This extension can be distributed as Python packages.
+The Python packaging instructions are specified in the [`pyproject.toml`](./pyproject.toml) file in the root of repository.
 
-0. Before generating a package, we first need to install `build` and `gitchangelog`.
+#### Pre-requisites
+
+We use [hatch](https://hatch.pypa.io/latest/) with the [hatch-jupyter-builder](https://github.com/jupyterlab/hatch-jupyter-builder) to handle the packaging and distribution of this extension.
+
+You can install the dependencies with:
+
+```bash
+pip install build twine hatch gitchangelog
+```
+
+#### Making a new release
+
+1. Make sure you have the latest version of the `main` branch:
 
    ```bash
-   pip install build twine gitchangelog
+   git checkout main
+   git pull
    ```
 
-1. Follow the instructions to make a new release,
+1. Bump the version using `hatch`. By default, this will create a tag.
+   See the docs on [hatch-nodejs-version](https://github.com/agoose77/hatch-nodejs-version#semver) for details.
 
-   - git fetch && git pull
-   - git clean -xdfi
-   - Update CHANGELOG.md with gitchangelog
-   - Check version in package.json - modify it if necessary
-   - git add && git commit -m "Release vX.X.X"
-   - jlpm install
-   - jlpm build
-   - python setup.py bdist_wheel --universal
-   - python setup.py sdist
-   - twine check dist/\*
-   - twine upload dist/\*
-   - git tag -a vX.X.X -m 'Release x.x.x'
-   - Increment version in package.json
-   - git add && git commit
-   - git push
-   - git push --tags
+   ```bash
+   hatch version <new-version>
+   # example
+   hatch version 1.0.0
+   ```
 
-### 📦 NPM package
+1. Ensure that the individual themes are aligned with the package version. The version of the themes is specified in the `package.json` file in the root of the repository. Update these as needed.
+
+1. Cleanup any development files before building the package:
+
+   ```bash
+     jlpm clean:all
+   ```
+
+1. Clean your local repository:
+
+   ```bash
+   git clean -xdfi
+   ```
+
+1. Push the changes and tag to GitHub:
+
+   ```bash
+   git push
+   git push --tags
+   ```
+
+1. To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in the `dist/` directory, do:
+
+   ```bash
+   python -m build
+   ```
+
+   > **Warning** > `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
+
+1. Ensure artifacts were built correctly:
+
+   ```bash
+   twine check dist/\*
+   ```
+
+1. To upload the package to PyPi:
+
+```bash
+twine upload dist/*
+```
+
+### NPM package 📦
 
 1. To publish the frontend part of the extension as a NPM package, do:
 
@@ -51,24 +94,32 @@ Python package.
    npm publish --access public
    ```
 
-## 👷🏽‍♀️ Automated releases with the Jupyter Releaser
+## Automated releases with the Jupyter Releaser 🏗
 
 The extension repository should already be compatible with the Jupyter Releaser.
 
-Check out the [`jupyter_releaser` workflow documentation](https://github.com/jupyter-server/jupyter_releaser#typical-workflow) for more information.
+Check out the [workflow documentation](https://jupyter-releaser.readthedocs.io/en/latest/get_started/making_release_from_repo.html) for more information.
 
-Here is a summary of the steps to cut a new release:
+> **Note**
+> These steps should only be done once to set up the action workflow.
 
-1. Fork the [`jupyter-releaser` repo](https://github.com/jupyter-server/jupyter_releaser)
-2. Add the following secrets as repository secrets in GitHub `ADMIN_GITHUB_TOKEN`, `PYPI_TOKEN` and `NPM_TOKEN`
-3. Go to the Actions panel
-4. Run the "Draft Changelog" workflow
-5. Merge the Changelog PR
-6. Run the "Draft Release" workflow
-7. Run the "Publish Release" workflow
+1. Add tokens to the [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) in the repository:
 
-## 📰 Publishing to `conda-forge`
+   - `ADMIN_GITHUB_TOKEN` (with "public_repo" and "repo:status" permissions); see the [documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+   - `NPM_TOKEN` (with "automation" permission); see the [documentation](https://docs.npmjs.com/creating-and-viewing-access-tokens)
 
-If the package is not on `conda-forge` yet, check the [`conda-forge`documentation on how to contribute new packages](https://conda-forge.org/docs/maintainer/adding_pkgs.html).
+2. Set up PyPI tokens as a trusted publisher:
 
-Otherwise, a bot should pick up the new version publish to PyPI, and open a new PR on the feedstock repository automatically.
+   - Set up your PyPI project by [adding a trusted publisher](https://docs.pypi.org/trusted-publishers/adding-a-publisher/)
+     - The _workflow name_ is `publish-release.yml` and the _environment_ should be left blank.
+   - Ensure the publishing release job as `permissions`: `id-token : write` (see the [documentation](https://docs.pypi.org/trusted-publishers/using-a-publisher/))
+
+3. To create the release:
+   1. Go to the "Actions" panel in the GitHub repository
+   2. Run the "Step 1: Prep Release" workflow
+   3. Check the draft change log
+   4. Run the "Step 2: Publish Release" workflow
+
+## Publishing to `conda-forge`
+
+Once a new release is made on PyPI the conda-forge bot should pick up the new version publish to PyPI, and open a new PR on the feedstock repository automatically.

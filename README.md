@@ -18,17 +18,17 @@ Welcome to the JupyterLab accessible themes' repository 👋🏽.
 To learn more about the broader accessibility initiatives within Jupyter, check the [jupyter/accessibility repository][jupyter-accesibility].
 
 - [JupyterLab accessible themes](#jupyterlab-accessible-themes)
-  - [About the themes](#about-the-themes)
-  - [Requirements 📦](#requirements-)
-  - [Installing the extension 🏗](#installing-the-extension-)
-  - [Uninstalling the extension 🧽](#uninstalling-the-extension-)
+  - [User guide 👩🏻‍💻](#user-guide-)
+    - [Themes included in this extension](#themes-included-in-this-extension)
+    - [Installing the extension 📦](#installing-the-extension-)
+    - [Uninstalling the extension 🧽](#uninstalling-the-extension-)
   - [Contributing to JupyterLab accessible themes 🙋🏽‍♀️](#contributing-to-jupyterlab-accessible-themes-️)
     - [Installing the development version 💻](#installing-the-development-version-)
       - [Pre-requisites](#pre-requisites)
       - [Building and linking the extension](#building-and-linking-the-extension)
       - [Further development tips](#further-development-tips)
-    - [Pre-commit hooks 🧹](#pre-commit-hooks-)
     - [Uninstalling the development version 🧽](#uninstalling-the-development-version-)
+    - [Pre-commit hooks 🧹](#pre-commit-hooks-)
     - [Testing the extension ✅](#testing-the-extension-)
       - [Frontend tests](#frontend-tests)
       - [Integration tests](#integration-tests)
@@ -38,24 +38,29 @@ To learn more about the broader accessibility initiatives within Jupyter, check 
 
 This repository defines a set of accessible themes according to [WCAG color standards](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html). Please note that some themes are optimized for colorblindness and/or high contrast. Inside the README of each theme, you will find detailed information about the colors, their purpose and reference links from the original authors.
 
-## About the themes
+## User guide 👩🏻‍💻
+
+### Themes included in this extension
 
 - [Pitaya Smoothie](./packages/pitayasmoothie/README.md) - Color-blind friendly
 - [GitHub light](./packages/githublight/README.md)
 
-All the themes are using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letter form distinction to increase character recognition, ultimately improving readability.
+All the themes use the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letter form distinction to increase character recognition, ultimately improving readability.
 
-This font can only be changed for the `Markdown viewer` and the `Terminal`. You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
+This font can only be changed for the `Markdown viewer` and the `Terminal` through the JupyterLab settings manager.
+You will need to make these changes from the `Advanced settings` editor in the JupyterLab UI:
 
 1. Select the `Settings` option in the `menu bar`.
 2. Go to `Markdown viewer settings`, and type the font family that you want to use.
 3. To change the `Terminal` font, scroll down to `Terminal settings` and type the name of the font family.
 
-## Requirements 📦
+### Installing the extension 📦
 
-- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) >= 3.0, <4.0
+Before installing the extension you will need to have [JupyterLab 3](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) installed.
 
-## Installing the extension 🏗
+> **Note**
+> Currently, this extension is compatible with JupyterLab 3.x only.
+> We hope to support JupyterLab 4.x in the future.
 
 You can install the extension using `pip`:
 
@@ -63,7 +68,7 @@ You can install the extension using `pip`:
 pip install jupyterlab_accessible_themes
 ```
 
-If you prefer `conda`:
+or with `conda` if you prefer:
 
 ```bash
 conda install -c conda-forge jupyterlab_accessible_themes
@@ -72,7 +77,13 @@ conda install -c conda-forge jupyterlab_accessible_themes
 mamba install jupyterlab_accessible_themes
 ```
 
-## Uninstalling the extension 🧽
+Once installed, you can verify that the extension is enabled by running the following command:
+
+```bash
+jupyter labextension list
+```
+
+### Uninstalling the extension 🧽
 
 To remove the extension you can run the following command:
 
@@ -90,13 +101,15 @@ conda uninstall jupyterlab_accessible_themes
 
 #### Pre-requisites
 
-1. You will need to have [NodeJS](https://nodejs.org/en/download/) installed on your local computer to build the extension package.
-2. Python >= 3.8 and `pip`.
+You will need the following prerequisites to build a development version of the extension:
+
+- Python >= 3.8 and `pip`
+- Optional: conda or mamba
 
 #### Building and linking the extension
 
 > **Note**
-> The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` in lieu of `jlpm` in the commands below.
+> The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use`yarn` or `npm` instead of `jlpm` in the commands below.
 
 1. Clone this repository to your local computer:
 
@@ -114,48 +127,27 @@ conda uninstall jupyterlab_accessible_themes
 
    ```bash
    # Create environment named `jupyterlab-accessible-themes`
-   conda create -n jupyterlab-accessible-themes
-   conda activate jupyterlab-accessible-themes
+   conda env create -f environment.yml
    ```
 
-4. Install JupyterLab and NodeJS **if not installed**:
+   This will create a new environment named `jupyterlab-accessible-themes` with all the dependencies needed to build the extension.
 
-   ```bash
-   # Install node and jupyterlab from conda-forge
-   conda install -c conda-forge 'nodejs>16' 'jupyterlab<4'
-   ```
-
-5. Install the node dependencies and build the extension:
-
-   ```bash
-   # Install node dependencies
-   jlpm install
-
-   # Compile packages before linking to Jupyterlab development version
-   jlpm build
-   ```
-
-6. Install the package in development mode:
+4. Install the package in development mode:
 
    ```bash
    pip install -e .
    ```
 
-7. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
+5. Now you'll need to link the development version of the extension to JupyterLab and rebuild the Typescript source:
 
    ```bash
    # Link your development version of the extension with JupyterLab
    jupyter labextension develop . --overwrite
-   ```
-
-8. On the first installation, or after making some changes, to visualize them in your local JupyterLab re-run the following command:
-
-   ```bash
    # Rebuild extension Typescript source after making changes
    jlpm build
    ```
 
-9. Run JupyterLab and check that the installation worked:
+6. Finally, start JupyterLab:
 
 ```bash
 # Run JupyterLab
@@ -188,6 +180,18 @@ To also generate source maps for the JupyterLab core extensions, you can run the
 jupyter lab build --minimize=False
 ```
 
+### Uninstalling the development version 🧽
+
+1. Remove the extension:
+
+   ```bash
+   pip uninstall jupyterlab_accessible_themes
+   ```
+
+2. In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
+   command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
+   folder is located. Then you can remove the symlink named `jupyterlab-accessible-themes` within that folder.
+
 ### Pre-commit hooks 🧹
 
 This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) to standardize our YAML and markdown structure.
@@ -215,18 +219,6 @@ This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) t
    # run the pre-commit hooks
    pre-commit run --all-files
    ```
-
-### Uninstalling the development version 🧽
-
-1. Remove the extension:
-
-   ```bash
-   pip uninstall jupyterlab_accessible_themes
-   ```
-
-2. In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
-   command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-   folder is located. Then you can remove the symlink named `jupyterlab-accessible-themes` within that folder.
 
 ### Testing the extension ✅
 

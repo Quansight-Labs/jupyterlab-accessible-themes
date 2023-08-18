@@ -1,0 +1,90 @@
+name: Build extension
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: "*"
+  workflow_dispatch:
+
+env:
+  FORCE_COLOR: "1" # Make tools pretty.
+  PYTHONIOENCODING: utf-8
+  PIP_DISABLE_PIP_VERSION_CHECK: 1
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash -ex {0}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository 🛎
+        uses: actions/checkout@v3
+
+      - name: Set up base environment 📦
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+
+      - name: Install dependencies 📦
+        run: python -m pip install -U "jupyterlab>=3.0.0,<4"
+
+        # TODO: fix linting in following PR
+      # - name: Lint the extension 🚨
+      #   run: |
+      #     jlpm
+      #     jlpm run eslint:check
+
+      - name: Build the extension 🏗
+        run: |
+          python -m pip install .
+
+          jupyter labextension list
+
+      - name: Package the extension 🛠
+        run: |
+
+          pip install build
+          python -m build
+          pip uninstall -y "jupyterlab_accessible_themes" jupyterlab
+
+      - name: Upload extension packages 📤
+        uses: actions/upload-artifact@v3
+        with:
+          name: extension-artifacts
+          path: dist/jupyterlab_accessible_themes*
+          if-no-files-found: error
+
+  test_isolated:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository 🛎
+        uses: actions/checkout@v3
+
+      - name: Install Python 🐍
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+
+      - name: Downlowd extension packages 📥
+        uses: actions/download-artifact@v3
+        with:
+          name: extension-artifacts
+
+      - name: Install and Test
+        run: |
+          # Remove NodeJS, twice to take care of system and locally installed node versions.
+          sudo rm -rf $(which node)
+          sudo rm -rf $(which node)
+
+          pip install "jupyterlab>=3.0.0,<4" jupyterlab_accessible_themes*.whl
+
+          jupyter labextension list

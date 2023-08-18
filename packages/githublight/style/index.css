@@ -1,14 +1,17 @@
 @charset "UTF-8";
-/*-----------------------------------------------------------------------------
+
+/* -----------------------------------------------------------------------------
 | Copyright (c) Jupyter Development Team.
 | Distributed under the terms of the Modified BSD License.
-|----------------------------------------------------------------------------*/
+|---------------------------------------------------------------------------- */
+
 /*
 The name of the variables follow the css patterns described in the css
 jupyterlab developer guide,
 https://jupyterlab.readthedocs.io/en/latest/developer/css.html
 */
 @import "./variables.css";
+
 /* Set the default typography for monospace elements */
 tt,
 code,
@@ -22,15 +25,15 @@ pre {
 
 /* --------------------------------------
 /* Change gutter style
------------------------------------------*/
+----------------------------------------- */
 .cm-s-jupyter .CodeMirror-gutter {
   background-color: var(--gh-light-white);
 }
 
 /* --------------------------------------
 /* Change tab style
------------------------------------------*/
-.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
+----------------------------------------- */
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current::before {
   background: var(--gh-light-blue6);
 }
 
@@ -49,7 +52,7 @@ pre {
 
 /* --------------------------------------
 /* Change list item style
------------------------------------------*/
+----------------------------------------- */
 .jp-DirListing-item.jp-mod-selected .jp-icon-selectable[fill] {
   fill: var(--gh-light-blue6);
 }
@@ -60,28 +63,28 @@ pre {
 
 /* --------------------------------------
 /* Change disclaimer button font color
------------------------------------------*/
+----------------------------------------- */
 .jp-extensionmanager-disclaimer-disable {
   color: var(--gh-light-black) !important;
 }
 
 /* --------------------------------------
 /* Change fill color for icons
------------------------------------------*/
+----------------------------------------- */
 .jp-icon3[fill] {
   fill: unset;
 }
 
 /* --------------------------------------
 /* Change hover color in settings forms
------------------------------------------*/
+----------------------------------------- */
 .jp-SettingsPanel .jp-objectFieldWrapper .form-group:hover {
   background-color: var(--gh-light-gray1) !important;
 }
 
 /* --------------------------------------
 /* Change sidebar
------------------------------------------*/
+----------------------------------------- */
 
 .jp-SideBar.lm-TabBar.jp-mod-left .lm-TabBar-tab + .lm-TabBar-tab {
   fill: var(--gh-light-gray5);
@@ -104,7 +107,7 @@ pre {
 
 /* --------------------------------------
 /* Change menu item style
------------------------------------------*/
+----------------------------------------- */
 .lm-Menu-item:hover[data-type="command"] {
   background: var(--gh-light-gray5);
   color: var(--gh-light-white);
@@ -126,5 +129,3 @@ pre {
 .jp-switch-track::before {
   color: var(--gh-light-white);
 }
-
-/*# sourceMappingURL=index.css.map */
