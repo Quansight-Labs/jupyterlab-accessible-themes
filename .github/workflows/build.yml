@@ -18,7 +18,7 @@ concurrency:
 
 defaults:
   run:
-    shell: bash -eux {0}
+    shell: bash -ex {0}
 
 jobs:
   build:
@@ -67,9 +67,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository 🛎
         uses: actions/checkout@v3
-      - name: Install Python
+      - name: Install Python 🐍
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
