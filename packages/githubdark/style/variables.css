@@ -290,7 +290,7 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-layout-color1: var(--gh-dark-gray8);
   /* activity bar, inactive tab, status bar*/
   /* here use same as inactive tabs */
-  --jp-layout-color2: var(--gh-dark-gray8);
+  --jp-layout-color2: var(--gh-dark-gray9);
   /* editor/notebok surrounding area */
   --jp-layout-color3: var(--gh-dark-gray8);
   --jp-layout-color4: var(--gh-dark-gray8);
@@ -341,14 +341,15 @@ https://github.com/primer/primitives/blob/main/data/colors/themes/light.ts.
   --jp-error-color1: var(--gh-dark-red6);
   --jp-error-color2: var(--gh-dark-red7);
   --jp-error-color3: var(--gh-dark-red8);
-  --jp-success-color0: var(--gh-dark-green5);
-  --jp-success-color1: var(--gh-dark-green6);
-  --jp-success-color2: var(--gh-dark-green7);
-  --jp-success-color3: var(--gh-dark-green8);
+  --jp-success-color0: var(--gh-dark-green4);
+  --jp-success-color1: var(--gh-dark-green5);
+  --jp-success-color2: var(--gh-dark-green6);
+  --jp-success-color3: var(--gh-dark-green7);
   --jp-info-color0: var(--gh-dark-purple5);
   --jp-info-color1: var(--gh-dark-purple6);
   --jp-info-color2: var(--gh-dark-purple7);
   --jp-info-color3: var(--gh-dark-purple8);
+  --jp-reject-color-normal: var(--gh-dark-blue5);
   /* Cell specific styles */
   --jp-cell-padding: 5px;
   --jp-cell-collapser-width: 8px;

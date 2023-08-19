@@ -104,4 +104,21 @@ pre {
   background: var(--gh-dark-gray4) !important;
 }
 
+.jp-toast-button:hover {
+  background-color: var(--gh-dark-gray2) !important;
+  color: var(--gh-dark-black) !important;
+}
+
+button:focus-visible {
+  outline: 1px solid var(--gh-dark-blue5);
+}
+
+.jp-Licenses-Bundles .lm-TabBar-tab.lm-mod-current {
+  color: var(--gh-dark-black);
+}
+
+.jp-Licenses-Bundles .lm-TabBar-tab.lm-mod-current label {
+  color: var(--gh-dark-black);
+}
+
 /*# sourceMappingURL=index.css.map */
