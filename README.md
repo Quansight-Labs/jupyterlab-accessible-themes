@@ -65,17 +65,21 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 You can install the extension using `pip`:
 
 ```bash
-pip install jupyterlab_accessible_themes
+pip install jupyterlab-accessible-themes
 ```
 
 If you prefer `conda`:
 
 ```bash
-conda install -c conda-forge jupyterlab_accessible_themes
+conda install -c conda-forge jupyterlab-accessible-themes
 
 # alternatively you can use mamba
-mamba install jupyterlab_accessible_themes
+mamba install jupyterlab-accessible-themes
 ```
+
+After installing the extension, open JupyterLab, go to the top menu bar, go to Settings &gt; Theme, and choose one of the themes provided by this extension.
+
+<img width="1840" alt="choose an accessible theme from Settings &gt; Theme in the JuptyerLab top menu bar" src="https://github.com/Quansight-Labs/jupyterlab-accessible-themes/assets/317883/78bac93d-d5b0-4d23-81cb-deb9f589ebf4">
 
 ## Uninstalling the extension 🧽
 
@@ -83,10 +87,10 @@ To remove the extension you can run the following command:
 
 ```bash
 # if installed with pip
-pip uninstall jupyterlab_accessible_themes
+pip uninstall jupyterlab-accessible-themes
 
 # if using conda
-conda uninstall jupyterlab_accessible_themes
+conda uninstall jupyterlab-accessible-themes
 ```
 
 ## Contributing to JupyterLab accessible themes 🙋🏽‍♀️
@@ -226,7 +230,7 @@ This repository uses the `prettier` [pre-commit hook](https://pre-commit.com/) t
 1. Remove the extension:
 
    ```bash
-   pip uninstall jupyterlab_accessible_themes
+   pip uninstall jupyterlab-accessible-themes
    ```
 
 2. In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
