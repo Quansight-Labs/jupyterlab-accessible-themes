@@ -21,7 +21,7 @@ def get_long_description():
 
 HERE = Path(__file__).parent
 MOD = "jupyterlab_accessible_themes"
-VARIANTS = ["pitayasmoothie", "githublight"]
+VARIANTS = ["pitayasmoothie", "githublight", "githubdark"]
 EXTS = [HERE / MOD / f"labextensions/{v}" for v in VARIANTS]
 MANIFESTS = [ext / "package.json" for ext in EXTS]
 PACKAGES = [json.loads(pkg_json.read_text(encoding="utf-8")) for pkg_json in MANIFESTS]

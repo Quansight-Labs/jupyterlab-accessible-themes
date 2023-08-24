@@ -41,7 +41,12 @@ This repository defines a set of accessible themes according to [WCAG color stan
 ## About the themes
 
 - [Pitaya Smoothie](./packages/pitayasmoothie/README.md) - Color-blind friendly
-- [GitHub light](./packages/githublight/README.md)
+- [GitHub Light](./packages/githublight/README.md)
+- [Github Dark](./packages/githubdark/README.md)
+
+## Font
+
+=======
 
 All the themes are using the [Atkinson Hyperlegible font](https://brailleinstitute.org/freefont), which focuses on letter form distinction to increase character recognition, ultimately improving readability.
 
