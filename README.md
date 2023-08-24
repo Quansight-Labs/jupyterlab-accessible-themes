@@ -76,7 +76,6 @@ After installing the extension, open JupyterLab, go to the top menu bar, go to S
 
 <img width="1840" alt="choose an accessible theme from Settings &gt; Theme in the JuptyerLab top menu bar" src="https://github.com/Quansight-Labs/jupyterlab-accessible-themes/assets/317883/78bac93d-d5b0-4d23-81cb-deb9f589ebf4">
 
-
 ## Uninstalling the extension 🧽
 
 To remove the extension you can run the following command:
