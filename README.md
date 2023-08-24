@@ -60,7 +60,7 @@ This font can only be changed for the `Markdown viewer` and the `Terminal`. You 
 You can install the extension using `pip`:
 
 ```bash
-pip install 
+pip install
 ```
 
 If you prefer `conda`:
