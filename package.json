@@ -100,5 +100,8 @@
         "jlpm clean:all"
       ]
     }
+  },
+  "jupyterlab": {
+    "extension": true
   }
 }
