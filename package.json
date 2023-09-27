@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-accessible-themes",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "accessible jupyter lab themes",
   "private": true,
   "workspaces": [
