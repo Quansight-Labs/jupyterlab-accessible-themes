@@ -10,7 +10,7 @@ include *.config.js
 include yarn.lock
 include lerna.json
 
-graft jupyterlab_accessible_themes/labextension
+graft jupyterlab_accessible_themes/labextensions
 
 # Javascript files
 graft src

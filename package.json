@@ -32,18 +32,11 @@
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:ext",
-    "build:prod": "jlpm clean && jlpm build:lib && jlpm build:labextension",
-    "build:labextension": "jupyter labextension build .",
-    "build:labextension:dev": "jupyter labextension build --development True .",
     "build:lib": "lerna run build:lib",
     "build:ext": "lerna run build:ext",
-    "dev": "yarn dev:py && yarn dev:ext",
-    "dev:py": "pip install -e.",
-    "dev:ext": "jupyter labextension develop --overwrite .",
-    "clean": "rimraf \"./packages/*/lib\" \"packages/*/*.tsbuildinfo\" ./jupyterlab_gt_coar_theme/labextensions",
+    "clean": "rimraf \"./packages/*/lib\" \"packages/*/*.tsbuildinfo\" ./jupyterlab_accessible_themes/labextensions",
     "eslint": "jlpm eslint:check --fix",
     "eslint:check": "eslint . --cache --ext .ts,.tsx",
-    "install:extension": "jlpm build",
     "lint": "jlpm stylelint && jlpm prettier && jlpm eslint",
     "lint:check": "jlpm stylelint:check && jlpm prettier:check && jlpm eslint:check",
     "prettier": "jlpm prettier:base --write --list-different",
@@ -100,8 +93,5 @@
         "jlpm clean:all"
       ]
     }
-  },
-  "jupyterlab": {
-    "extension": true
   }
 }

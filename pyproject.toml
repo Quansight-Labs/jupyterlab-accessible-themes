@@ -8,22 +8,25 @@ requires-python = ">=3.8"
 dynamic = ["version", "description", "readme", "license", "authors", "urls"]
 
 [tool.jupyter-packaging.options]
-skip-if-exists = ["jupyterlab_accessible_themes/labextension/static/style.js"]
 ensured-targets = [
-    "jupyterlab_accessible_themes/labextension/static/style.js",
-    "jupyterlab_accessible_themes/labextension/package.json"
+    "jupyterlab_accessible_themes/labextensions/githubdark/static/style.js",
+    "jupyterlab_accessible_themes/labextensions/githubdark/package.json",
+    "jupyterlab_accessible_themes/labextensions/githublight/static/style.js",
+    "jupyterlab_accessible_themes/labextensions/githublight/package.json",
+    "jupyterlab_accessible_themes/labextensions/pitayasmoothie/static/style.js",
+    "jupyterlab_accessible_themes/labextensions/pitayasmoothie/package.json"
 ]
 
 [tool.jupyter-packaging.builder]
 factory = "jupyter_packaging.npm_builder"
 
 [tool.jupyter-packaging.build-args]
-build_cmd = "build:prod"
+build_cmd = "build"
 npm = ["jlpm"]
 
 [tool.check-manifest]
 ignore = [
-    "jupyterlab_accessible_themes/labextension/**",
+    "jupyterlab_accessible_themes/labextensions/**",
     "yarn.lock",
     ".*",
     "package-lock.json"
