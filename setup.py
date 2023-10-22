@@ -40,7 +40,7 @@ for ext, pkg in zip(EXTS, PACKAGES):
             if not p.is_dir()
         ]
 
-DATA_FILES = sorted([(k, v) for k, v in EXT_FILES.items()])
+DATA_FILES = sorted(EXT_FILES.items())
 
 pkg_name = HERE / "package.json"
 PKG_INFO = json.loads(pkg_name.read_text(encoding="utf-8"))
