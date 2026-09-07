@@ -21,28 +21,28 @@ repos:
 
   # Autoformat: Python code - sort imports
   - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+    rev: 9.0.1
     hooks:
       - id: isort
         name: isort
         args: ["--profile", "black"]
 
   # Autoformat: Python code
-  - repo: https://github.com/psf/black
-    rev: 24.4.2
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 26.5.1
     hooks:
       - id: black
 
   # Lint: Python code
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.7
+    rev: v0.16.6
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
 
   # Misc...
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     # ref: https://github.com/pre-commit/pre-commit-hooks#hooks-available
     hooks:
       - id: end-of-file-fixer
